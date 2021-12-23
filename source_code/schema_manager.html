@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manage the XML Schema files : schema_manager &mdash; punx 7.g4a22359 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Validation : validate" href="validate.html" />
+    <link rel="prev" title="NXDL Definition File Tree Structure : nxdltree" href="nxdltree.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> punx
+          </a>
+              <div class="version">
+                0.2.6
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../contents.html">Contents</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../overview.html">Project Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changes.html">Change History</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../license.html">License</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cache_manager.html">Cache : <code class="xref py py-mod docutils literal notranslate"><span class="pre">cache_manager</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="finding.html">Findings : <code class="xref py py-mod docutils literal notranslate"><span class="pre">finding</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="github_handler.html">GitHub : <code class="xref py py-mod docutils literal notranslate"><span class="pre">github_handler</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="h5tree.html">HDF5 Data File Tree Structure : <code class="xref py py-mod docutils literal notranslate"><span class="pre">h5tree</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="main.html">User interface : <code class="xref py py-mod docutils literal notranslate"><span class="pre">main</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="nxdl_manager.html">NXDL Manager : <code class="xref py py-mod docutils literal notranslate"><span class="pre">nxdl_manager</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="nxdl_schema.html">NXDL Rules: The XML Schema files : <code class="xref py py-mod docutils literal notranslate"><span class="pre">nxdl_schema</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="nxdltree.html">NXDL Definition File Tree Structure : <code class="xref py py-mod docutils literal notranslate"><span class="pre">nxdltree</span></code></a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Manage the XML Schema files : <code class="xref py py-mod docutils literal notranslate"><span class="pre">schema_manager</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#module-punx.schema_manager">source code documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="validate.html">Validation : <code class="xref py py-mod docutils literal notranslate"><span class="pre">validate</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contents.html#source-code">Source Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contents.html#indices-and-tables">Indices and tables</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">punx</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../contents.html">Contents</a> &raquo;</li>
+      <li>Manage the XML Schema files : <code class="xref py py-mod docutils literal notranslate"><span class="pre">schema_manager</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/source_code/schema_manager.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="manage-the-xml-schema-files-schema-manager">
+<h1>Manage the XML Schema files : <code class="xref py py-mod docutils literal notranslate"><span class="pre">schema_manager</span></code><a class="headerlink" href="#manage-the-xml-schema-files-schema-manager" title="Permalink to this headline"></a></h1>
+<p>-tba-</p>
+<hr class="docutils" />
+<section id="module-punx.schema_manager">
+<span id="source-code-documentation"></span><h2>source code documentation<a class="headerlink" href="#module-punx.schema_manager" title="Permalink to this headline"></a></h2>
+<p>manages the XML Schema of this project</p>
+<p>The <em>schema_manager</em> calls the <em>cache_manager</em> and
+is called by <em>nxdl_manager</em>.</p>
+<p>Public</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#punx.schema_manager.SchemaManager" title="punx.schema_manager.SchemaManager"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SchemaManager</span></code></a>([path])</p></td>
+<td><p>describes the XML Schema for the NeXus NXDL definitions files</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#punx.schema_manager.Schema_Root" title="punx.schema_manager.Schema_Root"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Schema_Root</span></code></a>(element_node[, obj_name, ...])</p></td>
+<td><p>root element of the nxdl.xsd file</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#punx.schema_manager.Schema_Attribute" title="punx.schema_manager.Schema_Attribute"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Schema_Attribute</span></code></a>(xml_obj[, obj_name, ...])</p></td>
+<td><p>xs:attribute element</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#punx.schema_manager.Schema_Element" title="punx.schema_manager.Schema_Element"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Schema_Element</span></code></a>(xml_obj[, obj_name, ns_dict, ...])</p></td>
+<td><p>xs:element</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#punx.schema_manager.Schema_Type" title="punx.schema_manager.Schema_Type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Schema_Type</span></code></a>(ref[, tag, schema_root])</p></td>
+<td><p>a named NXDL structure type (such as groupGroup)</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#punx.schema_manager.get_default_schema_manager" title="punx.schema_manager.get_default_schema_manager"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_default_schema_manager</span></code></a>()</p></td>
+<td><p>internal: convenience function</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#punx.schema_manager.raise_error" title="punx.schema_manager.raise_error"><code class="xref py py-obj docutils literal notranslate"><span class="pre">raise_error</span></code></a>(node, text, obj)</p></td>
+<td><p>standard <em>ValueError</em> exception handling</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#punx.schema_manager.strip_ns" title="punx.schema_manager.strip_ns"><code class="xref py py-obj docutils literal notranslate"><span class="pre">strip_ns</span></code></a>(ref)</p></td>
+<td><p>strip the namespace prefix from <code class="docutils literal notranslate"><span class="pre">ref</span></code></p></td>
+</tr>
+</tbody>
+</table>
+<p>Internal</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_Mixin</span></code>(xml_obj[, obj_name, ns_dict, schema_root])</p></td>
+<td><p>common code for NXDL Rules classes below</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_GroupParsing</span></code>(*args, **kwargs)</p></td>
+<td><p>internal: avoid a known recursion of group in a group</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_Recursion</span></code>(obj_name)</p></td>
+<td><p>internal: an element used in recursion, such as child group of group</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py class">
+<dt class="sig sig-object py" id="punx.schema_manager.SchemaManager">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">punx.schema_manager.</span></span><span class="sig-name descname"><span class="pre">SchemaManager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/schema_manager.html#SchemaManager"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.schema_manager.SchemaManager" title="Permalink to this definition"></a></dt>
+<dd><p>describes the XML Schema for the NeXus NXDL definitions files</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="punx.schema_manager.SchemaManager.parse_nxdlTypes">
+<span class="sig-name descname"><span class="pre">parse_nxdlTypes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/schema_manager.html#SchemaManager.parse_nxdlTypes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.schema_manager.SchemaManager.parse_nxdlTypes" title="Permalink to this definition"></a></dt>
+<dd><p>get the allowed data types and unit types from nxdlTypes.xsd</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="punx.schema_manager.SchemaManager.parse_nxdl_patterns">
+<span class="sig-name descname"><span class="pre">parse_nxdl_patterns</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/schema_manager.html#SchemaManager.parse_nxdl_patterns"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.schema_manager.SchemaManager.parse_nxdl_patterns" title="Permalink to this definition"></a></dt>
+<dd><p>get regexp patterns for validItemName, validNXClassName, &amp; validTargetName from nxdl.xsd</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="punx.schema_manager.Schema_Attribute">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">punx.schema_manager.</span></span><span class="sig-name descname"><span class="pre">Schema_Attribute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xml_obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">obj_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ns_dict</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">schema_root</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/schema_manager.html#Schema_Attribute"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.schema_manager.Schema_Attribute" title="Permalink to this definition"></a></dt>
+<dd><p>xs:attribute element</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>xml_obj</strong> (<em>lxml.etree.Element</em>) – XML element</p></li>
+<li><p><strong>obj_name</strong> (<em>str</em>) – optional, default taken from <code class="docutils literal notranslate"><span class="pre">xml_obj</span></code></p></li>
+<li><p><strong>ns_dict</strong> (<em>dict</em>) – optional, default taken from <code class="xref py py-data docutils literal notranslate"><span class="pre">NAMESPACE_DICT</span></code></p></li>
+<li><p><strong>schema_root</strong> (<em>obj</em>) – optional, instance of lxml.etree._Element</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="punx.schema_manager.Schema_Element">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">punx.schema_manager.</span></span><span class="sig-name descname"><span class="pre">Schema_Element</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xml_obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">obj_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ns_dict</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">schema_root</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/schema_manager.html#Schema_Element"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.schema_manager.Schema_Element" title="Permalink to this definition"></a></dt>
+<dd><p>xs:element</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>xml_obj</strong> (<em>lxml.etree.Element</em>) – XML element</p></li>
+<li><p><strong>obj_name</strong> (<em>str</em>) – optional, default taken from <code class="docutils literal notranslate"><span class="pre">xml_obj</span></code></p></li>
+<li><p><strong>ns_dict</strong> (<em>dict</em>) – optional, default taken from <code class="xref py py-data docutils literal notranslate"><span class="pre">NAMESPACE_DICT</span></code></p></li>
+<li><p><strong>schema_root</strong> (<em>obj</em>) – optional, instance of lxml.etree._Element</p></li>
+</ul>
+</dd>
+<dt class="field-even">See</dt>
+<dd class="field-even"><p><a class="reference external" href="http://download.nexusformat.org/doc/html/nxdl.html">http://download.nexusformat.org/doc/html/nxdl.html</a></p>
+</dd>
+<dt class="field-odd">See</dt>
+<dd class="field-odd"><p><a class="reference external" href="http://download.nexusformat.org/doc/html/nxdl_desc.html#nxdl-elements">http://download.nexusformat.org/doc/html/nxdl_desc.html#nxdl-elements</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="punx.schema_manager.Schema_Root">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">punx.schema_manager.</span></span><span class="sig-name descname"><span class="pre">Schema_Root</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">element_node</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">obj_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ns_dict</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">schema_root</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">schema_manager</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/schema_manager.html#Schema_Root"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.schema_manager.Schema_Root" title="Permalink to this definition"></a></dt>
+<dd><p>root element of the nxdl.xsd file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>xml_obj</strong> (<em>lxml.etree.Element</em>) – XML element</p></li>
+<li><p><strong>obj_name</strong> (<em>str</em>) – optional, default taken from <code class="docutils literal notranslate"><span class="pre">xml_obj</span></code></p></li>
+<li><p><strong>ns_dict</strong> (<em>dict</em>) – optional, default taken from <code class="xref py py-data docutils literal notranslate"><span class="pre">NAMESPACE_DICT</span></code></p></li>
+<li><p><strong>schema_root</strong> (<em>obj</em>) – optional, instance of lxml.etree._Element</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="punx.schema_manager.Schema_Root.parse_sequence">
+<span class="sig-name descname"><span class="pre">parse_sequence</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">seq_node</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/schema_manager.html#Schema_Root.parse_sequence"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.schema_manager.Schema_Root.parse_sequence" title="Permalink to this definition"></a></dt>
+<dd><p>parse the sequence used in the root element</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="punx.schema_manager.Schema_Type">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">punx.schema_manager.</span></span><span class="sig-name descname"><span class="pre">Schema_Type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ref</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tag</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'*'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">schema_root</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/schema_manager.html#Schema_Type"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.schema_manager.Schema_Type" title="Permalink to this definition"></a></dt>
+<dd><p>a named NXDL structure type (such as groupGroup)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ref</strong> (<em>str</em>) – name of NXDL structure type (such as <code class="docutils literal notranslate"><span class="pre">groupGroup</span></code>)</p></li>
+<li><p><strong>tag</strong> (<em>str</em>) – XML Schema element tag, such as complexType (default=``*``)</p></li>
+<li><p><strong>schema_root</strong> (<em>obj</em>) – optional, instance of lxml.etree._Element</p></li>
+</ul>
+</dd>
+<dt class="field-even">See</dt>
+<dd class="field-even"><p><a class="reference external" href="http://download.nexusformat.org/doc/html/nxdl.html">http://download.nexusformat.org/doc/html/nxdl.html</a></p>
+</dd>
+<dt class="field-odd">See</dt>
+<dd class="field-odd"><p><a class="reference external" href="http://download.nexusformat.org/doc/html/nxdl_desc.html#nxdl-data-types-internal">http://download.nexusformat.org/doc/html/nxdl_desc.html#nxdl-data-types-internal</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="punx.schema_manager.Schema_nxdlType">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">punx.schema_manager.</span></span><span class="sig-name descname"><span class="pre">Schema_nxdlType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xml_obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ns_dict</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">schema_root</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/schema_manager.html#Schema_nxdlType"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.schema_manager.Schema_nxdlType" title="Permalink to this definition"></a></dt>
+<dd><p>one of the types defined in the file <em>nxdlTypes.xsd</em></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="punx.schema_manager.Schema_pattern">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">punx.schema_manager.</span></span><span class="sig-name descname"><span class="pre">Schema_pattern</span></span><a class="reference internal" href="../_modules/punx/schema_manager.html#Schema_pattern"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.schema_manager.Schema_pattern" title="Permalink to this definition"></a></dt>
+<dd><p>describe the regular expression patterns ofr names of NeXus things</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="punx.schema_manager.get_default_schema_manager">
+<span class="sig-prename descclassname"><span class="pre">punx.schema_manager.</span></span><span class="sig-name descname"><span class="pre">get_default_schema_manager</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/schema_manager.html#get_default_schema_manager"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.schema_manager.get_default_schema_manager" title="Permalink to this definition"></a></dt>
+<dd><p>internal: convenience function</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="punx.schema_manager.raise_error">
+<span class="sig-prename descclassname"><span class="pre">punx.schema_manager.</span></span><span class="sig-name descname"><span class="pre">raise_error</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/schema_manager.html#raise_error"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.schema_manager.raise_error" title="Permalink to this definition"></a></dt>
+<dd><p>standard <em>ValueError</em> exception handling</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>node</strong> (<em>obj</em>) – instance of</p></li>
+<li><p><strong>text</strong> (<em>str</em>) – label for <code class="docutils literal notranslate"><span class="pre">obj</span></code></p></li>
+<li><p><strong>obj</strong> (<em>str</em>) – value</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="punx.schema_manager.strip_ns">
+<span class="sig-prename descclassname"><span class="pre">punx.schema_manager.</span></span><span class="sig-name descname"><span class="pre">strip_ns</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ref</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/schema_manager.html#strip_ns"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.schema_manager.strip_ns" title="Permalink to this definition"></a></dt>
+<dd><p>strip the namespace prefix from <code class="docutils literal notranslate"><span class="pre">ref</span></code></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>ref</strong> (<em>str</em>) – one word, colon delimited string, such as <em>nx:groupGroup</em></p>
+</dd>
+<dt class="field-even">Returns str</dt>
+<dd class="field-even"><p>the part to the right of the last colon</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="nxdltree.html" class="btn btn-neutral float-left" title="NXDL Definition File Tree Structure : nxdltree" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="validate.html" class="btn btn-neutral float-right" title="Validation : validate" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2014-2021, Pete R. Jemian.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

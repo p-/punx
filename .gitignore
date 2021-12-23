@@ -1,0 +1,55 @@
+*.py[cod]
+
+# developer local test modules
+dev_*.py
+
+# local creds for authenticated access
+punx/__github_creds__.txt
+
+# local NXDL source cache (to be packaged with sdist)
+#punx/cache/*
+
+# C extensions
+*.so
+
+# Packages
+*.egg
+*.egg-info
+dist
+build
+eggs
+parts
+bin
+var
+sdist
+develop-eggs
+.installed.cfg
+lib
+lib64
+__pycache__
+
+# Installer logs
+pip-log.txt
+
+# Python logging package output
+log.txt
+
+# Unit test / coverage reports
+.coverage
+.tox
+nosetests.xml
+htmlcov
+tests/__pycache__
+punx/tests/__pycache__
+
+# Translations
+*.mo
+
+# Mr Developer
+.mr.developer.cfg
+/.settings
+/.idea
+/punx/data/local
+
+# Microsoft VS Code editor
+.vscode/

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User interface: subcommand: configuration &mdash; punx 7.g4a22359 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="User interface: subcommand: demo" href="demo.html" />
+    <link rel="prev" title="Project Overview" href="overview.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> punx
+          </a>
+              <div class="version">
+                0.2.6
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="contents.html">Contents</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="overview.html">Project Overview</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="overview.html#command-line-help">command line help</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="overview.html#subcommands">Subcommands</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">User interface: subcommand: <strong>configuration</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="demo.html">User interface: subcommand: <strong>demo</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="hierarchy.html">User interface: subcommand: <strong>hierarchy</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tree.html">User interface: subcommand: <strong>tree</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="update.html">User interface: subcommand: <strong>update</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="validate.html">Validation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="install.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changes.html">Change History</a></li>
+<li class="toctree-l2"><a class="reference internal" href="license.html">License</a></li>
+<li class="toctree-l2"><a class="reference internal" href="source_code/cache_manager.html">Cache : <code class="xref py py-mod docutils literal notranslate"><span class="pre">cache_manager</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="source_code/finding.html">Findings : <code class="xref py py-mod docutils literal notranslate"><span class="pre">finding</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="source_code/github_handler.html">GitHub : <code class="xref py py-mod docutils literal notranslate"><span class="pre">github_handler</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="source_code/h5tree.html">HDF5 Data File Tree Structure : <code class="xref py py-mod docutils literal notranslate"><span class="pre">h5tree</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="source_code/main.html">User interface : <code class="xref py py-mod docutils literal notranslate"><span class="pre">main</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="source_code/nxdl_manager.html">NXDL Manager : <code class="xref py py-mod docutils literal notranslate"><span class="pre">nxdl_manager</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="source_code/nxdl_schema.html">NXDL Rules: The XML Schema files : <code class="xref py py-mod docutils literal notranslate"><span class="pre">nxdl_schema</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="source_code/nxdltree.html">NXDL Definition File Tree Structure : <code class="xref py py-mod docutils literal notranslate"><span class="pre">nxdltree</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="source_code/schema_manager.html">Manage the XML Schema files : <code class="xref py py-mod docutils literal notranslate"><span class="pre">schema_manager</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="source_code/validate.html">Validation : <code class="xref py py-mod docutils literal notranslate"><span class="pre">validate</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="contents.html#source-code">Source Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contents.html#indices-and-tables">Indices and tables</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">punx</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="contents.html">Contents</a> &raquo;</li>
+          <li><a href="overview.html">Project Overview</a> &raquo;</li>
+      <li>User interface: subcommand: <strong>configuration</strong></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/configuration.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <span class="target" id="config"></span><section id="user-interface-subcommand-configuration">
+<span id="index-0"></span><h1>User interface: subcommand: <strong>configuration</strong><a class="headerlink" href="#user-interface-subcommand-configuration" title="Permalink to this headline"></a></h1>
+<p>The <em>configuration</em> subcommand shows the internal configuration
+of the <code class="docutils literal notranslate"><span class="pre">punx</span></code> program.  It shows a table with the available
+<em>NXDL file sets</em>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">console</span><span class="o">&gt;</span> <span class="n">punx</span> <span class="n">configuration</span>
+<span class="n">Locally</span><span class="o">-</span><span class="n">available</span> <span class="n">versions</span> <span class="n">of</span> <span class="n">NeXus</span> <span class="n">definitions</span> <span class="p">(</span><span class="n">NXDL</span> <span class="n">files</span><span class="p">)</span>
+<span class="o">=============</span> <span class="o">=======</span> <span class="o">======</span> <span class="o">===================</span> <span class="o">=======</span> <span class="o">==========================================</span>
+<span class="n">NXDL</span> <span class="n">file</span> <span class="nb">set</span> <span class="nb">type</span>    <span class="n">cache</span>  <span class="n">date</span> <span class="o">&amp;</span> <span class="n">time</span>         <span class="n">commit</span>  <span class="n">path</span>
+<span class="o">=============</span> <span class="o">=======</span> <span class="o">======</span> <span class="o">===================</span> <span class="o">=======</span> <span class="o">==========================================</span>
+<span class="n">a4fd52d</span>       <span class="n">commit</span>  <span class="n">source</span> <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">19</span> <span class="mi">01</span><span class="p">:</span><span class="mi">07</span><span class="p">:</span><span class="mi">45</span> <span class="n">a4fd52d</span> <span class="n">C</span><span class="p">:</span>\<span class="n">source_path</span>\<span class="n">punx</span>\<span class="n">cache</span>\<span class="n">a4fd52d</span>
+<span class="n">v2018</span><span class="o">.</span><span class="mi">5</span>       <span class="n">release</span> <span class="n">source</span> <span class="mi">2018</span><span class="o">-</span><span class="mi">05</span><span class="o">-</span><span class="mi">15</span> <span class="mi">16</span><span class="p">:</span><span class="mi">34</span><span class="p">:</span><span class="mi">19</span> <span class="n">a3045fd</span> <span class="n">C</span><span class="p">:</span>\<span class="n">source_path</span>\<span class="n">punx</span>\<span class="n">src</span>\<span class="n">punx</span>\<span class="n">cache</span>\<span class="n">v2018</span><span class="o">.</span><span class="mi">5</span>
+<span class="n">v3</span><span class="o">.</span><span class="mi">3</span>          <span class="n">release</span> <span class="n">source</span> <span class="mi">2017</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">12</span> <span class="mi">17</span><span class="p">:</span><span class="mi">41</span><span class="p">:</span><span class="mi">13</span> <span class="mi">9285</span><span class="n">af9</span> <span class="n">C</span><span class="p">:</span>\<span class="n">source_path</span>\<span class="n">punx</span>\<span class="n">src</span>\<span class="n">punx</span>\<span class="n">cache</span>\<span class="n">v3</span><span class="o">.</span><span class="mi">3</span>
+<span class="mi">9</span><span class="n">eab</span>          <span class="n">commit</span>  <span class="n">user</span>   <span class="mi">2016</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mi">19</span> <span class="mi">17</span><span class="p">:</span><span class="mi">58</span><span class="p">:</span><span class="mi">51</span> <span class="mi">9</span><span class="n">eab281</span> <span class="n">C</span><span class="p">:</span>\<span class="n">user_path</span>\<span class="n">AppData</span>\<span class="n">Roaming</span>\<span class="n">punx</span>\<span class="mi">9</span><span class="n">eab</span>
+<span class="n">master</span>        <span class="n">branch</span>  <span class="n">user</span>   <span class="mi">2018</span><span class="o">-</span><span class="mi">05</span><span class="o">-</span><span class="mi">16</span> <span class="mi">02</span><span class="p">:</span><span class="mi">07</span><span class="p">:</span><span class="mi">48</span> <span class="mi">2</span><span class="n">dc081e</span> <span class="n">C</span><span class="p">:</span>\<span class="n">user_path</span>\<span class="n">AppData</span>\<span class="n">Roaming</span>\<span class="n">punx</span>\<span class="n">master</span>
+<span class="o">=============</span> <span class="o">=======</span> <span class="o">======</span> <span class="o">===================</span> <span class="o">=======</span> <span class="o">==========================================</span>
+
+<span class="n">default</span> <span class="n">NXDL</span> <span class="n">file</span> <span class="nb">set</span><span class="p">:</span>  <span class="n">master</span>
+</pre></div>
+</div>
+<p>An NXDL file set is the complete set of NXDL (XML) files that
+provide a version of the NeXus standard, including the XML Schema
+files that provide all the default and basic structures of the NXDL
+files.</p>
+<p>Above, the user cache has a version of the GitHub <em>master</em> branch (
+the master branch contains the latest
+revisions by the developers on that date).</p>
+<p id="index-1">An NXDL file set is <em>referenced</em> by one of the GitHub identifiers:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 78%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>identifier</p></th>
+<th class="head"><p>example</p></th>
+<th class="head"><p>description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>commit</p></td>
+<td><p>9eab</p></td>
+<td><p>SHA-1 hash tag <a class="footnote-reference brackets" href="#id5" id="id1">1</a> that identifies a specific commit to the repository</p></td>
+</tr>
+<tr class="row-odd"><td><p>branch</p></td>
+<td><p>master</p></td>
+<td><p>name of a branch <a class="footnote-reference brackets" href="#id6" id="id2">2</a> in the repository</p></td>
+</tr>
+<tr class="row-even"><td><p>tag</p></td>
+<td><p>Schema-3.4</p></td>
+<td><p>name of a tag <a class="footnote-reference brackets" href="#id7" id="id3">3</a> in the repository</p></td>
+</tr>
+<tr class="row-odd"><td><p>release</p></td>
+<td><p>v2018.5</p></td>
+<td><p>name of a repository release <a class="footnote-reference brackets" href="#id8" id="id4">4</a></p></td>
+</tr>
+</tbody>
+</table>
+<dl class="footnote brackets">
+<dt class="label" id="id5"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>commit (hash): A commit is a snapshot of the GitHub repository.
+A SHA-1 hash code is the unique identifier of a commit.
+It is a 40-character sequence of hexadecimals.
+It may be shortened to just the first characters which identify
+it uniquely in the repository.  Three or four characters <em>may</em> be
+unique (1:16^3 or 1:16^4) while
+seven characters are almost certain (1:16^7) to be a unique reference.</p>
+<p>For example. the commit <cite>9eab</cite> may also be identified
+as <cite>9eab281</cite>, or by its full SHA-1 has
+<cite>9eab2816e19440f8601fdf81ee972e330319c28f</cite>
+(<a class="reference external" href="https://github.com/nexusformat/definitions/commit/9eab281">https://github.com/nexusformat/definitions/commit/9eab281</a>).
+All point to the same commit on 2016-10-19 17:58:51.</p>
+</dd>
+<dt class="label" id="id6"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dd><p>branch: <a class="reference external" href="https://help.github.com/articles/about-branches/">https://help.github.com/articles/about-branches/</a></p>
+</dd>
+<dt class="label" id="id7"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
+<dd><p>tag: a user-provided text name for a commit</p>
+</dd>
+<dt class="label" id="id8"><span class="brackets"><a class="fn-backref" href="#id4">4</a></span></dt>
+<dd><p>release: <a class="reference external" href="https://help.github.com/articles/about-releases/">https://help.github.com/articles/about-releases/</a></p>
+</dd>
+</dl>
+<p id="index-2">When a <em>ref</em> (a reference to a specific NXDL file set identifier)
+is not provided, the default NXDL file set will be chosen as the one
+with the most recent date &amp; time.  That date &amp; time is provided by
+GitHub as the time the changes were to committed to the repository.</p>
+<p id="index-3">NXDL file sets may be found in the <em>source cache</em> (as distributed
+with the program) or in the <em>user cache</em> as maintained by the <code class="docutils literal notranslate"><span class="pre">punx</span></code>
+<a class="reference internal" href="update.html#update"><span class="std std-ref">User interface: subcommand: update</span></a> subcommand.  The full path to the file set is provided.</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="overview.html" class="btn btn-neutral float-left" title="Project Overview" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="demo.html" class="btn btn-neutral float-right" title="User interface: subcommand: demo" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2014-2021, Pete R. Jemian.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

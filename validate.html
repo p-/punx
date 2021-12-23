@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Validation &mdash; punx 7.g4a22359 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Data File Validation" href="data_file_validation.html" />
+    <link rel="prev" title="User interface: subcommand: update" href="update.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> punx
+          </a>
+              <div class="version">
+                0.2.6
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="contents.html">Contents</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="overview.html">Project Overview</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="overview.html#command-line-help">command line help</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="overview.html#subcommands">Subcommands</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="configuration.html">User interface: subcommand: <strong>configuration</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="demo.html">User interface: subcommand: <strong>demo</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="hierarchy.html">User interface: subcommand: <strong>hierarchy</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tree.html">User interface: subcommand: <strong>tree</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="update.html">User interface: subcommand: <strong>update</strong></a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Validation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="install.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changes.html">Change History</a></li>
+<li class="toctree-l2"><a class="reference internal" href="license.html">License</a></li>
+<li class="toctree-l2"><a class="reference internal" href="source_code/cache_manager.html">Cache : <code class="xref py py-mod docutils literal notranslate"><span class="pre">cache_manager</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="source_code/finding.html">Findings : <code class="xref py py-mod docutils literal notranslate"><span class="pre">finding</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="source_code/github_handler.html">GitHub : <code class="xref py py-mod docutils literal notranslate"><span class="pre">github_handler</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="source_code/h5tree.html">HDF5 Data File Tree Structure : <code class="xref py py-mod docutils literal notranslate"><span class="pre">h5tree</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="source_code/main.html">User interface : <code class="xref py py-mod docutils literal notranslate"><span class="pre">main</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="source_code/nxdl_manager.html">NXDL Manager : <code class="xref py py-mod docutils literal notranslate"><span class="pre">nxdl_manager</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="source_code/nxdl_schema.html">NXDL Rules: The XML Schema files : <code class="xref py py-mod docutils literal notranslate"><span class="pre">nxdl_schema</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="source_code/nxdltree.html">NXDL Definition File Tree Structure : <code class="xref py py-mod docutils literal notranslate"><span class="pre">nxdltree</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="source_code/schema_manager.html">Manage the XML Schema files : <code class="xref py py-mod docutils literal notranslate"><span class="pre">schema_manager</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="source_code/validate.html">Validation : <code class="xref py py-mod docutils literal notranslate"><span class="pre">validate</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="contents.html#source-code">Source Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contents.html#indices-and-tables">Indices and tables</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">punx</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="contents.html">Contents</a> &raquo;</li>
+          <li><a href="overview.html">Project Overview</a> &raquo;</li>
+      <li>Validation</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/validate.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <span class="target" id="validate"></span><section id="validation">
+<span id="index-0"></span><h1>Validation<a class="headerlink" href="#validation" title="Permalink to this headline"></a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<p><em>Validation</em> is the process of comparing an object with a standard.
+An important aspect of validation is the report of each aspect tested and whether
+or not it complies with the standard.  This is a useful and necessary step when
+composing NeXus HDF5 data files or software that will read NeXus data files and when
+building NeXus Definition Language (NXDL) files.</p>
+<p>In NeXus, three basic types of object can be validated:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="data_file_validation.html#data-file-validation"><span class="std std-ref">HDF5 data files</span></a> must comply with the specifications set forth in the
+applicable NeXus base classes, application definitions, and contributed definitions.</p></li>
+<li><p><a class="reference internal" href="nxdl_file_validation.html#nxdl-file-validation"><span class="std std-ref">NeXus NXDL files</span></a> must comply with the
+XML Schema files <cite>nxdl.xsd</cite> and <cite>nxdlTypes.xsd</cite>.</p></li>
+<li><p><strong>XML Schema files</strong> must comply with the rules defined by the WWW3 consortium.
+TODO: citation needed.</p></li>
+</ul>
+<section id="user-interface-subcommand-validate">
+<h2>User interface: subcommand: <strong>validate</strong><a class="headerlink" href="#user-interface-subcommand-validate" title="Permalink to this headline"></a></h2>
+<p>validate a NeXus file</p>
+<p class="rubric">command line help</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="lineno">1 </span><span class="go">usage: punx validate [-h] [--report REPORT] infile</span>
+<span class="lineno">2 </span>
+<span class="lineno">3 </span><span class="go">positional arguments:</span>
+<span class="lineno">4 </span><span class="go">  infile           HDF5 or NXDL file name</span>
+<span class="lineno">5 </span>
+<span class="lineno">6 </span><span class="go">optional arguments:</span>
+<span class="lineno">7 </span><span class="go">  -h, --help       show this help message and exit</span>
+<span class="lineno">8 </span><span class="go"> --report REPORT  select which validation findings to report, choices: COMMENT,ERROR,NOTE,OK,OPTIONAL,TODO,UNUSED,WARN (separate with comma if more</span>
+<span class="lineno">9 </span><span class="go">                  than one, do not use white space)</span>
+</pre></div>
+</div>
+<p>The <strong>REPORT</strong> findings are as presented in the table above for each validation step.</p>
+<section id="examples">
+<h3>Examples<a class="headerlink" href="#examples" title="Permalink to this headline"></a></h3>
+<p>–tba–</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="update.html" class="btn btn-neutral float-left" title="User interface: subcommand: update" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="data_file_validation.html" class="btn btn-neutral float-right" title="Data File Validation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2014-2021, Pete R. Jemian.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User interface : main &mdash; punx 7.g4a22359 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="NXDL Manager : nxdl_manager" href="nxdl_manager.html" />
+    <link rel="prev" title="HDF5 Data File Tree Structure : h5tree" href="h5tree.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> punx
+          </a>
+              <div class="version">
+                0.2.6
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../contents.html">Contents</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../overview.html">Project Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changes.html">Change History</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../license.html">License</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cache_manager.html">Cache : <code class="xref py py-mod docutils literal notranslate"><span class="pre">cache_manager</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="finding.html">Findings : <code class="xref py py-mod docutils literal notranslate"><span class="pre">finding</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="github_handler.html">GitHub : <code class="xref py py-mod docutils literal notranslate"><span class="pre">github_handler</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="h5tree.html">HDF5 Data File Tree Structure : <code class="xref py py-mod docutils literal notranslate"><span class="pre">h5tree</span></code></a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">User interface : <code class="xref py py-mod docutils literal notranslate"><span class="pre">main</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#module-punx.main">source code settings</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nxdl_manager.html">NXDL Manager : <code class="xref py py-mod docutils literal notranslate"><span class="pre">nxdl_manager</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="nxdl_schema.html">NXDL Rules: The XML Schema files : <code class="xref py py-mod docutils literal notranslate"><span class="pre">nxdl_schema</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="nxdltree.html">NXDL Definition File Tree Structure : <code class="xref py py-mod docutils literal notranslate"><span class="pre">nxdltree</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="schema_manager.html">Manage the XML Schema files : <code class="xref py py-mod docutils literal notranslate"><span class="pre">schema_manager</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="validate.html">Validation : <code class="xref py py-mod docutils literal notranslate"><span class="pre">validate</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contents.html#source-code">Source Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contents.html#indices-and-tables">Indices and tables</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">punx</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../contents.html">Contents</a> &raquo;</li>
+      <li>User interface : <code class="xref py py-mod docutils literal notranslate"><span class="pre">main</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/source_code/main.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="user-interface-main">
+<h1>User interface : <code class="xref py py-mod docutils literal notranslate"><span class="pre">main</span></code><a class="headerlink" href="#user-interface-main" title="Permalink to this headline"></a></h1>
+<p>Provides the user interface(s) to the punx program.</p>
+<section id="module-punx.main">
+<span id="source-code-settings"></span><h2>source code settings<a class="headerlink" href="#module-punx.main" title="Permalink to this headline"></a></h2>
+<p>Python Utilities for NeXus HDF5 files</p>
+<p>main user interface file</p>
+<p class="rubric">Usage</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>console&gt; punx -h
+usage: punx [-h] [-v]
+            {configuration,demonstrate,structure,tree,update,validate} ...
+
+Python Utilities for NeXus HDF5 files version: 0.2.0+9.g31fd4b4.dirty URL:
+http://punx.readthedocs.io
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -v, --version         show program&#39;s version number and exit
+
+subcommand:
+  valid subcommands
+
+  {configuration,demonstrate,structure,tree,update,validate}
+    configuration       show configuration details of punx
+    demonstrate         demonstrate HDF5 file validation
+    structure           structure command deprecated. Use ``tree`` instead
+    tree                show tree structure of HDF5 or NXDL file
+    update              update the local cache of NeXus definitions
+    validate            validate a NeXus file
+
+Note: It is only necessary to use the first two (or more) characters of any
+subcommand, enough that the abbreviation is unique. Such as: ``demonstrate``
+can be abbreviated to ``demo`` or even ``de``.
+</pre></div>
+</div>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">main</span></code>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#punx.main.MyArgumentParser" title="punx.main.MyArgumentParser"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MyArgumentParser</span></code></a>([prog, usage, description, ...])</p></td>
+<td><p>override standard ArgumentParser to enable shortcut feature</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#punx.main.parse_command_line_arguments" title="punx.main.parse_command_line_arguments"><code class="xref py py-obj docutils literal notranslate"><span class="pre">parse_command_line_arguments</span></code></a>()</p></td>
+<td><p>process command line</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#punx.main.func_demo" title="punx.main.func_demo"><code class="xref py py-obj docutils literal notranslate"><span class="pre">func_demo</span></code></a>(args)</p></td>
+<td><p>show what <strong>punx</strong> can do</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#punx.main.func_validate" title="punx.main.func_validate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">func_validate</span></code></a>(args)</p></td>
+<td><p>validate the content of a NeXus HDF5 data file of NXDL XML file</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#punx.main.func_hierarchy" title="punx.main.func_hierarchy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">func_hierarchy</span></code></a>(args)</p></td>
+<td><p>not implemented yet</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#punx.main.func_configuration" title="punx.main.func_configuration"><code class="xref py py-obj docutils literal notranslate"><span class="pre">func_configuration</span></code></a>(args)</p></td>
+<td><p>show internal configuration of punx</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#punx.main.func_tree" title="punx.main.func_tree"><code class="xref py py-obj docutils literal notranslate"><span class="pre">func_tree</span></code></a>(args)</p></td>
+<td><p>print the tree structure of a NeXus HDF5 data file of NXDL XML file</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#punx.main.func_update" title="punx.main.func_update"><code class="xref py py-obj docutils literal notranslate"><span class="pre">func_update</span></code></a>(args)</p></td>
+<td><p>update or install versions of the NeXus definitions</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py class">
+<dt class="sig sig-object py" id="punx.main.MyArgumentParser">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">punx.main.</span></span><span class="sig-name descname"><span class="pre">MyArgumentParser</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prog=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">usage=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">epilog=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parents=[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">formatter_class=&lt;class</span> <span class="pre">'argparse.HelpFormatter'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefix_chars='-'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fromfile_prefix_chars=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">argument_default=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">conflict_handler='error'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">add_help=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allow_abbrev=True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/main.html#MyArgumentParser"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.main.MyArgumentParser" title="Permalink to this definition"></a></dt>
+<dd><p>override standard ArgumentParser to enable shortcut feature</p>
+<p>stretch goal: permit the first two char (or more) of each subcommand to be accepted
+# ?? <a class="reference external" href="http://stackoverflow.com/questions/4114996/python-argparse-nargs-or-depending-on-prior-argument?rq=1">http://stackoverflow.com/questions/4114996/python-argparse-nargs-or-depending-on-prior-argument?rq=1</a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="punx.main.MyArgumentParser.parse_args">
+<span class="sig-name descname"><span class="pre">parse_args</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespace</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/main.html#MyArgumentParser.parse_args"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.main.MyArgumentParser.parse_args" title="Permalink to this definition"></a></dt>
+<dd><p>permit the first two char (or more) of each subcommand to be accepted</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="punx.main.exit_message">
+<span class="sig-prename descclassname"><span class="pre">punx.main.</span></span><span class="sig-name descname"><span class="pre">exit_message</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exit_code</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/main.html#exit_message"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.main.exit_message" title="Permalink to this definition"></a></dt>
+<dd><p>exit this code with a message and a status</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>msg</strong> (<em>str</em>) – text to be reported</p></li>
+<li><p><strong>status</strong> (<em>int</em>) – 0 - 50 (default: ERROR = 40)</p></li>
+<li><p><strong>exit_code</strong> (<em>int</em>) – 0: no error, 1: error (default)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="punx.main.func_configuration">
+<span class="sig-prename descclassname"><span class="pre">punx.main.</span></span><span class="sig-name descname"><span class="pre">func_configuration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/main.html#func_configuration"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.main.func_configuration" title="Permalink to this definition"></a></dt>
+<dd><p>show internal configuration of punx</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="punx.main.func_demo">
+<span class="sig-prename descclassname"><span class="pre">punx.main.</span></span><span class="sig-name descname"><span class="pre">func_demo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/main.html#func_demo"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.main.func_demo" title="Permalink to this definition"></a></dt>
+<dd><p>show what <strong>punx</strong> can do</p>
+<p id="index-0">Internally, runs these commands:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">punx</span> <span class="n">validate</span> <span class="o">&lt;</span><span class="n">source_directory</span><span class="o">&gt;/</span><span class="n">data</span><span class="o">/</span><span class="n">writer_1_3</span><span class="o">.</span><span class="n">hdf5</span>
+<span class="n">punx</span> <span class="n">tree</span> <span class="o">&lt;</span><span class="n">source_directory</span><span class="o">&gt;/</span><span class="n">data</span><span class="o">/</span><span class="n">writer_1_3</span><span class="o">.</span><span class="n">hdf5</span>
+</pre></div>
+</div>
+<p id="index-1">If you get an error message that looks like this one
+(line breaks added here for clarity):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>punx.cache.FileNotFound: file does not exist:
+/Users/&lt;username&gt;/.config/punx/definitions-master/nxdl.xsd
+AND not found in source cache either!  Report this problem to the developer.
+</pre></div>
+</div>
+<p>then you will need to update your local cache of the NeXus definitions.
+Use this command to update the local cache:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">punx</span> <span class="n">update</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="punx.main.func_hierarchy">
+<span class="sig-prename descclassname"><span class="pre">punx.main.</span></span><span class="sig-name descname"><span class="pre">func_hierarchy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/main.html#func_hierarchy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.main.func_hierarchy" title="Permalink to this definition"></a></dt>
+<dd><p>not implemented yet</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="punx.main.func_structure">
+<span class="sig-prename descclassname"><span class="pre">punx.main.</span></span><span class="sig-name descname"><span class="pre">func_structure</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/main.html#func_structure"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.main.func_structure" title="Permalink to this definition"></a></dt>
+<dd><p>deprecated subcommand</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="punx.main.func_tree">
+<span class="sig-prename descclassname"><span class="pre">punx.main.</span></span><span class="sig-name descname"><span class="pre">func_tree</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/main.html#func_tree"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.main.func_tree" title="Permalink to this definition"></a></dt>
+<dd><p>print the tree structure of a NeXus HDF5 data file of NXDL XML file</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="punx.main.func_update">
+<span class="sig-prename descclassname"><span class="pre">punx.main.</span></span><span class="sig-name descname"><span class="pre">func_update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/main.html#func_update"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.main.func_update" title="Permalink to this definition"></a></dt>
+<dd><p>update or install versions of the NeXus definitions</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="punx.main.func_validate">
+<span class="sig-prename descclassname"><span class="pre">punx.main.</span></span><span class="sig-name descname"><span class="pre">func_validate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/main.html#func_validate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.main.func_validate" title="Permalink to this definition"></a></dt>
+<dd><p>validate the content of a NeXus HDF5 data file of NXDL XML file</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="punx.main.parse_command_line_arguments">
+<span class="sig-prename descclassname"><span class="pre">punx.main.</span></span><span class="sig-name descname"><span class="pre">parse_command_line_arguments</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/main.html#parse_command_line_arguments"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.main.parse_command_line_arguments" title="Permalink to this definition"></a></dt>
+<dd><p>process command line</p>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="h5tree.html" class="btn btn-neutral float-left" title="HDF5 Data File Tree Structure : h5tree" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="nxdl_manager.html" class="btn btn-neutral float-right" title="NXDL Manager : nxdl_manager" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2014-2021, Pete R. Jemian.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

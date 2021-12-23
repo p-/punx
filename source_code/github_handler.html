@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GitHub : github_handler &mdash; punx 7.g4a22359 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="HDF5 Data File Tree Structure : h5tree" href="h5tree.html" />
+    <link rel="prev" title="Findings : finding" href="finding.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> punx
+          </a>
+              <div class="version">
+                0.2.6
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../contents.html">Contents</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../overview.html">Project Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changes.html">Change History</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../license.html">License</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cache_manager.html">Cache : <code class="xref py py-mod docutils literal notranslate"><span class="pre">cache_manager</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="finding.html">Findings : <code class="xref py py-mod docutils literal notranslate"><span class="pre">finding</span></code></a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">GitHub : <code class="xref py py-mod docutils literal notranslate"><span class="pre">github_handler</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#module-punx.github_handler">source code documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="h5tree.html">HDF5 Data File Tree Structure : <code class="xref py py-mod docutils literal notranslate"><span class="pre">h5tree</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="main.html">User interface : <code class="xref py py-mod docutils literal notranslate"><span class="pre">main</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="nxdl_manager.html">NXDL Manager : <code class="xref py py-mod docutils literal notranslate"><span class="pre">nxdl_manager</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="nxdl_schema.html">NXDL Rules: The XML Schema files : <code class="xref py py-mod docutils literal notranslate"><span class="pre">nxdl_schema</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="nxdltree.html">NXDL Definition File Tree Structure : <code class="xref py py-mod docutils literal notranslate"><span class="pre">nxdltree</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="schema_manager.html">Manage the XML Schema files : <code class="xref py py-mod docutils literal notranslate"><span class="pre">schema_manager</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="validate.html">Validation : <code class="xref py py-mod docutils literal notranslate"><span class="pre">validate</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contents.html#source-code">Source Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contents.html#indices-and-tables">Indices and tables</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">punx</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../contents.html">Contents</a> &raquo;</li>
+      <li>GitHub : <code class="xref py py-mod docutils literal notranslate"><span class="pre">github_handler</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/source_code/github_handler.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="github-github-handler">
+<h1>GitHub : <code class="xref py py-mod docutils literal notranslate"><span class="pre">github_handler</span></code><a class="headerlink" href="#github-github-handler" title="Permalink to this headline"></a></h1>
+<p>The <code class="xref py py-mod docutils literal notranslate"><span class="pre">github_handler</span></code> module handles all communications with the NeXus
+GitHub repository.  The interaction is handled through the <a class="reference external" href="https://docs.github.com/en/rest">GitHub REST
+API</a>.  A token is needed to update the local
+cache of NeXus definitions.  (See <code class="docutils literal notranslate"><span class="pre">punx</span> <span class="pre">update</span> <span class="pre">-h</span></code> for help on this command.)</p>
+<p>GitHub requests use an <em>access token</em>. The token is unique to each user and may
+be generated by visiting <a class="reference external" href="https://github.com/settings/tokens">the GitHub user’s token settings page</a>. Without a token, the GitHub API Rate
+Limit allows unauthenticated access only a few downloads per hour.</p>
+<p>These environment variables are searched (in order) for a token:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">GH_TOKEN</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">GITHUB_TOKEN</span></code> (searched in that order).</p></li>
+</ul>
+<p>Here is an example of a GitHub token:
+<code class="docutils literal notranslate"><span class="pre">ghp_AbcdEF0gHIJKlMNopqrs1tUvwXyzAb2CDEFg</span></code> (N.B.: This is not a valid token;
+it is only an example.  You must use your own token.)</p>
+<p>To set the <code class="docutils literal notranslate"><span class="pre">GH_TOKEN</span></code> environment variable with this token:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">GH_TOKEN</span><span class="o">=</span>ghp_AbcdEF0gHIJKlMNopqrs1tUvwXyzAb2CDEFg
+</pre></div>
+</div>
+<p>For more details about tokens and authentication, please visit the <a class="reference external" href="https://docs.github.com/en/rest/overview/other-authentication-methods">GitHub
+documentation</a>.</p>
+<section id="module-punx.github_handler">
+<span id="source-code-documentation"></span><h2>source code documentation<a class="headerlink" href="#module-punx.github_handler" title="Permalink to this headline"></a></h2>
+<p>manages the communications with GitHub</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#punx.github_handler.GitHub_Repository_Reference" title="punx.github_handler.GitHub_Repository_Reference"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GitHub_Repository_Reference</span></code></a>()</p></td>
+<td><p>all information necessary to describe and download a repository branch, release, tag, or SHA hash</p></td>
+</tr>
+</tbody>
+</table>
+<p>USAGE:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">grr</span> <span class="o">=</span> <span class="n">punx</span><span class="o">.</span><span class="n">github_handler</span><span class="o">.</span><span class="n">GitHub_Repository_Reference</span><span class="p">()</span>
+<span class="n">grr</span><span class="o">.</span><span class="n">connect_repo</span><span class="p">()</span>
+<span class="k">if</span> <span class="n">grr</span><span class="o">.</span><span class="n">request_info</span><span class="p">(</span><span class="sa">u</span><span class="s1">&#39;v3.2&#39;</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">d</span> <span class="o">=</span> <span class="n">grr</span><span class="o">.</span><span class="n">download</span><span class="p">()</span>
+</pre></div>
+</div>
+<dl class="py class">
+<dt class="sig sig-object py" id="punx.github_handler.GitHub_Repository_Reference">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">punx.github_handler.</span></span><span class="sig-name descname"><span class="pre">GitHub_Repository_Reference</span></span><a class="reference internal" href="../_modules/punx/github_handler.html#GitHub_Repository_Reference"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.github_handler.GitHub_Repository_Reference" title="Permalink to this definition"></a></dt>
+<dd><p>all information necessary to describe and download a repository branch, release, tag, or SHA hash</p>
+<p>ROUTINES</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#punx.github_handler.GitHub_Repository_Reference.connect_repo" title="punx.github_handler.GitHub_Repository_Reference.connect_repo"><code class="xref py py-obj docutils literal notranslate"><span class="pre">connect_repo</span></code></a>([repo_name, token])</p></td>
+<td><p>connect with the GitHub repository</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#punx.github_handler.GitHub_Repository_Reference.request_info" title="punx.github_handler.GitHub_Repository_Reference.request_info"><code class="xref py py-obj docutils literal notranslate"><span class="pre">request_info</span></code></a>([ref])</p></td>
+<td><p>request download information about <code class="docutils literal notranslate"><span class="pre">ref</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#punx.github_handler.GitHub_Repository_Reference.download" title="punx.github_handler.GitHub_Repository_Reference.download"><code class="xref py py-obj docutils literal notranslate"><span class="pre">download</span></code></a>()</p></td>
+<td><p>download the NXDL definitions described by <code class="docutils literal notranslate"><span class="pre">ref</span></code></p></td>
+</tr>
+</tbody>
+</table>
+<dl class="field-list simple">
+<dt class="field-odd">See</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/PyGithub/PyGithub/tree/master/github">https://github.com/PyGithub/PyGithub/tree/master/github</a></p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="punx.github_handler.GitHub_Repository_Reference.connect_repo">
+<span class="sig-name descname"><span class="pre">connect_repo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">repo_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">token</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/github_handler.html#GitHub_Repository_Reference.connect_repo"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.github_handler.GitHub_Repository_Reference.connect_repo" title="Permalink to this definition"></a></dt>
+<dd><p>connect with the GitHub repository</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>repo_name</strong> (<em>str</em>) – name of repository in <a class="reference external" href="https://github.com/nexusformat">https://github.com/nexusformat</a> (default: <em>definitions</em>)</p></li>
+<li><p><strong>token</strong> (<em>str</em><em> or </em><em>None</em>) – GitHub access token or <code class="docutils literal notranslate"><span class="pre">None</span></code></p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns bool</dt>
+<dd class="field-even"><p>True if using GitHub credentials</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="punx.github_handler.GitHub_Repository_Reference.download">
+<span class="sig-name descname"><span class="pre">download</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/github_handler.html#GitHub_Repository_Reference.download"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.github_handler.GitHub_Repository_Reference.download" title="Permalink to this definition"></a></dt>
+<dd><p>download the NXDL definitions described by <code class="docutils literal notranslate"><span class="pre">ref</span></code></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="punx.github_handler.GitHub_Repository_Reference.get_branch">
+<span class="sig-name descname"><span class="pre">get_branch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ref</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'main'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/github_handler.html#GitHub_Repository_Reference.get_branch"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.github_handler.GitHub_Repository_Reference.get_branch" title="Permalink to this definition"></a></dt>
+<dd><p>learn the download information about the named branch</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>ref</strong> (<em>str</em>) – name of branch in repository</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="punx.github_handler.GitHub_Repository_Reference.get_commit">
+<span class="sig-name descname"><span class="pre">get_commit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ref</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'a4fd52d'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/github_handler.html#GitHub_Repository_Reference.get_commit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.github_handler.GitHub_Repository_Reference.get_commit" title="Permalink to this definition"></a></dt>
+<dd><p>learn the download information about the referenced commit</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>ref</strong> (<em>str</em>) – name of SHA hash, first unique characters are sufficient, usually 7 or less</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="punx.github_handler.GitHub_Repository_Reference.get_release">
+<span class="sig-name descname"><span class="pre">get_release</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ref</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'v2018.5'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/github_handler.html#GitHub_Repository_Reference.get_release"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.github_handler.GitHub_Repository_Reference.get_release" title="Permalink to this definition"></a></dt>
+<dd><p>learn the download information about the named release</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>ref</strong> (<em>str</em>) – name of release in repository</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="punx.github_handler.GitHub_Repository_Reference.get_tag">
+<span class="sig-name descname"><span class="pre">get_tag</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ref</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Schema-3.3'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/github_handler.html#GitHub_Repository_Reference.get_tag"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.github_handler.GitHub_Repository_Reference.get_tag" title="Permalink to this definition"></a></dt>
+<dd><p>learn the download information about the named tag</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>ref</strong> (<em>str</em>) – name of tag in repository</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="punx.github_handler.GitHub_Repository_Reference.request_info">
+<span class="sig-name descname"><span class="pre">request_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ref</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/github_handler.html#GitHub_Repository_Reference.request_info"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.github_handler.GitHub_Repository_Reference.request_info" title="Permalink to this definition"></a></dt>
+<dd><p>request download information about <code class="docutils literal notranslate"><span class="pre">ref</span></code></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>ref</strong> (<em>str</em>) – name of branch, release, tag, or SHA hash (default: <em>v3.2</em>)</p>
+</dd>
+</dl>
+<p>download URLs</p>
+<ul class="simple">
+<li><p>base:  <a class="reference external" href="https://github.com">https://github.com</a></p></li>
+<li><p>master: <a class="reference external" href="https://github.com/nexusformat/definitions/archive/master.zip">https://github.com/nexusformat/definitions/archive/master.zip</a></p></li>
+<li><p>branch (www_page_486): <a class="reference external" href="https://github.com/nexusformat/definitions/archive/www_page_486.zip">https://github.com/nexusformat/definitions/archive/www_page_486.zip</a></p></li>
+<li><p>hash (83ce630): <a class="reference external" href="https://github.com/nexusformat/definitions/archive/83ce630.zip">https://github.com/nexusformat/definitions/archive/83ce630.zip</a></p></li>
+<li><p>release (v3.2): see hash c0b9500</p></li>
+<li><p>tag (NXcanSAS-1.0): see hash 83ce630</p></li>
+</ul>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="punx.github_handler.get_GitHub_credentials">
+<span class="sig-prename descclassname"><span class="pre">punx.github_handler.</span></span><span class="sig-name descname"><span class="pre">get_GitHub_credentials</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/github_handler.html#get_GitHub_credentials"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.github_handler.get_GitHub_credentials" title="Permalink to this definition"></a></dt>
+<dd><p>Get the Github API token from a file or environment.</p>
+<p>GitHub requests use an access token. The token is unique to a user and may
+be generated by visiting <a class="reference external" href="https://github.com/settings/tokens">https://github.com/settings/tokens</a>.</p>
+<p>The token is provided in either of these environment variables: <code class="docutils literal notranslate"><span class="pre">GH_TOKEN</span></code>
+or <code class="docutils literal notranslate"><span class="pre">GITHUB_TOKEN</span></code> (searched in that order).</p>
+<p>Issues a warning and returns <code class="docutils literal notranslate"><span class="pre">None</span></code> if credentials are not found per above
+search.</p>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="finding.html" class="btn btn-neutral float-left" title="Findings : finding" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="h5tree.html" class="btn btn-neutral float-right" title="HDF5 Data File Tree Structure : h5tree" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2014-2021, Pete R. Jemian.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User interface: subcommand: update &mdash; punx 7.g4a22359 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Validation" href="validate.html" />
+    <link rel="prev" title="User interface: subcommand: tree" href="tree.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> punx
+          </a>
+              <div class="version">
+                0.2.6
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="contents.html">Contents</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="overview.html">Project Overview</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="overview.html#command-line-help">command line help</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="overview.html#subcommands">Subcommands</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="configuration.html">User interface: subcommand: <strong>configuration</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="demo.html">User interface: subcommand: <strong>demo</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="hierarchy.html">User interface: subcommand: <strong>hierarchy</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tree.html">User interface: subcommand: <strong>tree</strong></a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">User interface: subcommand: <strong>update</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="validate.html">Validation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="install.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changes.html">Change History</a></li>
+<li class="toctree-l2"><a class="reference internal" href="license.html">License</a></li>
+<li class="toctree-l2"><a class="reference internal" href="source_code/cache_manager.html">Cache : <code class="xref py py-mod docutils literal notranslate"><span class="pre">cache_manager</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="source_code/finding.html">Findings : <code class="xref py py-mod docutils literal notranslate"><span class="pre">finding</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="source_code/github_handler.html">GitHub : <code class="xref py py-mod docutils literal notranslate"><span class="pre">github_handler</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="source_code/h5tree.html">HDF5 Data File Tree Structure : <code class="xref py py-mod docutils literal notranslate"><span class="pre">h5tree</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="source_code/main.html">User interface : <code class="xref py py-mod docutils literal notranslate"><span class="pre">main</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="source_code/nxdl_manager.html">NXDL Manager : <code class="xref py py-mod docutils literal notranslate"><span class="pre">nxdl_manager</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="source_code/nxdl_schema.html">NXDL Rules: The XML Schema files : <code class="xref py py-mod docutils literal notranslate"><span class="pre">nxdl_schema</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="source_code/nxdltree.html">NXDL Definition File Tree Structure : <code class="xref py py-mod docutils literal notranslate"><span class="pre">nxdltree</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="source_code/schema_manager.html">Manage the XML Schema files : <code class="xref py py-mod docutils literal notranslate"><span class="pre">schema_manager</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="source_code/validate.html">Validation : <code class="xref py py-mod docutils literal notranslate"><span class="pre">validate</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="contents.html#source-code">Source Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contents.html#indices-and-tables">Indices and tables</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">punx</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="contents.html">Contents</a> &raquo;</li>
+          <li><a href="overview.html">Project Overview</a> &raquo;</li>
+      <li>User interface: subcommand: <strong>update</strong></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/update.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="user-interface-subcommand-update">
+<span id="update"></span><span id="index-0"></span><h1>User interface: subcommand: <strong>update</strong><a class="headerlink" href="#user-interface-subcommand-update" title="Permalink to this headline"></a></h1>
+<p><strong>punx</strong> keeps a local copy of the NeXus definition files.
+The originals of these files are located on GitHub.</p>
+<p>+.. caution::  The update process is being refactored, this may not work correctly now</p>
+<p>To <em>update</em> the local cache of NeXus definitions, run:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">console&gt; punx update</span>
+
+<span class="go">INFO: get repo info: https://api.github.com/repos/nexusformat/definitions/commits</span>
+<span class="go">INFO: git sha: 8eb46e229f900d1e77e37c4b6ee6e0405efe099c</span>
+<span class="go">INFO: git iso8601: 2016-06-17T18:05:28Z</span>
+<span class="go">INFO: not updating NeXus definitions files</span>
+</pre></div>
+</div>
+<p>This shows the current cache was up to date.  Here’s an example
+when the source cache needed to be updated:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">console&gt; punx update</span>
+
+<span class="go">INFO: get repo info: https://api.github.com/repos/nexusformat/definitions/commits</span>
+<span class="go">INFO: git sha: 8eb46e229f900d1e77e37c4b6ee6e0405efe099c</span>
+<span class="go">INFO: git iso8601: 2016-06-17T18:05:28Z</span>
+<span class="go">INFO: updating NeXus definitions files</span>
+<span class="go">INFO: download: https://github.com/nexusformat/definitions/archive/master.zip</span>
+<span class="go">INFO: extract ZIP to: C:/Users/Pete/Documents/eclipse/punx/punx/cache</span>
+</pre></div>
+</div>
+<p class="rubric">command line help</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">console&gt; punx update -h</span>
+<span class="go">punx update -h</span>
+<span class="go">usage: punx update [-h] [-f]</span>
+
+<span class="go">optional arguments:</span>
+<span class="go">  -h, --help   show this help message and exit</span>
+<span class="go">  -f, --force  force update (if GitHub available)</span>
+</pre></div>
+</div>
+<section id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline"></a></h2>
+<p>–tba–</p>
+</section>
+<section id="problems">
+<h2>Problems<a class="headerlink" href="#problems" title="Permalink to this headline"></a></h2>
+<section id="github-api-rate-limit-exceeded">
+<span id="id1"></span><h3>GitHub API rate limit exceeded<a class="headerlink" href="#github-api-rate-limit-exceeded" title="Permalink to this headline"></a></h3>
+<p>A common problem happens when updating the NXDL definitions from GitHub.
+Here’s what it looks like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ python ./punx/main.py update --force
+
+(&#39;INFO:&#39;, &#39;get repo info: https://api.github.com/repos/nexusformat/definitions/commits&#39;)
+
+Traceback (most recent call last):
+
+  File &quot;./punx/main.py&quot;, line 416, in &lt;module&gt;
+
+    main()
+
+  File &quot;./punx/main.py&quot;, line 412, in main
+
+    args.func(args)
+
+  File &quot;./punx/main.py&quot;, line 170, in func_update
+
+    cache.update_NXDL_Cache(force_update=args.force)
+
+  File &quot;/home/travis/build/prjemian/punx/punx/cache.py&quot;, line 257, in update_NXDL_Cache
+
+    info = __get_github_info__()    # check with GitHub first
+
+  File &quot;/home/travis/build/prjemian/punx/punx/cache.py&quot;, line 246, in __get_github_info__
+
+    punx.GITHUB_NXDL_REPOSITORY)
+
+  File &quot;/home/travis/build/prjemian/punx/punx/cache.py&quot;, line 228, in githubMasterInfo
+
+    raise punx.CannotUpdateFromGithubNow(msg)
+
+punx.CannotUpdateFromGithubNow: API rate limit exceeded for nn.nn.nn.nn.
+(But here&#39;s the good news: Authenticated requests get a higher rate limit.
+Check out the documentation for more details.)
+</pre></div>
+</div>
+<p>GitHub imposes a limit on the number of unauthenticated downloads per hour <a class="footnote-reference brackets" href="#id4" id="id2">1</a>.
+You can check your rate limit status <a class="footnote-reference brackets" href="#id5" id="id3">2</a>.  Mostly, this means try again later.</p>
+<dl class="footnote brackets">
+<dt class="label" id="id4"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
+<dd><p>“The rate limit allows you to make up to 60 requests per hour,
+associated with your IP address”,
+<a class="reference external" href="https://developer.github.com/v3/#rate-limiting">https://developer.github.com/v3/#rate-limiting</a></p>
+</dd>
+<dt class="label" id="id5"><span class="brackets"><a class="fn-backref" href="#id3">2</a></span></dt>
+<dd><p>Status of GitHub API Rate Limit: <a class="reference external" href="https://developer.github.com/v3/rate_limit/">https://developer.github.com/v3/rate_limit/</a></p>
+</dd>
+</dl>
+<p>A GitHub issue has been raised to resolve this for the <strong>punx</strong> project. <a class="footnote-reference brackets" href="#id7" id="id6">3</a></p>
+<dl class="footnote brackets">
+<dt class="label" id="id7"><span class="brackets"><a class="fn-backref" href="#id6">3</a></span></dt>
+<dd><p><em>update: cannot download NXDL files from GitHub #64,</em>
+<a class="reference external" href="https://github.com/prjemian/punx/issues/64">https://github.com/prjemian/punx/issues/64</a></p>
+</dd>
+</dl>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="tree.html" class="btn btn-neutral float-left" title="User interface: subcommand: tree" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="validate.html" class="btn btn-neutral float-right" title="Validation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2014-2021, Pete R. Jemian.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

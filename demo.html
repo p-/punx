@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User interface: subcommand: demo &mdash; punx 7.g4a22359 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="User interface: subcommand: hierarchy" href="hierarchy.html" />
+    <link rel="prev" title="User interface: subcommand: configuration" href="configuration.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> punx
+          </a>
+              <div class="version">
+                0.2.6
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="contents.html">Contents</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="overview.html">Project Overview</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="overview.html#command-line-help">command line help</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="overview.html#subcommands">Subcommands</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="configuration.html">User interface: subcommand: <strong>configuration</strong></a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">User interface: subcommand: <strong>demo</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="hierarchy.html">User interface: subcommand: <strong>hierarchy</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tree.html">User interface: subcommand: <strong>tree</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="update.html">User interface: subcommand: <strong>update</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="validate.html">Validation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="install.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changes.html">Change History</a></li>
+<li class="toctree-l2"><a class="reference internal" href="license.html">License</a></li>
+<li class="toctree-l2"><a class="reference internal" href="source_code/cache_manager.html">Cache : <code class="xref py py-mod docutils literal notranslate"><span class="pre">cache_manager</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="source_code/finding.html">Findings : <code class="xref py py-mod docutils literal notranslate"><span class="pre">finding</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="source_code/github_handler.html">GitHub : <code class="xref py py-mod docutils literal notranslate"><span class="pre">github_handler</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="source_code/h5tree.html">HDF5 Data File Tree Structure : <code class="xref py py-mod docutils literal notranslate"><span class="pre">h5tree</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="source_code/main.html">User interface : <code class="xref py py-mod docutils literal notranslate"><span class="pre">main</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="source_code/nxdl_manager.html">NXDL Manager : <code class="xref py py-mod docutils literal notranslate"><span class="pre">nxdl_manager</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="source_code/nxdl_schema.html">NXDL Rules: The XML Schema files : <code class="xref py py-mod docutils literal notranslate"><span class="pre">nxdl_schema</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="source_code/nxdltree.html">NXDL Definition File Tree Structure : <code class="xref py py-mod docutils literal notranslate"><span class="pre">nxdltree</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="source_code/schema_manager.html">Manage the XML Schema files : <code class="xref py py-mod docutils literal notranslate"><span class="pre">schema_manager</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="source_code/validate.html">Validation : <code class="xref py py-mod docutils literal notranslate"><span class="pre">validate</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="contents.html#source-code">Source Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contents.html#indices-and-tables">Indices and tables</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">punx</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="contents.html">Contents</a> &raquo;</li>
+          <li><a href="overview.html">Project Overview</a> &raquo;</li>
+      <li>User interface: subcommand: <strong>demo</strong></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/demo.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <span class="target" id="demo"></span><section id="user-interface-subcommand-demo">
+<span id="index-0"></span><h1>User interface: subcommand: <strong>demo</strong><a class="headerlink" href="#user-interface-subcommand-demo" title="Permalink to this headline"></a></h1>
+<p>The <em>demo</em> subcommand is useful to
+demonstrate HDF5 file validation
+and to verify correct program operation.
+It uses an example NeXus HDF5 data file supplied
+with the <em>punx</em> software, the <em>writer_1_3.hdf5</em>
+example from the NeXus manual.</p>
+<p class="rubric">command line help</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">console&gt; punx demo -h</span>
+<span class="go">punx demo -h</span>
+<span class="go">usage: punx demo [-h]</span>
+
+<span class="go">optional arguments:</span>
+<span class="go">  -h, --help  show this help message and exit</span>
+</pre></div>
+</div>
+<section id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline"></a></h2>
+<p>One example of how to use <strong>punx</strong> is shown in the <em>demo</em> mode.
+This can be used directly after installing the python package.</p>
+<p>Type this command …:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">punx</span> <span class="n">demo</span>
+</pre></div>
+</div>
+<p>… and this output will appear on the console,
+showing a validation of <em>writer_1_3.hdf5</em>, an example
+NeXus HDF5 data file from the NeXus documentation.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="lineno"> 1 </span><span class="go">C:\Users\Pete\Documents\eclipse\punx\src\punx\main.py</span>
+<span class="lineno"> 2 </span>
+<span class="lineno"> 3 </span><span class="go">!!! WARNING: this program is not ready for distribution.</span>
+<span class="lineno"> 4 </span>
+<span class="lineno"> 5 </span>
+<span class="lineno"> 6 </span><span class="go">console&gt; punx validate C:\Users\Pete\Documents\eclipse\punx\src\punx\data\writer_1_3.hdf5</span>
+<span class="lineno"> 7 </span><span class="go">data file: C:\Users\Pete\Documents\eclipse\punx\src\punx\data\writer_1_3.hdf5</span>
+<span class="lineno"> 8 </span><span class="go">NeXus definitions (branch): master, dated 2018-05-16 02:07:48, sha=2dc081ee4265eebf80a953080a2ed275c1799a21</span>
+<span class="lineno"> 9 </span>
+<span class="lineno">10 </span><span class="go">findings</span>
+<span class="lineno">11 </span><span class="go">============================ ====== ==================================== =============================================</span>
+<span class="lineno">12 </span><span class="go">address                      status test                                 comments                                     </span>
+<span class="lineno">13 </span><span class="go">============================ ====== ==================================== =============================================</span>
+<span class="lineno">14 </span><span class="go">/                            TODO   NeXus base class                     NXroot: more validations needed              </span>
+<span class="lineno">15 </span><span class="go">/                            OK     known NXDL                           NXroot: recognized NXDL specification        </span>
+<span class="lineno">16 </span><span class="go">/                            OK     NeXus base class                     NXroot: known NeXus base class               </span>
+<span class="lineno">17 </span><span class="go">/                            OK     NeXus default plot                   found by v3: /Scan/data/counts               </span>
+<span class="lineno">18 </span><span class="go">/Scan                        TODO   NeXus base class                     NXentry: more validations needed             </span>
+<span class="lineno">19 </span><span class="go">/Scan                        OK     group in base class                  not defined: NXroot/Scan                     </span>
+<span class="lineno">20 </span><span class="go">/Scan                        OK     known NXDL                           NXentry: recognized NXDL specification       </span>
+<span class="lineno">21 </span><span class="go">/Scan                        OK     NeXus base class                     NXentry: known NeXus base class              </span>
+<span class="lineno">22 </span><span class="go">/Scan                        OK     NXDL group in data file              found:  in /Scan/data                        </span>
+<span class="lineno">23 </span><span class="go">/Scan                        NOTE   validItemName                        relaxed pattern: [A-Za-z_][\w_]*             </span>
+<span class="lineno">24 </span><span class="go">/Scan@NX_class               OK     validItemName                        pattern: NX.+                                </span>
+<span class="lineno">25 </span><span class="go">/Scan@NX_class               OK     attribute value                      recognized NXDL base class: NXentry          </span>
+<span class="lineno">26 </span><span class="go">/Scan@NX_class               OK     known attribute                      known: NXentry@NX_class                      </span>
+<span class="lineno">27 </span><span class="go">/Scan/data                   TODO   NeXus base class                     NXdata: more validations needed              </span>
+<span class="lineno">28 </span><span class="go">/Scan/data                   OK     validItemName                        strict pattern: [a-z_][a-z0-9_]*             </span>
+<span class="lineno">29 </span><span class="go">/Scan/data                   OK     group in base class                  defined: NXentry/data                        </span>
+<span class="lineno">30 </span><span class="go">/Scan/data                   OK     known NXDL                           NXdata: recognized NXDL specification        </span>
+<span class="lineno">31 </span><span class="go">/Scan/data                   OK     NeXus base class                     NXdata: known NeXus base class               </span>
+<span class="lineno">32 </span><span class="go">/Scan/data@NX_class          OK     validItemName                        pattern: NX.+                                </span>
+<span class="lineno">33 </span><span class="go">/Scan/data@NX_class          OK     attribute value                      recognized NXDL base class: NXdata           </span>
+<span class="lineno">34 </span><span class="go">/Scan/data@NX_class          OK     known attribute                      known: NXdata@NX_class                       </span>
+<span class="lineno">35 </span><span class="go">/Scan/data@axes              TODO   attribute value                      implement                                    </span>
+<span class="lineno">36 </span><span class="go">/Scan/data@axes              OK     validItemName                        strict pattern: [a-z_][a-z0-9_]*             </span>
+<span class="lineno">37 </span><span class="go">/Scan/data@axes              OK     known attribute                      known: NXdata@axes                           </span>
+<span class="lineno">38 </span><span class="go">/Scan/data@signal            OK     validItemName                        strict pattern: [a-z_][a-z0-9_]*             </span>
+<span class="lineno">39 </span><span class="go">/Scan/data@signal            OK     valid name @signal=counts            strict pattern: [a-z_][a-z0-9_]*             </span>
+<span class="lineno">40 </span><span class="go">/Scan/data@signal            OK     attribute value                      found: @signal=counts                        </span>
+<span class="lineno">41 </span><span class="go">/Scan/data@signal            OK     known attribute                      known: NXdata@signal                         </span>
+<span class="lineno">42 </span><span class="go">/Scan/data@signal            OK     value of @signal                     found: /Scan/data/counts                     </span>
+<span class="lineno">43 </span><span class="go">/Scan/data@signal            OK     NeXus default plot v3, NXdata@signal correct default plot setup in /NXentry/NXdata</span>
+<span class="lineno">44 </span><span class="go">/Scan/data@two_theta_indices TODO   attribute value                      implement                                    </span>
+<span class="lineno">45 </span><span class="go">/Scan/data@two_theta_indices OK     validItemName                        strict pattern: [a-z_][a-z0-9_]*             </span>
+<span class="lineno">46 </span><span class="go">/Scan/data@two_theta_indices OK     known attribute                      unknown: NXdata@two_theta_indices            </span>
+<span class="lineno">47 </span><span class="go">/Scan/data/counts            OK     validItemName                        strict pattern: [a-z_][a-z0-9_]*             </span>
+<span class="lineno">48 </span><span class="go">/Scan/data/counts            OK     field in base class                  not defined: NXdata/counts                   </span>
+<span class="lineno">49 </span><span class="go">/Scan/data/counts@units      TODO   attribute value                      implement                                    </span>
+<span class="lineno">50 </span><span class="go">/Scan/data/counts@units      OK     validItemName                        strict pattern: [a-z_][a-z0-9_]*             </span>
+<span class="lineno">51 </span><span class="go">/Scan/data/two_theta         OK     validItemName                        strict pattern: [a-z_][a-z0-9_]*             </span>
+<span class="lineno">52 </span><span class="go">/Scan/data/two_theta         OK     field in base class                  not defined: NXdata/two_theta                </span>
+<span class="lineno">53 </span><span class="go">/Scan/data/two_theta@units   TODO   attribute value                      implement                                    </span>
+<span class="lineno">54 </span><span class="go">/Scan/data/two_theta@units   OK     validItemName                        strict pattern: [a-z_][a-z0-9_]*             </span>
+<span class="lineno">55 </span><span class="go">============================ ====== ==================================== =============================================</span>
+<span class="lineno">56 </span>
+<span class="lineno">57 </span>
+<span class="lineno">58 </span><span class="go">summary statistics</span>
+<span class="lineno">59 </span><span class="go">======== ===== =========================================================== =========</span>
+<span class="lineno">60 </span><span class="go">status   count description                                                 (value)  </span>
+<span class="lineno">61 </span><span class="go">======== ===== =========================================================== =========</span>
+<span class="lineno">62 </span><span class="go">OK       33    meets NeXus specification                                   100      </span>
+<span class="lineno">63 </span><span class="go">NOTE     1     does not meet NeXus specification, but acceptable           75       </span>
+<span class="lineno">64 </span><span class="go">WARN     0     does not meet NeXus specification, not generally acceptable 25       </span>
+<span class="lineno">65 </span><span class="go">ERROR    0     violates NeXus specification                                -10000000</span>
+<span class="lineno">66 </span><span class="go">TODO     7     validation not implemented yet                              0        </span>
+<span class="lineno">67 </span><span class="go">UNUSED   0     optional NeXus item not used in data file                   0        </span>
+<span class="lineno">68 </span><span class="go">COMMENT  0     comment from the punx source code                           0        </span>
+<span class="lineno">69 </span><span class="go">OPTIONAL 38    allowed by NeXus specification, not identified              99       </span>
+<span class="lineno">70 </span><span class="go">         --                                                                         </span>
+<span class="lineno">71 </span><span class="go">TOTAL    79                                                                         </span>
+<span class="lineno">72 </span><span class="go">======== ===== =========================================================== =========</span>
+<span class="lineno">73 </span>
+<span class="lineno">74 </span><span class="go">&lt;finding&gt;=99.125000 of 72 items reviewed</span>
+<span class="lineno">75 </span>
+<span class="lineno">76 </span><span class="go">console&gt; punx tree C:\Users\Pete\Documents\eclipse\punx\src\punx\data\writer_1_3.hdf5</span>
+<span class="lineno">77 </span><span class="go">C:\Users\Pete\Documents\eclipse\punx\src\punx\data\writer_1_3.hdf5 : NeXus data file</span>
+<span class="lineno">78 </span><span class="go">  Scan:NXentry</span>
+<span class="lineno">79 </span><span class="go">    @NX_class = NXentry</span>
+<span class="lineno">80 </span><span class="go">    data:NXdata</span>
+<span class="lineno">81 </span><span class="go">      @NX_class = NXdata</span>
+<span class="lineno">82 </span><span class="go">      @signal = counts</span>
+<span class="lineno">83 </span><span class="go">      @axes = two_theta</span>
+<span class="lineno">84 </span><span class="go">      @two_theta_indices = 0</span>
+<span class="lineno">85 </span><span class="go">      counts:NX_INT32[31] = [1037, 1318, 1704, &#39;...&#39;, 1321]</span>
+<span class="lineno">86 </span><span class="go">        @units = counts</span>
+<span class="lineno">87 </span><span class="go">      two_theta:NX_FLOAT64[31] = [17.92608, 17.92591, 17.92575, &#39;...&#39;, 17.92108]</span>
+<span class="lineno">88 </span><span class="go">        @units = degrees</span>
+</pre></div>
+</div>
+<section id="problems-when-running-the-demo">
+<h3>Problems when running the demo<a class="headerlink" href="#problems-when-running-the-demo" title="Permalink to this headline"></a></h3>
+<p>Sometimes, problems happen when running the demo.
+In this section are some common problems encountered and
+what was done to resolve them.</p>
+<section id="cannot-reach-github">
+<h4>Cannot reach GitHub<a class="headerlink" href="#cannot-reach-github" title="Permalink to this headline"></a></h4>
+<p>See <a class="reference internal" href="update.html#github-api-rate-limit-exceeded"><span class="std std-ref">GitHub API rate limit exceeded</span></a></p>
+</section>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="configuration.html" class="btn btn-neutral float-left" title="User interface: subcommand: configuration" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="hierarchy.html" class="btn btn-neutral float-right" title="User interface: subcommand: hierarchy" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2014-2021, Pete R. Jemian.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

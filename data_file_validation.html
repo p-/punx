@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data File Validation &mdash; punx 7.g4a22359 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="NXDL File Validation" href="nxdl_file_validation.html" />
+    <link rel="prev" title="Validation" href="validate.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> punx
+          </a>
+              <div class="version">
+                0.2.6
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="contents.html">Contents</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="overview.html">Project Overview</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="overview.html#command-line-help">command line help</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="overview.html#subcommands">Subcommands</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="configuration.html">User interface: subcommand: <strong>configuration</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="demo.html">User interface: subcommand: <strong>demo</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="hierarchy.html">User interface: subcommand: <strong>hierarchy</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tree.html">User interface: subcommand: <strong>tree</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="update.html">User interface: subcommand: <strong>update</strong></a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="validate.html">Validation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="install.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changes.html">Change History</a></li>
+<li class="toctree-l2"><a class="reference internal" href="license.html">License</a></li>
+<li class="toctree-l2"><a class="reference internal" href="source_code/cache_manager.html">Cache : <code class="xref py py-mod docutils literal notranslate"><span class="pre">cache_manager</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="source_code/finding.html">Findings : <code class="xref py py-mod docutils literal notranslate"><span class="pre">finding</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="source_code/github_handler.html">GitHub : <code class="xref py py-mod docutils literal notranslate"><span class="pre">github_handler</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="source_code/h5tree.html">HDF5 Data File Tree Structure : <code class="xref py py-mod docutils literal notranslate"><span class="pre">h5tree</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="source_code/main.html">User interface : <code class="xref py py-mod docutils literal notranslate"><span class="pre">main</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="source_code/nxdl_manager.html">NXDL Manager : <code class="xref py py-mod docutils literal notranslate"><span class="pre">nxdl_manager</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="source_code/nxdl_schema.html">NXDL Rules: The XML Schema files : <code class="xref py py-mod docutils literal notranslate"><span class="pre">nxdl_schema</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="source_code/nxdltree.html">NXDL Definition File Tree Structure : <code class="xref py py-mod docutils literal notranslate"><span class="pre">nxdltree</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="source_code/schema_manager.html">Manage the XML Schema files : <code class="xref py py-mod docutils literal notranslate"><span class="pre">schema_manager</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="source_code/validate.html">Validation : <code class="xref py py-mod docutils literal notranslate"><span class="pre">validate</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="contents.html#source-code">Source Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contents.html#indices-and-tables">Indices and tables</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">punx</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="contents.html">Contents</a> &raquo;</li>
+          <li><a href="overview.html">Project Overview</a> &raquo;</li>
+          <li><a href="validate.html">Validation</a> &raquo;</li>
+      <li>Data File Validation</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/data_file_validation.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <span class="target" id="data-file-validation"></span><section id="id1">
+<h1>Data File Validation<a class="headerlink" href="#id1" title="Permalink to this headline"></a></h1>
+<p>NeXus HDF5 data files can have significant structure and variation.
+It can be a challenge to determine that a given file is compliant
+with any of the rules specified in the <em>NeXus definitions</em>
+(here, we refer to the the applicable NXDL files
+and NeXus XML Schema in aggregate as the <em>NeXus definitions</em>).
+Additionally, there are various releases and version of the NeXus standard.</p>
+<p>The first test for any file to be considered a NeXus data file is
+whether or not the file is a valid HDF5 file.  If the file is not HDF5,
+it is not a valid NeXus HDF5 data file.</p>
+<section id="general">
+<h2>General<a class="headerlink" href="#general" title="Permalink to this headline"></a></h2>
+<p>In general, validation of data files proceeds through several steps:</p>
+<ol class="arabic simple">
+<li><p>Is file HDF5?</p></li>
+<li><p>Does file contain one or more <strong>NXentry</strong> <a class="footnote-reference brackets" href="#nxentry" id="id2">1</a> groups?</p></li>
+<li><p>Test the <em>NeXus definitions</em> against the file</p></li>
+<li><p>Does the file define a default plot in each <strong>NXdata</strong> group? (recommended but no longer required)</p></li>
+<li><p>Does the file define a path to the default plot? (recommended but no longer required)</p></li>
+<li><p>Is the file a NeXus HDF5 data file?</p></li>
+</ol>
+<section id="is-file-hdf5">
+<h3>Is file HDF5?<a class="headerlink" href="#is-file-hdf5" title="Permalink to this headline"></a></h3>
+<p>This is a simple test and is handled by the <em>h5py</em> package.</p>
+</section>
+<section id="test-defs-against-the-data-file">
+<h3>Test <em>NeXus definitions</em> against the data file<a class="headerlink" href="#test-defs-against-the-data-file" title="Permalink to this headline"></a></h3>
+<p>The <em>NeXus definitions</em> provide specifications for what should be found in a NeXus data file
+and where it should be found.  Some itmes are optional and some items may be repeated.</p>
+<p>In NeXus data files, the structure is defined by adding <cite>NX_class</cite> attributes to each
+of the groups.  This structure must match what is defined in the NXDL file for that group.</p>
+<p>Groups must be one of the defined base classes
+(or contributed definitions intended for use as a base class, but this is rare)</p>
+</section>
+<section id="test-each-nxentry-group-agains-the-defs">
+<h3>Test each <strong>NXentry</strong> group agains the <em>NeXus definitions</em><a class="headerlink" href="#test-each-nxentry-group-agains-the-defs" title="Permalink to this headline"></a></h3>
+<p>In a NeXus data file, there are one more more <strong>NXentry</strong> groups.  Validation proceeds
+by walking through each of the groups that define a <cite>NX_class</cite> attribute using the
+matching base class (or contributed definition).</p>
+<p>NeXus application definitions are a special case of <strong>NXentry</strong> (or <strong>NXsubentry</strong>) group.
+If a group’s <cite>NX_class</cite> attribute has the value <cite>NXentry</cite> or <cite>NXsubentry</cite>, that group must
+contain a <cite>definition</cite> field.  The value of this <cite>definition</cite> field gives the name of the
+application definition to which this group (and all its subgroups) must comply.
+It is recommended to use <cite>NXsubentry</cite> to contain an application definition.</p>
+<p>Base classes are the building blocks of the NeXus structure.
+Application definitions differ from <strong>NXentry</strong> and <strong>NXsubentry</strong> in one important aspect:
+content specified in an application definition is <em>required</em>, by default.  In base classes,
+content is <em>optional</em> by default.
+Contributed definitions include propositions from the community for NeXus base classes
+or application definitions, as well as other NXDL files for long-term archival by NeXus.
+Consider the contributed definitions as either <em>candidates</em> for inclusion in the NeXus standard
+or a special case not for general use.</p>
+<dl class="footnote brackets">
+<dt class="label" id="nxentry"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
+<dd><p><a class="reference external" href="http://download.nexusformat.org/doc/html/classes/base_classes/NXentry.html">http://download.nexusformat.org/doc/html/classes/base_classes/NXentry.html</a></p>
+</dd>
+</dl>
+</section>
+</section>
+<section id="details">
+<h2>Details<a class="headerlink" href="#details" title="Permalink to this headline"></a></h2>
+<p>–tba–</p>
+<section id="parsing-the-xml-schema">
+<h3>Parsing the XML Schema<a class="headerlink" href="#parsing-the-xml-schema" title="Permalink to this headline"></a></h3>
+<p>The XML Schema defines the constructs of the NXDL language, the various enumerations,
+and the default values when the constructs are used in base classes or application definitions.</p>
+</section>
+<section id="parsing-the-nxdl-files">
+<h3>Parsing the NXDL files<a class="headerlink" href="#parsing-the-nxdl-files" title="Permalink to this headline"></a></h3>
+<p>–tba–</p>
+</section>
+<section id="application-definitions">
+<h3>Application Definitions<a class="headerlink" href="#application-definitions" title="Permalink to this headline"></a></h3>
+<p>–tba–</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="validate.html" class="btn btn-neutral float-left" title="Validation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="nxdl_file_validation.html" class="btn btn-neutral float-right" title="NXDL File Validation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2014-2021, Pete R. Jemian.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

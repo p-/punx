@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NXDL Definition File Tree Structure : nxdltree &mdash; punx 7.g4a22359 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Manage the XML Schema files : schema_manager" href="schema_manager.html" />
+    <link rel="prev" title="NXDL Rules: The XML Schema files : nxdl_schema" href="nxdl_schema.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> punx
+          </a>
+              <div class="version">
+                0.2.6
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../contents.html">Contents</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../overview.html">Project Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changes.html">Change History</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../license.html">License</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cache_manager.html">Cache : <code class="xref py py-mod docutils literal notranslate"><span class="pre">cache_manager</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="finding.html">Findings : <code class="xref py py-mod docutils literal notranslate"><span class="pre">finding</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="github_handler.html">GitHub : <code class="xref py py-mod docutils literal notranslate"><span class="pre">github_handler</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="h5tree.html">HDF5 Data File Tree Structure : <code class="xref py py-mod docutils literal notranslate"><span class="pre">h5tree</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="main.html">User interface : <code class="xref py py-mod docutils literal notranslate"><span class="pre">main</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="nxdl_manager.html">NXDL Manager : <code class="xref py py-mod docutils literal notranslate"><span class="pre">nxdl_manager</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="nxdl_schema.html">NXDL Rules: The XML Schema files : <code class="xref py py-mod docutils literal notranslate"><span class="pre">nxdl_schema</span></code></a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">NXDL Definition File Tree Structure : <code class="xref py py-mod docutils literal notranslate"><span class="pre">nxdltree</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#module-punx.nxdltree">source code documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="schema_manager.html">Manage the XML Schema files : <code class="xref py py-mod docutils literal notranslate"><span class="pre">schema_manager</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="validate.html">Validation : <code class="xref py py-mod docutils literal notranslate"><span class="pre">validate</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contents.html#source-code">Source Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contents.html#indices-and-tables">Indices and tables</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">punx</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../contents.html">Contents</a> &raquo;</li>
+      <li>NXDL Definition File Tree Structure : <code class="xref py py-mod docutils literal notranslate"><span class="pre">nxdltree</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/source_code/nxdltree.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="nxdl-definition-file-tree-structure-nxdltree">
+<span id="nxdltree"></span><h1>NXDL Definition File Tree Structure : <code class="xref py py-mod docutils literal notranslate"><span class="pre">nxdltree</span></code><a class="headerlink" href="#nxdl-definition-file-tree-structure-nxdltree" title="Permalink to this headline"></a></h1>
+<p>Describe the tree structure of a NeXus Definition Language NXDL XML file.</p>
+<p>Note:  The <em>tree</em> subcommand replaces the now-legacy <em>structure</em> subcommand.</p>
+<hr class="docutils" />
+<section id="module-punx.nxdltree">
+<span id="source-code-documentation"></span><h2>source code documentation<a class="headerlink" href="#module-punx.nxdltree" title="Permalink to this headline"></a></h2>
+<p>Describe the tree structure of a NXDL XML file</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#punx.nxdltree.NxdlTreeView" title="punx.nxdltree.NxdlTreeView"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NxdlTreeView</span></code></a>(nxdl_file)</p></td>
+<td><p>Describe the tree structure of a NXDL XML file</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py class">
+<dt class="sig sig-object py" id="punx.nxdltree.NxdlTreeView">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">punx.nxdltree.</span></span><span class="sig-name descname"><span class="pre">NxdlTreeView</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nxdl_file</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/nxdltree.html#NxdlTreeView"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.nxdltree.NxdlTreeView" title="Permalink to this definition"></a></dt>
+<dd><p>Describe the tree structure of a NXDL XML file</p>
+<p>Example usage showing default display:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mc</span> <span class="o">=</span> <span class="n">NxdlTreeView</span><span class="p">(</span><span class="n">nxdl_file_name</span><span class="p">)</span>
+<span class="n">mc</span><span class="o">.</span><span class="n">array_items_shown</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">show_attributes</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">txt</span> <span class="o">=</span> <span class="n">mc</span><span class="o">.</span><span class="n">report</span><span class="p">(</span><span class="n">show_attributes</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="punx.nxdltree.NxdlTreeView.report">
+<span class="sig-name descname"><span class="pre">report</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">show_attributes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/nxdltree.html#NxdlTreeView.report"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.nxdltree.NxdlTreeView.report" title="Permalink to this definition"></a></dt>
+<dd><p>return the structure of the NXDL file in a list of strings</p>
+<p>The work of parsing the data file is done in this method.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="punx.nxdltree.xslt_transformation">
+<span class="sig-prename descclassname"><span class="pre">punx.nxdltree.</span></span><span class="sig-name descname"><span class="pre">xslt_transformation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xslt_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">src_xml_file</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/nxdltree.html#xslt_transformation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.nxdltree.xslt_transformation" title="Permalink to this definition"></a></dt>
+<dd><p>return the transform of an XML file using an XSLT</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>xslt_file</strong> (<em>str</em>) – name of XSLT file</p></li>
+<li><p><strong>src_xml_file</strong> (<em>str</em>) – name of XML file</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="nxdl_schema.html" class="btn btn-neutral float-left" title="NXDL Rules: The XML Schema files : nxdl_schema" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="schema_manager.html" class="btn btn-neutral float-right" title="Manage the XML Schema files : schema_manager" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2014-2021, Pete R. Jemian.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

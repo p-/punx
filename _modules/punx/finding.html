@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>punx.finding &mdash; punx 7.g4a22359 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> punx
+          </a>
+              <div class="version">
+                0.2.6
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../contents.html">Contents</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">punx</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+      <li>punx.finding</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for punx.finding</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -----------------------------------------------------------------------------</span>
+<span class="c1"># :author:    Pete R. Jemian</span>
+<span class="c1"># :email:     prjemian@gmail.com</span>
+<span class="c1"># :copyright: (c) 2017-2018, Pete R. Jemian</span>
+<span class="c1">#</span>
+<span class="c1"># Distributed under the terms of the Creative Commons Attribution 4.0 International Public License.</span>
+<span class="c1">#</span>
+<span class="c1"># The full license is in the file LICENSE.txt, distributed with this software.</span>
+<span class="c1"># -----------------------------------------------------------------------------</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">document each item during validation</span>
+
+<span class="sd">.. autosummary::</span>
+
+<span class="sd">   ~Finding</span>
+<span class="sd">   ~VALID_STATUS_DICT</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+
+
+<span class="kn">import</span> <span class="nn">hashlib</span>
+
+
+<div class="viewcode-block" id="ValidationResultStatus"><a class="viewcode-back" href="../../source_code/finding.html#punx.finding.ValidationResultStatus">[docs]</a><span class="k">class</span> <span class="nc">ValidationResultStatus</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    summary result of a Finding</span>
+
+<span class="sd">    :param str key: short name</span>
+<span class="sd">    :param str color: suggested color for GUI</span>
+<span class="sd">    :param str description: one-line summary</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">color</span><span class="p">,</span> <span class="n">description</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">key</span> <span class="o">=</span> <span class="n">key</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">value</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="n">color</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">description</span> <span class="o">=</span> <span class="n">description</span>
+
+    <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">key</span></div>
+
+
+<span class="n">VERY_BAD</span> <span class="o">=</span> <span class="o">-</span><span class="mi">10000000</span>
+<span class="n">OK</span> <span class="o">=</span> <span class="n">ValidationResultStatus</span><span class="p">(</span><span class="s2">&quot;OK&quot;</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="s2">&quot;green&quot;</span><span class="p">,</span> <span class="s2">&quot;meets NeXus specification&quot;</span><span class="p">)</span>
+<span class="n">NOTE</span> <span class="o">=</span> <span class="n">ValidationResultStatus</span><span class="p">(</span>
+    <span class="s2">&quot;NOTE&quot;</span><span class="p">,</span> <span class="mi">75</span><span class="p">,</span> <span class="s2">&quot;palegreen&quot;</span><span class="p">,</span> <span class="s2">&quot;does not meet NeXus specification, but acceptable&quot;</span>
+<span class="p">)</span>
+<span class="n">WARN</span> <span class="o">=</span> <span class="n">ValidationResultStatus</span><span class="p">(</span>
+    <span class="s2">&quot;WARN&quot;</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="s2">&quot;yellow&quot;</span><span class="p">,</span> <span class="s2">&quot;does not meet NeXus specification, not generally acceptable&quot;</span>
+<span class="p">)</span>
+<span class="n">ERROR</span> <span class="o">=</span> <span class="n">ValidationResultStatus</span><span class="p">(</span><span class="s2">&quot;ERROR&quot;</span><span class="p">,</span> <span class="n">VERY_BAD</span><span class="p">,</span> <span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="s2">&quot;violates NeXus specification&quot;</span><span class="p">)</span>
+<span class="n">TODO</span> <span class="o">=</span> <span class="n">ValidationResultStatus</span><span class="p">(</span><span class="s2">&quot;TODO&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="s2">&quot;validation not implemented yet&quot;</span><span class="p">)</span>
+<span class="n">UNUSED</span> <span class="o">=</span> <span class="n">ValidationResultStatus</span><span class="p">(</span>
+    <span class="s2">&quot;UNUSED&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;grey&quot;</span><span class="p">,</span> <span class="s2">&quot;optional NeXus item not used in data file&quot;</span>
+<span class="p">)</span>
+<span class="n">COMMENT</span> <span class="o">=</span> <span class="n">ValidationResultStatus</span><span class="p">(</span>
+    <span class="s2">&quot;COMMENT&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;grey&quot;</span><span class="p">,</span> <span class="s2">&quot;comment from the punx source code&quot;</span>
+<span class="p">)</span>
+<span class="n">OPTIONAL</span> <span class="o">=</span> <span class="n">ValidationResultStatus</span><span class="p">(</span>
+    <span class="s2">&quot;OPTIONAL&quot;</span><span class="p">,</span> <span class="mi">99</span><span class="p">,</span> <span class="s2">&quot;grey&quot;</span><span class="p">,</span> <span class="s2">&quot;allowed by NeXus specification, not identified&quot;</span>
+<span class="p">)</span>
+
+<span class="n">VALID_STATUS_LIST</span> <span class="o">=</span> <span class="p">(</span><span class="n">OK</span><span class="p">,</span> <span class="n">NOTE</span><span class="p">,</span> <span class="n">WARN</span><span class="p">,</span> <span class="n">ERROR</span><span class="p">,</span> <span class="n">TODO</span><span class="p">,</span> <span class="n">UNUSED</span><span class="p">,</span> <span class="n">COMMENT</span><span class="p">,</span> <span class="n">OPTIONAL</span><span class="p">)</span>
+<span class="n">VALID_STATUS_DICT</span> <span class="o">=</span> <span class="p">{</span><span class="nb">str</span><span class="p">(</span><span class="n">f</span><span class="p">):</span> <span class="n">f</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">VALID_STATUS_LIST</span><span class="p">}</span>
+<span class="sd">&quot;&quot;&quot;dictionary (by names) of all available validations&quot;&quot;&quot;</span>
+
+<span class="n">TF_RESULT</span> <span class="o">=</span> <span class="p">{</span><span class="kc">True</span><span class="p">:</span> <span class="n">OK</span><span class="p">,</span> <span class="kc">False</span><span class="p">:</span> <span class="n">ERROR</span><span class="p">}</span>
+
+<span class="c1"># SHOW_ALL = VALID_STATUS_LIST</span>
+<span class="c1"># SHOW_ERRORS = (ERROR, WARN)</span>
+<span class="c1"># SHOW_NOT_OK = (WARN, ERROR, TODO, UNUSED)</span>
+
+
+<div class="viewcode-block" id="Finding"><a class="viewcode-back" href="../../source_code/finding.html#punx.finding.Finding">[docs]</a><span class="k">class</span> <span class="nc">Finding</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    a single reported observation while validating</span>
+
+<span class="sd">    :param str h5_address: address of h5py item</span>
+<span class="sd">    :param str test_name: short description of the test</span>
+<span class="sd">    :param obj status: one of: OK NOTE WARN ERROR TODO COMMENT OPTIONAL UNUSED</span>
+<span class="sd">    :param str comment: description</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">h5_address</span><span class="p">,</span> <span class="n">test_name</span><span class="p">,</span> <span class="n">status</span><span class="p">,</span> <span class="n">comment</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">status</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">VALID_STATUS_LIST</span><span class="p">:</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;unknown status value: &quot;</span> <span class="o">+</span> <span class="n">status</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">test_name</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">test_name</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">h5_address</span> <span class="o">=</span> <span class="n">h5_address</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">status</span> <span class="o">=</span> <span class="n">status</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">comment</span> <span class="o">=</span> <span class="n">comment</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">key</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">make_md5</span>
+
+    <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">s</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">status</span><span class="p">)</span>
+            <span class="n">s</span> <span class="o">+=</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">h5_address</span>
+            <span class="n">s</span> <span class="o">+=</span> <span class="s2">&quot;: &quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">test_name</span>
+            <span class="n">s</span> <span class="o">+=</span> <span class="s2">&quot;: &quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">comment</span>
+            <span class="k">return</span> <span class="n">s</span>
+        <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+            <span class="k">return</span> <span class="nb">object</span><span class="o">.</span><span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+<div class="viewcode-block" id="Finding.make_md5"><a class="viewcode-back" href="../../source_code/finding.html#punx.finding.Finding.make_md5">[docs]</a>    <span class="k">def</span> <span class="nf">make_md5</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;make a unique hash for this finding&quot;&quot;&quot;</span>
+        <span class="n">h</span> <span class="o">=</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">md5</span><span class="p">()</span>
+        <span class="n">h</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="nb">bytes</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">h5_address</span><span class="p">))</span>
+        <span class="n">h</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">h</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="nb">bytes</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">test_name</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">h</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span></div></div>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2014-2021, Pete R. Jemian.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
