@@ -1,100 +1,61 @@
-<!DOCTYPE html>
-<html class="writer-html5" lang="en" >
-<head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NXDL Manager : nxdl_manager &mdash; punx 12.gefa8367 documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
-  <!--[if lt IE 9]>
-    <script src="../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
-    <script src="../_static/js/theme.js"></script>
+
+<!doctype html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>NXDL Manager : nxdl_manager &#8212; punx 13.g996eae3 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bizstyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/bizstyle.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="NXDL Rules: The XML Schema files : nxdl_schema" href="nxdl_schema.html" />
-    <link rel="prev" title="User interface : main" href="main.html" /> 
-</head>
+    <link rel="prev" title="User interface : main" href="main.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <!--[if lt IE 9]>
+    <script src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="nxdl_schema.html" title="NXDL Rules: The XML Schema files : nxdl_schema"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="main.html" title="User interface : main"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">punx 13.g996eae3 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../contents.html" accesskey="U">Contents</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">NXDL Manager : <code class="xref py py-mod docutils literal notranslate"><span class="pre">nxdl_manager</span></code></a></li> 
+      </ul>
+    </div>  
 
-<body class="wy-body-for-nav"> 
-  <div class="wy-grid-for-nav">
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> punx
-          </a>
-              <div class="version">
-                0.2.6
-              </div>
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
-</div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="../contents.html">Contents</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../overview.html">Project Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../install.html">Installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../changes.html">Change History</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../license.html">License</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cache_manager.html">Cache : <code class="xref py py-mod docutils literal notranslate"><span class="pre">cache_manager</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="finding.html">Findings : <code class="xref py py-mod docutils literal notranslate"><span class="pre">finding</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="github_handler.html">GitHub : <code class="xref py py-mod docutils literal notranslate"><span class="pre">github_handler</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="h5tree.html">HDF5 Data File Tree Structure : <code class="xref py py-mod docutils literal notranslate"><span class="pre">h5tree</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="main.html">User interface : <code class="xref py py-mod docutils literal notranslate"><span class="pre">main</span></code></a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">NXDL Manager : <code class="xref py py-mod docutils literal notranslate"><span class="pre">nxdl_manager</span></code></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#module-punx.nxdl_manager">source code documentation</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="nxdl_schema.html">NXDL Rules: The XML Schema files : <code class="xref py py-mod docutils literal notranslate"><span class="pre">nxdl_schema</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="nxdltree.html">NXDL Definition File Tree Structure : <code class="xref py py-mod docutils literal notranslate"><span class="pre">nxdltree</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="schema_manager.html">Manage the XML Schema files : <code class="xref py py-mod docutils literal notranslate"><span class="pre">schema_manager</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="validate.html">Validation : <code class="xref py py-mod docutils literal notranslate"><span class="pre">validate</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../contents.html#source-code">Source Code</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../contents.html#indices-and-tables">Indices and tables</a></li>
-</ul>
-</li>
-</ul>
-
-        </div>
-      </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">punx</a>
-      </nav>
-
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
-  <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="../contents.html">Contents</a> &raquo;</li>
-      <li>NXDL Manager : <code class="xref py py-mod docutils literal notranslate"><span class="pre">nxdl_manager</span></code></li>
-      <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/source_code/nxdl_manager.rst.txt" rel="nofollow"> View page source</a>
-      </li>
-  </ul>
-  <hr/>
-</div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
-             
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
   <section id="nxdl-manager-nxdl-manager">
-<h1>NXDL Manager : <code class="xref py py-mod docutils literal notranslate"><span class="pre">nxdl_manager</span></code><a class="headerlink" href="#nxdl-manager-nxdl-manager" title="Permalink to this headline"></a></h1>
+<h1>NXDL Manager : <code class="xref py py-mod docutils literal notranslate"><span class="pre">nxdl_manager</span></code><a class="headerlink" href="#nxdl-manager-nxdl-manager" title="Permalink to this headline">¶</a></h1>
 <section id="module-punx.nxdl_manager">
-<span id="source-code-documentation"></span><h2>source code documentation<a class="headerlink" href="#module-punx.nxdl_manager" title="Permalink to this headline"></a></h2>
+<span id="source-code-documentation"></span><h2>source code documentation<a class="headerlink" href="#module-punx.nxdl_manager" title="Permalink to this headline">¶</a></h2>
 <p>Python representation of an NeXus NXDL class specification.</p>
 <ul class="simple">
 <li><p>The <em>nxdl_manager</em> calls <em>schema_manager</em></p></li>
@@ -107,7 +68,7 @@ It is identified by a name (release name, tag name, short commit hash, or branch
 name).</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="punx.nxdl_manager.NXDL_Manager">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">punx.nxdl_manager.</span></span><span class="sig-name descname"><span class="pre">NXDL_Manager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_set</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/nxdl_manager.html#NXDL_Manager"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.nxdl_manager.NXDL_Manager" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">punx.nxdl_manager.</span></span><span class="sig-name descname"><span class="pre">NXDL_Manager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_set</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/nxdl_manager.html#NXDL_Manager"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.nxdl_manager.NXDL_Manager" title="Permalink to this definition">¶</a></dt>
 <dd><p>Python access to the NXDL classes found in <code class="docutils literal notranslate"><span class="pre">nxdl_dir</span></code>.</p>
 <p>Attributes</p>
 <dl class="simple">
@@ -131,7 +92,7 @@ If not <code class="docutils literal notranslate"><span class="pre">None</span><
 </dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="punx.nxdl_manager.NXDL_Manager.get_nxdl_defaults">
-<span class="sig-name descname"><span class="pre">get_nxdl_defaults</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/nxdl_manager.html#NXDL_Manager.get_nxdl_defaults"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.nxdl_manager.NXDL_Manager.get_nxdl_defaults" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">get_nxdl_defaults</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/nxdl_manager.html#NXDL_Manager.get_nxdl_defaults"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.nxdl_manager.NXDL_Manager.get_nxdl_defaults" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get default values for this NXDL type from the NXDL Schema.</p>
 </dd></dl>
 
@@ -139,12 +100,12 @@ If not <code class="docutils literal notranslate"><span class="pre">None</span><
 
 <dl class="py class">
 <dt class="sig sig-object py" id="punx.nxdl_manager.NXDL__attribute">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">punx.nxdl_manager.</span></span><span class="sig-name descname"><span class="pre">NXDL__attribute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nxdl_definition</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nxdl_defaults</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/nxdl_manager.html#NXDL__attribute"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.nxdl_manager.NXDL__attribute" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">punx.nxdl_manager.</span></span><span class="sig-name descname"><span class="pre">NXDL__attribute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nxdl_definition</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nxdl_defaults</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/nxdl_manager.html#NXDL__attribute"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.nxdl_manager.NXDL__attribute" title="Permalink to this definition">¶</a></dt>
 <dd><p>Contents of a <em>attribute</em> structure (XML element) in a NXDL XML file.</p>
 <p>~parse_nxdl_xml</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="punx.nxdl_manager.NXDL__attribute.parse_nxdl_xml">
-<span class="sig-name descname"><span class="pre">parse_nxdl_xml</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xml_node</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/nxdl_manager.html#NXDL__attribute.parse_nxdl_xml"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.nxdl_manager.NXDL__attribute.parse_nxdl_xml" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">parse_nxdl_xml</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xml_node</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/nxdl_manager.html#NXDL__attribute.parse_nxdl_xml"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.nxdl_manager.NXDL__attribute.parse_nxdl_xml" title="Permalink to this definition">¶</a></dt>
 <dd><p>parse the XML content</p>
 </dd></dl>
 
@@ -152,17 +113,17 @@ If not <code class="docutils literal notranslate"><span class="pre">None</span><
 
 <dl class="py class">
 <dt class="sig sig-object py" id="punx.nxdl_manager.NXDL__base">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">punx.nxdl_manager.</span></span><span class="sig-name descname"><span class="pre">NXDL__base</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nxdl_definition</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/nxdl_manager.html#NXDL__base"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.nxdl_manager.NXDL__base" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">punx.nxdl_manager.</span></span><span class="sig-name descname"><span class="pre">NXDL__base</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nxdl_definition</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/nxdl_manager.html#NXDL__base"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.nxdl_manager.NXDL__base" title="Permalink to this definition">¶</a></dt>
 <dd><p>Base class for each NXDL structure.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="punx.nxdl_manager.NXDL__base.assign_defaults">
-<span class="sig-name descname"><span class="pre">assign_defaults</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/nxdl_manager.html#NXDL__base.assign_defaults"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.nxdl_manager.NXDL__base.assign_defaults" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">assign_defaults</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/nxdl_manager.html#NXDL__base.assign_defaults"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.nxdl_manager.NXDL__base.assign_defaults" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set default values for required components now.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="punx.nxdl_manager.NXDL__base.ensure_unique_name">
-<span class="sig-name descname"><span class="pre">ensure_unique_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/nxdl_manager.html#NXDL__base.ensure_unique_name"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.nxdl_manager.NXDL__base.ensure_unique_name" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">ensure_unique_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/nxdl_manager.html#NXDL__base.ensure_unique_name"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.nxdl_manager.NXDL__base.ensure_unique_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Check <code class="docutils literal notranslate"><span class="pre">obj.name</span></code>, replace to make unique if needed.</p>
 <p>EXAMPLE:</p>
 <ul class="simple">
@@ -179,7 +140,7 @@ If not <code class="docutils literal notranslate"><span class="pre">None</span><
 
 <dl class="py method">
 <dt class="sig sig-object py" id="punx.nxdl_manager.NXDL__base.parse_attributes">
-<span class="sig-name descname"><span class="pre">parse_attributes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xml_node</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/nxdl_manager.html#NXDL__base.parse_attributes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.nxdl_manager.NXDL__base.parse_attributes" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">parse_attributes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xml_node</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/nxdl_manager.html#NXDL__base.parse_attributes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.nxdl_manager.NXDL__base.parse_attributes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Parse NXDL <code class="docutils literal notranslate"><span class="pre">&lt;attribute&gt;</span></code> elements in <code class="docutils literal notranslate"><span class="pre">xml_node</span></code>.</p>
 <p>PARAMETERS</p>
 <dl>
@@ -191,7 +152,7 @@ If not <code class="docutils literal notranslate"><span class="pre">None</span><
 
 <dl class="py method">
 <dt class="sig sig-object py" id="punx.nxdl_manager.NXDL__base.parse_fields">
-<span class="sig-name descname"><span class="pre">parse_fields</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xml_node</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/nxdl_manager.html#NXDL__base.parse_fields"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.nxdl_manager.NXDL__base.parse_fields" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">parse_fields</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xml_node</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/nxdl_manager.html#NXDL__base.parse_fields"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.nxdl_manager.NXDL__base.parse_fields" title="Permalink to this definition">¶</a></dt>
 <dd><p>Parse NXDL <code class="docutils literal notranslate"><span class="pre">&lt;field&gt;</span></code> elements in <code class="docutils literal notranslate"><span class="pre">xml_node</span></code>.</p>
 <p>PARAMETERS</p>
 <dl class="simple">
@@ -202,7 +163,7 @@ If not <code class="docutils literal notranslate"><span class="pre">None</span><
 
 <dl class="py method">
 <dt class="sig sig-object py" id="punx.nxdl_manager.NXDL__base.parse_groups">
-<span class="sig-name descname"><span class="pre">parse_groups</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xml_node</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/nxdl_manager.html#NXDL__base.parse_groups"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.nxdl_manager.NXDL__base.parse_groups" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">parse_groups</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xml_node</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/nxdl_manager.html#NXDL__base.parse_groups"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.nxdl_manager.NXDL__base.parse_groups" title="Permalink to this definition">¶</a></dt>
 <dd><p>Parse NXDL <code class="docutils literal notranslate"><span class="pre">&lt;group&gt;</span></code> elements in <code class="docutils literal notranslate"><span class="pre">xml_node</span></code>.</p>
 <p>PARAMETERS</p>
 <dl class="simple">
@@ -213,7 +174,7 @@ If not <code class="docutils literal notranslate"><span class="pre">None</span><
 
 <dl class="py method">
 <dt class="sig sig-object py" id="punx.nxdl_manager.NXDL__base.parse_links">
-<span class="sig-name descname"><span class="pre">parse_links</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xml_node</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/nxdl_manager.html#NXDL__base.parse_links"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.nxdl_manager.NXDL__base.parse_links" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">parse_links</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xml_node</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/nxdl_manager.html#NXDL__base.parse_links"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.nxdl_manager.NXDL__base.parse_links" title="Permalink to this definition">¶</a></dt>
 <dd><p>Parse NXDL <code class="docutils literal notranslate"><span class="pre">&lt;link&gt;</span></code> elements in <code class="docutils literal notranslate"><span class="pre">xml_node</span></code>.</p>
 <p>PARAMETERS</p>
 <dl class="simple">
@@ -224,13 +185,13 @@ If not <code class="docutils literal notranslate"><span class="pre">None</span><
 
 <dl class="py method">
 <dt class="sig sig-object py" id="punx.nxdl_manager.NXDL__base.parse_nxdl_xml">
-<span class="sig-name descname"><span class="pre">parse_nxdl_xml</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/nxdl_manager.html#NXDL__base.parse_nxdl_xml"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.nxdl_manager.NXDL__base.parse_nxdl_xml" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">parse_nxdl_xml</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/nxdl_manager.html#NXDL__base.parse_nxdl_xml"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.nxdl_manager.NXDL__base.parse_nxdl_xml" title="Permalink to this definition">¶</a></dt>
 <dd><p>Parse the XML node and assemble NXDL structure.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="punx.nxdl_manager.NXDL__base.parse_symbols">
-<span class="sig-name descname"><span class="pre">parse_symbols</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xml_node</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/nxdl_manager.html#NXDL__base.parse_symbols"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.nxdl_manager.NXDL__base.parse_symbols" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">parse_symbols</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xml_node</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/nxdl_manager.html#NXDL__base.parse_symbols"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.nxdl_manager.NXDL__base.parse_symbols" title="Permalink to this definition">¶</a></dt>
 <dd><p>Parse NXDL <code class="docutils literal notranslate"><span class="pre">&lt;symbols&gt;</span></code> elements in <code class="docutils literal notranslate"><span class="pre">xml_node</span></code>.</p>
 <p>PARAMETERS</p>
 <dl class="simple">
@@ -241,7 +202,7 @@ If not <code class="docutils literal notranslate"><span class="pre">None</span><
 
 <dl class="py method">
 <dt class="sig sig-object py" id="punx.nxdl_manager.NXDL__base.parse_xml_attributes">
-<span class="sig-name descname"><span class="pre">parse_xml_attributes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">defaults</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/nxdl_manager.html#NXDL__base.parse_xml_attributes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.nxdl_manager.NXDL__base.parse_xml_attributes" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">parse_xml_attributes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">defaults</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/nxdl_manager.html#NXDL__base.parse_xml_attributes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.nxdl_manager.NXDL__base.parse_xml_attributes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Parse the XML attributes of an NXDL element tag.</p>
 <p>PARAMETERS</p>
 <dl class="simple">
@@ -254,7 +215,7 @@ If not <code class="docutils literal notranslate"><span class="pre">None</span><
 
 <dl class="py class">
 <dt class="sig sig-object py" id="punx.nxdl_manager.NXDL__definition">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">punx.nxdl_manager.</span></span><span class="sig-name descname"><span class="pre">NXDL__definition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nxdl_manager</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/nxdl_manager.html#NXDL__definition"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.nxdl_manager.NXDL__definition" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">punx.nxdl_manager.</span></span><span class="sig-name descname"><span class="pre">NXDL__definition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nxdl_manager</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/nxdl_manager.html#NXDL__definition"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.nxdl_manager.NXDL__definition" title="Permalink to this definition">¶</a></dt>
 <dd><p>Contents of a <em>definition</em> element in a NXDL XML file.</p>
 <dl class="simple">
 <dt>nxdl_manager obj :</dt><dd><p>Instance of <a class="reference internal" href="#punx.nxdl_manager.NXDL_Manager" title="punx.nxdl_manager.NXDL_Manager"><code class="xref py py-class docutils literal notranslate"><span class="pre">NXDL_Manager()</span></code></a>.</p>
@@ -262,13 +223,13 @@ If not <code class="docutils literal notranslate"><span class="pre">None</span><
 </dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="punx.nxdl_manager.NXDL__definition.parse_nxdl_xml">
-<span class="sig-name descname"><span class="pre">parse_nxdl_xml</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/nxdl_manager.html#NXDL__definition.parse_nxdl_xml"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.nxdl_manager.NXDL__definition.parse_nxdl_xml" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">parse_nxdl_xml</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/nxdl_manager.html#NXDL__definition.parse_nxdl_xml"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.nxdl_manager.NXDL__definition.parse_nxdl_xml" title="Permalink to this definition">¶</a></dt>
 <dd><p>parse the XML content</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="punx.nxdl_manager.NXDL__definition.set_file">
-<span class="sig-name descname"><span class="pre">set_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fname</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/nxdl_manager.html#NXDL__definition.set_file"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.nxdl_manager.NXDL__definition.set_file" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">set_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fname</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/nxdl_manager.html#NXDL__definition.set_file"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.nxdl_manager.NXDL__definition.set_file" title="Permalink to this definition">¶</a></dt>
 <dd><p>self.category: base_classes | applications | contributed_definitions</p>
 <p>determine the category of this NXDL</p>
 </dd></dl>
@@ -277,11 +238,11 @@ If not <code class="docutils literal notranslate"><span class="pre">None</span><
 
 <dl class="py class">
 <dt class="sig sig-object py" id="punx.nxdl_manager.NXDL__dim">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">punx.nxdl_manager.</span></span><span class="sig-name descname"><span class="pre">NXDL__dim</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nxdl_definition</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nxdl_defaults</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/nxdl_manager.html#NXDL__dim"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.nxdl_manager.NXDL__dim" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">punx.nxdl_manager.</span></span><span class="sig-name descname"><span class="pre">NXDL__dim</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nxdl_definition</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nxdl_defaults</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/nxdl_manager.html#NXDL__dim"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.nxdl_manager.NXDL__dim" title="Permalink to this definition">¶</a></dt>
 <dd><p>Contents of a <em>dim</em> structure (XML element) in a NXDL XML file.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="punx.nxdl_manager.NXDL__dim.parse_nxdl_xml">
-<span class="sig-name descname"><span class="pre">parse_nxdl_xml</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xml_node</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/nxdl_manager.html#NXDL__dim.parse_nxdl_xml"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.nxdl_manager.NXDL__dim.parse_nxdl_xml" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">parse_nxdl_xml</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xml_node</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/nxdl_manager.html#NXDL__dim.parse_nxdl_xml"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.nxdl_manager.NXDL__dim.parse_nxdl_xml" title="Permalink to this definition">¶</a></dt>
 <dd><p>parse the XML content</p>
 </dd></dl>
 
@@ -289,11 +250,11 @@ If not <code class="docutils literal notranslate"><span class="pre">None</span><
 
 <dl class="py class">
 <dt class="sig sig-object py" id="punx.nxdl_manager.NXDL__dimensions">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">punx.nxdl_manager.</span></span><span class="sig-name descname"><span class="pre">NXDL__dimensions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nxdl_definition</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nxdl_defaults</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/nxdl_manager.html#NXDL__dimensions"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.nxdl_manager.NXDL__dimensions" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">punx.nxdl_manager.</span></span><span class="sig-name descname"><span class="pre">NXDL__dimensions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nxdl_definition</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nxdl_defaults</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/nxdl_manager.html#NXDL__dimensions"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.nxdl_manager.NXDL__dimensions" title="Permalink to this definition">¶</a></dt>
 <dd><p>Contents of a <em>dimensions</em> structure (XML element) in a NXDL XML file.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="punx.nxdl_manager.NXDL__dimensions.parse_nxdl_xml">
-<span class="sig-name descname"><span class="pre">parse_nxdl_xml</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xml_node</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/nxdl_manager.html#NXDL__dimensions.parse_nxdl_xml"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.nxdl_manager.NXDL__dimensions.parse_nxdl_xml" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">parse_nxdl_xml</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xml_node</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/nxdl_manager.html#NXDL__dimensions.parse_nxdl_xml"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.nxdl_manager.NXDL__dimensions.parse_nxdl_xml" title="Permalink to this definition">¶</a></dt>
 <dd><p>parse the XML content</p>
 </dd></dl>
 
@@ -301,11 +262,11 @@ If not <code class="docutils literal notranslate"><span class="pre">None</span><
 
 <dl class="py class">
 <dt class="sig sig-object py" id="punx.nxdl_manager.NXDL__field">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">punx.nxdl_manager.</span></span><span class="sig-name descname"><span class="pre">NXDL__field</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nxdl_definition</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nxdl_defaults</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/nxdl_manager.html#NXDL__field"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.nxdl_manager.NXDL__field" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">punx.nxdl_manager.</span></span><span class="sig-name descname"><span class="pre">NXDL__field</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nxdl_definition</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nxdl_defaults</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/nxdl_manager.html#NXDL__field"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.nxdl_manager.NXDL__field" title="Permalink to this definition">¶</a></dt>
 <dd><p>Contents of a <em>field</em> structure (XML element) in a NXDL XML file.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="punx.nxdl_manager.NXDL__field.parse_nxdl_xml">
-<span class="sig-name descname"><span class="pre">parse_nxdl_xml</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xml_node</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/nxdl_manager.html#NXDL__field.parse_nxdl_xml"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.nxdl_manager.NXDL__field.parse_nxdl_xml" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">parse_nxdl_xml</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xml_node</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/nxdl_manager.html#NXDL__field.parse_nxdl_xml"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.nxdl_manager.NXDL__field.parse_nxdl_xml" title="Permalink to this definition">¶</a></dt>
 <dd><p>parse the XML content</p>
 </dd></dl>
 
@@ -313,11 +274,11 @@ If not <code class="docutils literal notranslate"><span class="pre">None</span><
 
 <dl class="py class">
 <dt class="sig sig-object py" id="punx.nxdl_manager.NXDL__group">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">punx.nxdl_manager.</span></span><span class="sig-name descname"><span class="pre">NXDL__group</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nxdl_definition</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nxdl_defaults</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/nxdl_manager.html#NXDL__group"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.nxdl_manager.NXDL__group" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">punx.nxdl_manager.</span></span><span class="sig-name descname"><span class="pre">NXDL__group</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nxdl_definition</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nxdl_defaults</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/nxdl_manager.html#NXDL__group"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.nxdl_manager.NXDL__group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Contents of a <em>group</em> structure (XML element) in a NXDL XML file.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="punx.nxdl_manager.NXDL__group.parse_nxdl_xml">
-<span class="sig-name descname"><span class="pre">parse_nxdl_xml</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xml_node</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/nxdl_manager.html#NXDL__group.parse_nxdl_xml"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.nxdl_manager.NXDL__group.parse_nxdl_xml" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">parse_nxdl_xml</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xml_node</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/nxdl_manager.html#NXDL__group.parse_nxdl_xml"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.nxdl_manager.NXDL__group.parse_nxdl_xml" title="Permalink to this definition">¶</a></dt>
 <dd><p>parse the XML content</p>
 </dd></dl>
 
@@ -325,7 +286,7 @@ If not <code class="docutils literal notranslate"><span class="pre">None</span><
 
 <dl class="py class">
 <dt class="sig sig-object py" id="punx.nxdl_manager.NXDL__link">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">punx.nxdl_manager.</span></span><span class="sig-name descname"><span class="pre">NXDL__link</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nxdl_definition</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nxdl_defaults</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/nxdl_manager.html#NXDL__link"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.nxdl_manager.NXDL__link" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">punx.nxdl_manager.</span></span><span class="sig-name descname"><span class="pre">NXDL__link</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nxdl_definition</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nxdl_defaults</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/nxdl_manager.html#NXDL__link"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.nxdl_manager.NXDL__link" title="Permalink to this definition">¶</a></dt>
 <dd><p>Contents of a <em>link</em> structure (XML element) in a NXDL XML file.</p>
 <p>example from NXmonopd:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">link</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;polar_angle&quot;</span> <span class="n">target</span><span class="o">=</span><span class="s2">&quot;/NXentry/NXinstrument/NXdetector/polar_angle&quot;</span><span class="o">&gt;</span>
@@ -338,7 +299,7 @@ If not <code class="docutils literal notranslate"><span class="pre">None</span><
 </div>
 <dl class="py method">
 <dt class="sig sig-object py" id="punx.nxdl_manager.NXDL__link.parse_nxdl_xml">
-<span class="sig-name descname"><span class="pre">parse_nxdl_xml</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xml_node</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/nxdl_manager.html#NXDL__link.parse_nxdl_xml"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.nxdl_manager.NXDL__link.parse_nxdl_xml" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">parse_nxdl_xml</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xml_node</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/nxdl_manager.html#NXDL__link.parse_nxdl_xml"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.nxdl_manager.NXDL__link.parse_nxdl_xml" title="Permalink to this definition">¶</a></dt>
 <dd><p>parse the XML content</p>
 </dd></dl>
 
@@ -346,7 +307,7 @@ If not <code class="docutils literal notranslate"><span class="pre">None</span><
 
 <dl class="py class">
 <dt class="sig sig-object py" id="punx.nxdl_manager.NXDL__symbols">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">punx.nxdl_manager.</span></span><span class="sig-name descname"><span class="pre">NXDL__symbols</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nxdl_definition</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nxdl_defaults</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/nxdl_manager.html#NXDL__symbols"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.nxdl_manager.NXDL__symbols" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">punx.nxdl_manager.</span></span><span class="sig-name descname"><span class="pre">NXDL__symbols</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nxdl_definition</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nxdl_defaults</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/nxdl_manager.html#NXDL__symbols"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.nxdl_manager.NXDL__symbols" title="Permalink to this definition">¶</a></dt>
 <dd><p>Contents of a <em>symbols</em> structure (XML element) in a NXDL XML file.</p>
 <p>example from NXcrystal:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">symbols</span><span class="o">&gt;</span>
@@ -358,7 +319,7 @@ If not <code class="docutils literal notranslate"><span class="pre">None</span><
 </div>
 <dl class="py method">
 <dt class="sig sig-object py" id="punx.nxdl_manager.NXDL__symbols.parse_nxdl_xml">
-<span class="sig-name descname"><span class="pre">parse_nxdl_xml</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">symbols_node</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/nxdl_manager.html#NXDL__symbols.parse_nxdl_xml"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.nxdl_manager.NXDL__symbols.parse_nxdl_xml" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">parse_nxdl_xml</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">symbols_node</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/nxdl_manager.html#NXDL__symbols.parse_nxdl_xml"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.nxdl_manager.NXDL__symbols.parse_nxdl_xml" title="Permalink to this definition">¶</a></dt>
 <dd><p>parse the XML content</p>
 </dd></dl>
 
@@ -366,7 +327,7 @@ If not <code class="docutils literal notranslate"><span class="pre">None</span><
 
 <dl class="py function">
 <dt class="sig sig-object py" id="punx.nxdl_manager.get_NXDL_file_list">
-<span class="sig-prename descclassname"><span class="pre">punx.nxdl_manager.</span></span><span class="sig-name descname"><span class="pre">get_NXDL_file_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nxdl_dir</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/nxdl_manager.html#get_NXDL_file_list"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.nxdl_manager.get_NXDL_file_list" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">punx.nxdl_manager.</span></span><span class="sig-name descname"><span class="pre">get_NXDL_file_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nxdl_dir</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/nxdl_manager.html#get_NXDL_file_list"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.nxdl_manager.get_NXDL_file_list" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return a list of all NXDL files in the <code class="docutils literal notranslate"><span class="pre">nxdl_dir</span></code>.</p>
 <p>The list is sorted by NXDL category (base_classes, applications,
 contributed_definitions) and then alphabetically within each category.</p>
@@ -379,7 +340,7 @@ contributed_definitions) and then alphabetically within each category.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="punx.nxdl_manager.validate_xml_tree">
-<span class="sig-prename descclassname"><span class="pre">punx.nxdl_manager.</span></span><span class="sig-name descname"><span class="pre">validate_xml_tree</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xml_tree</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/nxdl_manager.html#validate_xml_tree"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.nxdl_manager.validate_xml_tree" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">punx.nxdl_manager.</span></span><span class="sig-name descname"><span class="pre">validate_xml_tree</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xml_tree</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/nxdl_manager.html#validate_xml_tree"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.nxdl_manager.validate_xml_tree" title="Permalink to this definition">¶</a></dt>
 <dd><p>Validate an NXDL XML file against its NeXus NXDL XML Schema file.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -392,34 +353,70 @@ contributed_definitions) and then alphabetically within each category.</p>
 </section>
 
 
-           </div>
+            <div class="clearer"></div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="main.html" class="btn btn-neutral float-left" title="User interface : main" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="nxdl_schema.html" class="btn btn-neutral float-right" title="NXDL Rules: The XML Schema files : nxdl_schema" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
-
-  <hr/>
-
-  <div role="contentinfo">
-    <p>&#169; Copyright 2014-2022, Pete R. Jemian.</p>
-  </div>
-
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
-   
-
-</footer>
         </div>
       </div>
-    </section>
-  </div>
-  <script>
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script> 
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">NXDL Manager : <code class="xref py py-mod docutils literal notranslate"><span class="pre">nxdl_manager</span></code></a><ul>
+<li><a class="reference internal" href="#module-punx.nxdl_manager">source code documentation</a></li>
+</ul>
+</li>
+</ul>
 
-</body>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="main.html"
+                        title="previous chapter">User interface : <code class="xref py py-mod docutils literal notranslate"><span class="pre">main</span></code></a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="nxdl_schema.html"
+                        title="next chapter">NXDL Rules: The XML Schema files : <code class="xref py py-mod docutils literal notranslate"><span class="pre">nxdl_schema</span></code></a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/source_code/nxdl_manager.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="nxdl_schema.html" title="NXDL Rules: The XML Schema files : nxdl_schema"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="main.html" title="User interface : main"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">punx 13.g996eae3 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../contents.html" >Contents</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">NXDL Manager : <code class="xref py py-mod docutils literal notranslate"><span class="pre">nxdl_manager</span></code></a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2014-2022, Pete R. Jemian.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.2.
+    </div>
+  </body>
 </html>

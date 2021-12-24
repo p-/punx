@@ -1,100 +1,59 @@
-<!DOCTYPE html>
-<html class="writer-html5" lang="en" >
-<head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HDF5 Data File Tree Structure : h5tree &mdash; punx 12.gefa8367 documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
-  <!--[if lt IE 9]>
-    <script src="../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
-    <script src="../_static/js/theme.js"></script>
+
+<!doctype html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>HDF5 Data File Tree Structure : h5tree &#8212; punx 13.g996eae3 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bizstyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/bizstyle.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="User interface : main" href="main.html" />
-    <link rel="prev" title="GitHub : github_handler" href="github_handler.html" /> 
-</head>
+    <link rel="prev" title="GitHub : github_handler" href="github_handler.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <!--[if lt IE 9]>
+    <script src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="main.html" title="User interface : main"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="github_handler.html" title="GitHub : github_handler"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">punx 13.g996eae3 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../contents.html" accesskey="U">Contents</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">HDF5 Data File Tree Structure : <code class="xref py py-mod docutils literal notranslate"><span class="pre">h5tree</span></code></a></li> 
+      </ul>
+    </div>  
 
-<body class="wy-body-for-nav"> 
-  <div class="wy-grid-for-nav">
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> punx
-          </a>
-              <div class="version">
-                0.2.6
-              </div>
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
-</div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="../contents.html">Contents</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../overview.html">Project Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../install.html">Installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../changes.html">Change History</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../license.html">License</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cache_manager.html">Cache : <code class="xref py py-mod docutils literal notranslate"><span class="pre">cache_manager</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="finding.html">Findings : <code class="xref py py-mod docutils literal notranslate"><span class="pre">finding</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="github_handler.html">GitHub : <code class="xref py py-mod docutils literal notranslate"><span class="pre">github_handler</span></code></a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">HDF5 Data File Tree Structure : <code class="xref py py-mod docutils literal notranslate"><span class="pre">h5tree</span></code></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#how-to-use-h5tree">How to use <strong>h5tree</strong></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#example">Example</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#module-punx.h5tree">source code documentation</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="main.html">User interface : <code class="xref py py-mod docutils literal notranslate"><span class="pre">main</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="nxdl_manager.html">NXDL Manager : <code class="xref py py-mod docutils literal notranslate"><span class="pre">nxdl_manager</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="nxdl_schema.html">NXDL Rules: The XML Schema files : <code class="xref py py-mod docutils literal notranslate"><span class="pre">nxdl_schema</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="nxdltree.html">NXDL Definition File Tree Structure : <code class="xref py py-mod docutils literal notranslate"><span class="pre">nxdltree</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="schema_manager.html">Manage the XML Schema files : <code class="xref py py-mod docutils literal notranslate"><span class="pre">schema_manager</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="validate.html">Validation : <code class="xref py py-mod docutils literal notranslate"><span class="pre">validate</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../contents.html#source-code">Source Code</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../contents.html#indices-and-tables">Indices and tables</a></li>
-</ul>
-</li>
-</ul>
-
-        </div>
-      </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">punx</a>
-      </nav>
-
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
-  <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="../contents.html">Contents</a> &raquo;</li>
-      <li>HDF5 Data File Tree Structure : <code class="xref py py-mod docutils literal notranslate"><span class="pre">h5tree</span></code></li>
-      <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/source_code/h5tree.rst.txt" rel="nofollow"> View page source</a>
-      </li>
-  </ul>
-  <hr/>
-</div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
-             
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
   <section id="hdf5-data-file-tree-structure-h5tree">
-<span id="h5tree"></span><h1>HDF5 Data File Tree Structure : <code class="xref py py-mod docutils literal notranslate"><span class="pre">h5tree</span></code><a class="headerlink" href="#hdf5-data-file-tree-structure-h5tree" title="Permalink to this headline"></a></h1>
+<span id="h5tree"></span><h1>HDF5 Data File Tree Structure : <code class="xref py py-mod docutils literal notranslate"><span class="pre">h5tree</span></code><a class="headerlink" href="#hdf5-data-file-tree-structure-h5tree" title="Permalink to this headline">¶</a></h1>
 <p>Print the tree structure of any HDF5 file.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Note</dt>
@@ -105,7 +64,7 @@ the <cite>h5toText</cite> program from the
 </dd>
 </dl>
 <section id="how-to-use-h5tree">
-<span id="index-0"></span><h2>How to use <strong>h5tree</strong><a class="headerlink" href="#how-to-use-h5tree" title="Permalink to this headline"></a></h2>
+<span id="index-0"></span><h2>How to use <strong>h5tree</strong><a class="headerlink" href="#how-to-use-h5tree" title="Permalink to this headline">¶</a></h2>
 <p>Print the HDF5 tree of a file:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ punx tree  path/to/file/hdf5/file.hdf5
 </pre></div>
@@ -126,7 +85,7 @@ the <cite>h5toText</cite> program from the
 </div>
 </section>
 <section id="example">
-<h2>Example<a class="headerlink" href="#example" title="Permalink to this headline"></a></h2>
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
 <p>Here’s an example tree view of a NeXus HDF5 data file
 (<strong>writer_1_3.h5</strong> from the NeXus documentation <a class="footnote-reference brackets" href="#id2" id="id1">1</a>):</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span><span class="lineno"> 1 </span>  [linux,512]$ punx tree data/writer_1_3.hdf5
@@ -153,7 +112,7 @@ the <cite>h5toText</cite> program from the
 </section>
 <hr class="docutils" />
 <section id="module-punx.h5tree">
-<span id="source-code-documentation"></span><h2>source code documentation<a class="headerlink" href="#module-punx.h5tree" title="Permalink to this headline"></a></h2>
+<span id="source-code-documentation"></span><h2>source code documentation<a class="headerlink" href="#module-punx.h5tree" title="Permalink to this headline">¶</a></h2>
 <p>Describe the tree structure of any HDF5 file</p>
 <table class="longtable docutils align-default">
 <colgroup>
@@ -168,7 +127,7 @@ the <cite>h5toText</cite> program from the
 </table>
 <dl class="py class">
 <dt class="sig sig-object py" id="punx.h5tree.Hdf5TreeView">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">punx.h5tree.</span></span><span class="sig-name descname"><span class="pre">Hdf5TreeView</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/h5tree.html#Hdf5TreeView"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.h5tree.Hdf5TreeView" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">punx.h5tree.</span></span><span class="sig-name descname"><span class="pre">Hdf5TreeView</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/h5tree.html#Hdf5TreeView"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.h5tree.Hdf5TreeView" title="Permalink to this definition">¶</a></dt>
 <dd><p>Describe the tree structure of any HDF5 file</p>
 <p>Example usage showing default display:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mc</span> <span class="o">=</span> <span class="n">Hdf5TreeView</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
@@ -179,7 +138,7 @@ the <cite>h5toText</cite> program from the
 </div>
 <dl class="py method">
 <dt class="sig sig-object py" id="punx.h5tree.Hdf5TreeView.report">
-<span class="sig-name descname"><span class="pre">report</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">show_attributes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/h5tree.html#Hdf5TreeView.report"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.h5tree.Hdf5TreeView.report" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">report</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">show_attributes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/h5tree.html#Hdf5TreeView.report"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.h5tree.Hdf5TreeView.report" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the structure of the HDF5 file in a list of strings.</p>
 <p>The work of parsing the datafile is done in this method.</p>
 <p>The hierarchy of the file is represented by indentation using spaces.
@@ -203,34 +162,72 @@ follows the <code class="docutils literal notranslate"><span class="pre">=</span
 </section>
 
 
-           </div>
+            <div class="clearer"></div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="github_handler.html" class="btn btn-neutral float-left" title="GitHub : github_handler" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="main.html" class="btn btn-neutral float-right" title="User interface : main" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
-
-  <hr/>
-
-  <div role="contentinfo">
-    <p>&#169; Copyright 2014-2022, Pete R. Jemian.</p>
-  </div>
-
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
-   
-
-</footer>
         </div>
       </div>
-    </section>
-  </div>
-  <script>
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script> 
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">HDF5 Data File Tree Structure : <code class="xref py py-mod docutils literal notranslate"><span class="pre">h5tree</span></code></a><ul>
+<li><a class="reference internal" href="#how-to-use-h5tree">How to use <strong>h5tree</strong></a></li>
+<li><a class="reference internal" href="#example">Example</a></li>
+<li><a class="reference internal" href="#module-punx.h5tree">source code documentation</a></li>
+</ul>
+</li>
+</ul>
 
-</body>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="github_handler.html"
+                        title="previous chapter">GitHub : <code class="xref py py-mod docutils literal notranslate"><span class="pre">github_handler</span></code></a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="main.html"
+                        title="next chapter">User interface : <code class="xref py py-mod docutils literal notranslate"><span class="pre">main</span></code></a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/source_code/h5tree.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="main.html" title="User interface : main"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="github_handler.html" title="GitHub : github_handler"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">punx 13.g996eae3 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../contents.html" >Contents</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">HDF5 Data File Tree Structure : <code class="xref py py-mod docutils literal notranslate"><span class="pre">h5tree</span></code></a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2014-2022, Pete R. Jemian.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.2.
+    </div>
+  </body>
 </html>

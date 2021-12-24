@@ -1,108 +1,60 @@
-<!DOCTYPE html>
-<html class="writer-html5" lang="en" >
-<head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>User interface: subcommand: demo &mdash; punx 12.gefa8367 documentation</title>
-      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
-  <!--[if lt IE 9]>
-    <script src="_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/doctools.js"></script>
-    <script src="_static/js/theme.js"></script>
+
+<!doctype html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>User interface: subcommand: demo &#8212; punx 13.g996eae3 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/bizstyle.css" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/bizstyle.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="User interface: subcommand: hierarchy" href="hierarchy.html" />
-    <link rel="prev" title="User interface: subcommand: configuration" href="configuration.html" /> 
-</head>
+    <link rel="prev" title="User interface: subcommand: configuration" href="configuration.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <!--[if lt IE 9]>
+    <script src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="hierarchy.html" title="User interface: subcommand: hierarchy"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="configuration.html" title="User interface: subcommand: configuration"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">punx 13.g996eae3 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="contents.html" >Contents</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="overview.html" accesskey="U">Project Overview</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">User interface: subcommand: <strong>demo</strong></a></li> 
+      </ul>
+    </div>  
 
-<body class="wy-body-for-nav"> 
-  <div class="wy-grid-for-nav">
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
-            <a href="index.html" class="icon icon-home"> punx
-          </a>
-              <div class="version">
-                0.2.6
-              </div>
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
-</div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="contents.html">Contents</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="overview.html">Project Overview</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="overview.html#command-line-help">command line help</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="overview.html#subcommands">Subcommands</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="configuration.html">User interface: subcommand: <strong>configuration</strong></a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">User interface: subcommand: <strong>demo</strong></a></li>
-<li class="toctree-l4"><a class="reference internal" href="hierarchy.html">User interface: subcommand: <strong>hierarchy</strong></a></li>
-<li class="toctree-l4"><a class="reference internal" href="tree.html">User interface: subcommand: <strong>tree</strong></a></li>
-<li class="toctree-l4"><a class="reference internal" href="update.html">User interface: subcommand: <strong>update</strong></a></li>
-<li class="toctree-l4"><a class="reference internal" href="validate.html">Validation</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="install.html">Installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changes.html">Change History</a></li>
-<li class="toctree-l2"><a class="reference internal" href="license.html">License</a></li>
-<li class="toctree-l2"><a class="reference internal" href="source_code/cache_manager.html">Cache : <code class="xref py py-mod docutils literal notranslate"><span class="pre">cache_manager</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="source_code/finding.html">Findings : <code class="xref py py-mod docutils literal notranslate"><span class="pre">finding</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="source_code/github_handler.html">GitHub : <code class="xref py py-mod docutils literal notranslate"><span class="pre">github_handler</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="source_code/h5tree.html">HDF5 Data File Tree Structure : <code class="xref py py-mod docutils literal notranslate"><span class="pre">h5tree</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="source_code/main.html">User interface : <code class="xref py py-mod docutils literal notranslate"><span class="pre">main</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="source_code/nxdl_manager.html">NXDL Manager : <code class="xref py py-mod docutils literal notranslate"><span class="pre">nxdl_manager</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="source_code/nxdl_schema.html">NXDL Rules: The XML Schema files : <code class="xref py py-mod docutils literal notranslate"><span class="pre">nxdl_schema</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="source_code/nxdltree.html">NXDL Definition File Tree Structure : <code class="xref py py-mod docutils literal notranslate"><span class="pre">nxdltree</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="source_code/schema_manager.html">Manage the XML Schema files : <code class="xref py py-mod docutils literal notranslate"><span class="pre">schema_manager</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="source_code/validate.html">Validation : <code class="xref py py-mod docutils literal notranslate"><span class="pre">validate</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="contents.html#source-code">Source Code</a></li>
-<li class="toctree-l2"><a class="reference internal" href="contents.html#indices-and-tables">Indices and tables</a></li>
-</ul>
-</li>
-</ul>
-
-        </div>
-      </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">punx</a>
-      </nav>
-
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
-  <ul class="wy-breadcrumbs">
-      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="contents.html">Contents</a> &raquo;</li>
-          <li><a href="overview.html">Project Overview</a> &raquo;</li>
-      <li>User interface: subcommand: <strong>demo</strong></li>
-      <li class="wy-breadcrumbs-aside">
-            <a href="_sources/demo.rst.txt" rel="nofollow"> View page source</a>
-      </li>
-  </ul>
-  <hr/>
-</div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
-             
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
   <span class="target" id="demo"></span><section id="user-interface-subcommand-demo">
-<span id="index-0"></span><h1>User interface: subcommand: <strong>demo</strong><a class="headerlink" href="#user-interface-subcommand-demo" title="Permalink to this headline"></a></h1>
+<span id="index-0"></span><h1>User interface: subcommand: <strong>demo</strong><a class="headerlink" href="#user-interface-subcommand-demo" title="Permalink to this headline">¶</a></h1>
 <p>The <em>demo</em> subcommand is useful to
 demonstrate HDF5 file validation
 and to verify correct program operation.
@@ -119,7 +71,7 @@ example from the NeXus manual.</p>
 </pre></div>
 </div>
 <section id="examples">
-<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline"></a></h2>
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
 <p>One example of how to use <strong>punx</strong> is shown in the <em>demo</em> mode.
 This can be used directly after installing the python package.</p>
 <p>Type this command …:</p>
@@ -220,12 +172,12 @@ NeXus HDF5 data file from the NeXus documentation.</p>
 </pre></div>
 </div>
 <section id="problems-when-running-the-demo">
-<h3>Problems when running the demo<a class="headerlink" href="#problems-when-running-the-demo" title="Permalink to this headline"></a></h3>
+<h3>Problems when running the demo<a class="headerlink" href="#problems-when-running-the-demo" title="Permalink to this headline">¶</a></h3>
 <p>Sometimes, problems happen when running the demo.
 In this section are some common problems encountered and
 what was done to resolve them.</p>
 <section id="cannot-reach-github">
-<h4>Cannot reach GitHub<a class="headerlink" href="#cannot-reach-github" title="Permalink to this headline"></a></h4>
+<h4>Cannot reach GitHub<a class="headerlink" href="#cannot-reach-github" title="Permalink to this headline">¶</a></h4>
 <p>See <a class="reference internal" href="update.html#github-api-rate-limit-exceeded"><span class="std std-ref">GitHub API rate limit exceeded</span></a></p>
 </section>
 </section>
@@ -233,34 +185,77 @@ what was done to resolve them.</p>
 </section>
 
 
-           </div>
+            <div class="clearer"></div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="configuration.html" class="btn btn-neutral float-left" title="User interface: subcommand: configuration" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="hierarchy.html" class="btn btn-neutral float-right" title="User interface: subcommand: hierarchy" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
-
-  <hr/>
-
-  <div role="contentinfo">
-    <p>&#169; Copyright 2014-2022, Pete R. Jemian.</p>
-  </div>
-
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
-   
-
-</footer>
         </div>
       </div>
-    </section>
-  </div>
-  <script>
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script> 
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">User interface: subcommand: <strong>demo</strong></a><ul>
+<li><a class="reference internal" href="#examples">Examples</a><ul>
+<li><a class="reference internal" href="#problems-when-running-the-demo">Problems when running the demo</a><ul>
+<li><a class="reference internal" href="#cannot-reach-github">Cannot reach GitHub</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 
-</body>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="configuration.html"
+                        title="previous chapter">User interface: subcommand: <strong>configuration</strong></a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="hierarchy.html"
+                        title="next chapter">User interface: subcommand: <strong>hierarchy</strong></a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/demo.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="hierarchy.html" title="User interface: subcommand: hierarchy"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="configuration.html" title="User interface: subcommand: configuration"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">punx 13.g996eae3 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="contents.html" >Contents</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="overview.html" >Project Overview</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">User interface: subcommand: <strong>demo</strong></a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2014-2022, Pete R. Jemian.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.2.
+    </div>
+  </body>
 </html>
