@@ -6,7 +6,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>punx.schema_manager &#8212; punx 13.g996eae3 documentation</title>
+    <title>punx.schema_manager &#8212; punx 15.g8ec64b4 documentation</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/bizstyle.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
@@ -32,7 +32,7 @@
         <li class="right" >
           <a href="../../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">punx 13.g996eae3 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">punx 15.g8ec64b4 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">Module code</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">punx.schema_manager</a></li> 
       </ul>
@@ -99,7 +99,7 @@
 <span class="n">logger</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">setup_logger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
 
 
-<div class="viewcode-block" id="strip_ns"><a class="viewcode-back" href="../../source_code/schema_manager.html#punx.schema_manager.strip_ns">[docs]</a><span class="k">def</span> <span class="nf">strip_ns</span><span class="p">(</span><span class="n">ref</span><span class="p">):</span>
+<div class="viewcode-block" id="strip_ns"><a class="viewcode-back" href="../../api/schema_manager.html#punx.schema_manager.strip_ns">[docs]</a><span class="k">def</span> <span class="nf">strip_ns</span><span class="p">(</span><span class="n">ref</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    strip the namespace prefix from ``ref``</span>
 
@@ -109,7 +109,7 @@
     <span class="k">return</span> <span class="n">ref</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;:&quot;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span></div>
 
 
-<div class="viewcode-block" id="raise_error"><a class="viewcode-back" href="../../source_code/schema_manager.html#punx.schema_manager.raise_error">[docs]</a><span class="k">def</span> <span class="nf">raise_error</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">text</span><span class="p">,</span> <span class="n">obj</span><span class="p">):</span>
+<div class="viewcode-block" id="raise_error"><a class="viewcode-back" href="../../api/schema_manager.html#punx.schema_manager.raise_error">[docs]</a><span class="k">def</span> <span class="nf">raise_error</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">text</span><span class="p">,</span> <span class="n">obj</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    standard *ValueError* exception handling</span>
 
@@ -122,7 +122,7 @@
     <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="get_default_schema_manager"><a class="viewcode-back" href="../../source_code/schema_manager.html#punx.schema_manager.get_default_schema_manager">[docs]</a><span class="k">def</span> <span class="nf">get_default_schema_manager</span><span class="p">():</span>
+<div class="viewcode-block" id="get_default_schema_manager"><a class="viewcode-back" href="../../api/schema_manager.html#punx.schema_manager.get_default_schema_manager">[docs]</a><span class="k">def</span> <span class="nf">get_default_schema_manager</span><span class="p">():</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    internal: convenience function</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -134,7 +134,7 @@
     <span class="k">return</span> <span class="n">cm</span><span class="o">.</span><span class="n">default_file_set</span><span class="o">.</span><span class="n">schema_manager</span></div>
 
 
-<div class="viewcode-block" id="SchemaManager"><a class="viewcode-back" href="../../source_code/schema_manager.html#punx.schema_manager.SchemaManager">[docs]</a><span class="k">class</span> <span class="nc">SchemaManager</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="viewcode-block" id="SchemaManager"><a class="viewcode-back" href="../../api/schema_manager.html#punx.schema_manager.SchemaManager">[docs]</a><span class="k">class</span> <span class="nc">SchemaManager</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
 
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    describes the XML Schema for the NeXus NXDL definitions files</span>
@@ -175,7 +175,7 @@
         <span class="c1"># del self.lxml_schema    # needed for XML file validation</span>
         <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">lxml_tree</span>
 
-<div class="viewcode-block" id="SchemaManager.parse_nxdl_patterns"><a class="viewcode-back" href="../../source_code/schema_manager.html#punx.schema_manager.SchemaManager.parse_nxdl_patterns">[docs]</a>    <span class="k">def</span> <span class="nf">parse_nxdl_patterns</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="SchemaManager.parse_nxdl_patterns"><a class="viewcode-back" href="../../api/schema_manager.html#punx.schema_manager.SchemaManager.parse_nxdl_patterns">[docs]</a>    <span class="k">def</span> <span class="nf">parse_nxdl_patterns</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        get regexp patterns for validItemName, validNXClassName, &amp; validTargetName from nxdl.xsd</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -209,7 +209,7 @@
 
         <span class="k">return</span> <span class="n">db</span></div>
 
-<div class="viewcode-block" id="SchemaManager.parse_nxdlTypes"><a class="viewcode-back" href="../../source_code/schema_manager.html#punx.schema_manager.SchemaManager.parse_nxdlTypes">[docs]</a>    <span class="k">def</span> <span class="nf">parse_nxdlTypes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="SchemaManager.parse_nxdlTypes"><a class="viewcode-back" href="../../api/schema_manager.html#punx.schema_manager.SchemaManager.parse_nxdlTypes">[docs]</a>    <span class="k">def</span> <span class="nf">parse_nxdlTypes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        get the allowed data types and unit types from nxdlTypes.xsd</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -248,7 +248,7 @@
         <span class="k">return</span> <span class="n">db</span><span class="p">,</span> <span class="n">units</span></div></div>
 
 
-<div class="viewcode-block" id="Schema_pattern"><a class="viewcode-back" href="../../source_code/schema_manager.html#punx.schema_manager.Schema_pattern">[docs]</a><span class="k">class</span> <span class="nc">Schema_pattern</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="viewcode-block" id="Schema_pattern"><a class="viewcode-back" href="../../api/schema_manager.html#punx.schema_manager.Schema_pattern">[docs]</a><span class="k">class</span> <span class="nc">Schema_pattern</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
 
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    describe the regular expression patterns ofr names of NeXus things</span>
@@ -261,7 +261,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">maxLength</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>  <span class="c1"># unlimited</span></div>
 
 
-<div class="viewcode-block" id="Schema_nxdlType"><a class="viewcode-back" href="../../source_code/schema_manager.html#punx.schema_manager.Schema_nxdlType">[docs]</a><span class="k">class</span> <span class="nc">Schema_nxdlType</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="viewcode-block" id="Schema_nxdlType"><a class="viewcode-back" href="../../api/schema_manager.html#punx.schema_manager.Schema_nxdlType">[docs]</a><span class="k">class</span> <span class="nc">Schema_nxdlType</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
 
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    one of the types defined in the file *nxdlTypes.xsd*</span>
@@ -384,7 +384,7 @@
         <span class="n">obj</span><span class="o">.</span><span class="n">copy_to</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
 
 
-<div class="viewcode-block" id="Schema_Root"><a class="viewcode-back" href="../../source_code/schema_manager.html#punx.schema_manager.Schema_Root">[docs]</a><span class="k">class</span> <span class="nc">Schema_Root</span><span class="p">(</span><span class="n">_Mixin</span><span class="p">):</span>
+<div class="viewcode-block" id="Schema_Root"><a class="viewcode-back" href="../../api/schema_manager.html#punx.schema_manager.Schema_Root">[docs]</a><span class="k">class</span> <span class="nc">Schema_Root</span><span class="p">(</span><span class="n">_Mixin</span><span class="p">):</span>
 
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    root element of the nxdl.xsd file</span>
@@ -445,7 +445,7 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">schema_types</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">definition</span><span class="o">=</span><span class="bp">self</span><span class="p">)</span>  <span class="c1"># FIXME:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">schema_types</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">children</span><span class="p">)</span>
 
-<div class="viewcode-block" id="Schema_Root.parse_sequence"><a class="viewcode-back" href="../../source_code/schema_manager.html#punx.schema_manager.Schema_Root.parse_sequence">[docs]</a>    <span class="k">def</span> <span class="nf">parse_sequence</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">seq_node</span><span class="p">):</span>
+<div class="viewcode-block" id="Schema_Root.parse_sequence"><a class="viewcode-back" href="../../api/schema_manager.html#punx.schema_manager.Schema_Root.parse_sequence">[docs]</a>    <span class="k">def</span> <span class="nf">parse_sequence</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">seq_node</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        parse the sequence used in the root element</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -461,7 +461,7 @@
                 <span class="n">raise_error</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">msg</span><span class="p">,</span> <span class="n">node</span><span class="o">.</span><span class="n">tag</span><span class="p">)</span></div></div>
 
 
-<div class="viewcode-block" id="Schema_Attribute"><a class="viewcode-back" href="../../source_code/schema_manager.html#punx.schema_manager.Schema_Attribute">[docs]</a><span class="k">class</span> <span class="nc">Schema_Attribute</span><span class="p">(</span><span class="n">_Mixin</span><span class="p">):</span>
+<div class="viewcode-block" id="Schema_Attribute"><a class="viewcode-back" href="../../api/schema_manager.html#punx.schema_manager.Schema_Attribute">[docs]</a><span class="k">class</span> <span class="nc">Schema_Attribute</span><span class="p">(</span><span class="n">_Mixin</span><span class="p">):</span>
 
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    xs:attribute element</span>
@@ -516,7 +516,7 @@
             <span class="k">return</span> <span class="n">_Mixin</span><span class="o">.</span><span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="Schema_Element"><a class="viewcode-back" href="../../source_code/schema_manager.html#punx.schema_manager.Schema_Element">[docs]</a><span class="k">class</span> <span class="nc">Schema_Element</span><span class="p">(</span><span class="n">_Mixin</span><span class="p">):</span>
+<div class="viewcode-block" id="Schema_Element"><a class="viewcode-back" href="../../api/schema_manager.html#punx.schema_manager.Schema_Element">[docs]</a><span class="k">class</span> <span class="nc">Schema_Element</span><span class="p">(</span><span class="n">_Mixin</span><span class="p">):</span>
 
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    xs:element</span>
@@ -568,7 +568,7 @@
                 <span class="n">type_obj</span><span class="o">.</span><span class="n">copy_to</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="Schema_Type"><a class="viewcode-back" href="../../source_code/schema_manager.html#punx.schema_manager.Schema_Type">[docs]</a><span class="k">class</span> <span class="nc">Schema_Type</span><span class="p">(</span><span class="n">_Mixin</span><span class="p">):</span>
+<div class="viewcode-block" id="Schema_Type"><a class="viewcode-back" href="../../api/schema_manager.html#punx.schema_manager.Schema_Type">[docs]</a><span class="k">class</span> <span class="nc">Schema_Type</span><span class="p">(</span><span class="n">_Mixin</span><span class="p">):</span>
 
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    a named NXDL structure type (such as groupGroup)</span>
@@ -682,7 +682,7 @@
         <li class="right" >
           <a href="../../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">punx 13.g996eae3 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">punx 15.g8ec64b4 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" >Module code</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">punx.schema_manager</a></li> 
       </ul>

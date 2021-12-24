@@ -6,7 +6,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>punx.validate &#8212; punx 13.g996eae3 documentation</title>
+    <title>punx.validate &#8212; punx 15.g8ec64b4 documentation</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/bizstyle.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
@@ -32,7 +32,7 @@
         <li class="right" >
           <a href="../../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">punx 13.g996eae3 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">punx 15.g8ec64b4 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">Module code</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">punx.validate</a></li> 
       </ul>
@@ -94,7 +94,7 @@
 <span class="n">logger</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">setup_logger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
 
 
-<div class="viewcode-block" id="Data_File_Validator"><a class="viewcode-back" href="../../source_code/validate.html#punx.validate.Data_File_Validator">[docs]</a><span class="k">class</span> <span class="nc">Data_File_Validator</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="viewcode-block" id="Data_File_Validator"><a class="viewcode-back" href="../../api/validate.html#punx.validate.Data_File_Validator">[docs]</a><span class="k">class</span> <span class="nc">Data_File_Validator</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
 
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    manage the validation of a NeXus HDF5 data file</span>
@@ -152,7 +152,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">classpaths</span> <span class="o">=</span> <span class="p">{}</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">regexp_cache</span> <span class="o">=</span> <span class="p">{}</span>
 
-<div class="viewcode-block" id="Data_File_Validator.close"><a class="viewcode-back" href="../../source_code/validate.html#punx.validate.Data_File_Validator.close">[docs]</a>    <span class="k">def</span> <span class="nf">close</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Data_File_Validator.close"><a class="viewcode-back" href="../../api/validate.html#punx.validate.Data_File_Validator.close">[docs]</a>    <span class="k">def</span> <span class="nf">close</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        close the HDF5 file (if it is open)</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -160,7 +160,7 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">h5</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">h5</span> <span class="o">=</span> <span class="kc">None</span></div>
 
-<div class="viewcode-block" id="Data_File_Validator.record_finding"><a class="viewcode-back" href="../../source_code/validate.html#punx.validate.Data_File_Validator.record_finding">[docs]</a>    <span class="k">def</span> <span class="nf">record_finding</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">v_item</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">status</span><span class="p">,</span> <span class="n">comment</span><span class="p">):</span>
+<div class="viewcode-block" id="Data_File_Validator.record_finding"><a class="viewcode-back" href="../../api/validate.html#punx.validate.Data_File_Validator.record_finding">[docs]</a>    <span class="k">def</span> <span class="nf">record_finding</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">v_item</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">status</span><span class="p">,</span> <span class="n">comment</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        prepare the finding object and record it</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -169,7 +169,7 @@
         <span class="n">v_item</span><span class="o">.</span><span class="n">validations</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">f</span>
         <span class="k">return</span> <span class="n">f</span></div>
 
-<div class="viewcode-block" id="Data_File_Validator.finding_score"><a class="viewcode-back" href="../../source_code/validate.html#punx.validate.Data_File_Validator.finding_score">[docs]</a>    <span class="k">def</span> <span class="nf">finding_score</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Data_File_Validator.finding_score"><a class="viewcode-back" href="../../api/validate.html#punx.validate.Data_File_Validator.finding_score">[docs]</a>    <span class="k">def</span> <span class="nf">finding_score</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        return a numerical score for the set of findings</span>
 
@@ -188,7 +188,7 @@
         <span class="k">else</span><span class="p">:</span>
             <span class="k">return</span> <span class="n">total</span><span class="p">,</span> <span class="n">count</span><span class="p">,</span> <span class="nb">float</span><span class="p">(</span><span class="n">total</span><span class="p">)</span> <span class="o">/</span> <span class="n">count</span></div>
 
-<div class="viewcode-block" id="Data_File_Validator.finding_summary"><a class="viewcode-back" href="../../source_code/validate.html#punx.validate.Data_File_Validator.finding_summary">[docs]</a>    <span class="k">def</span> <span class="nf">finding_summary</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">report_statuses</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="Data_File_Validator.finding_summary"><a class="viewcode-back" href="../../api/validate.html#punx.validate.Data_File_Validator.finding_summary">[docs]</a>    <span class="k">def</span> <span class="nf">finding_summary</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">report_statuses</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        return a summary dictionary of the count of findings by status</span>
 
@@ -215,7 +215,7 @@
             <span class="n">summary</span><span class="p">[</span><span class="n">f</span><span class="o">.</span><span class="n">status</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
         <span class="k">return</span> <span class="n">summary</span></div>
 
-<div class="viewcode-block" id="Data_File_Validator.print_report"><a class="viewcode-back" href="../../source_code/validate.html#punx.validate.Data_File_Validator.print_report">[docs]</a>    <span class="k">def</span> <span class="nf">print_report</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">statuses</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="Data_File_Validator.print_report"><a class="viewcode-back" href="../../api/validate.html#punx.validate.Data_File_Validator.print_report">[docs]</a>    <span class="k">def</span> <span class="nf">print_report</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">statuses</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Print a validation report.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -266,7 +266,7 @@
         <span class="n">total</span><span class="p">,</span> <span class="n">count</span><span class="p">,</span> <span class="n">average</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">finding_score</span><span class="p">()</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&lt;finding&gt;=</span><span class="si">%f</span><span class="s2"> of </span><span class="si">%d</span><span class="s2"> items reviewed&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">average</span><span class="p">,</span> <span class="n">count</span><span class="p">))</span></div>
 
-<div class="viewcode-block" id="Data_File_Validator.validate"><a class="viewcode-back" href="../../source_code/validate.html#punx.validate.Data_File_Validator.validate">[docs]</a>    <span class="k">def</span> <span class="nf">validate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fname</span><span class="p">):</span>
+<div class="viewcode-block" id="Data_File_Validator.validate"><a class="viewcode-back" href="../../api/validate.html#punx.validate.Data_File_Validator.validate">[docs]</a>    <span class="k">def</span> <span class="nf">validate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fname</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;start the validation process from the file root&quot;&quot;&quot;</span>
         <span class="kn">from</span> <span class="nn">.validations</span> <span class="k">import</span> <span class="n">default_plot</span>
 
@@ -309,7 +309,7 @@
 
     <span class="c1"># - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</span>
 
-<div class="viewcode-block" id="Data_File_Validator.build_address_catalog"><a class="viewcode-back" href="../../source_code/validate.html#punx.validate.Data_File_Validator.build_address_catalog">[docs]</a>    <span class="k">def</span> <span class="nf">build_address_catalog</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Data_File_Validator.build_address_catalog"><a class="viewcode-back" href="../../api/validate.html#punx.validate.Data_File_Validator.build_address_catalog">[docs]</a>    <span class="k">def</span> <span class="nf">build_address_catalog</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        find all HDF5 addresses and NeXus class paths in the data file</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -355,7 +355,7 @@
 
         <span class="n">attribute</span><span class="o">.</span><span class="n">verify</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">v_item</span><span class="p">)</span>
 
-<div class="viewcode-block" id="Data_File_Validator.validate_group"><a class="viewcode-back" href="../../source_code/validate.html#punx.validate.Data_File_Validator.validate_group">[docs]</a>    <span class="k">def</span> <span class="nf">validate_group</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">v_item</span><span class="p">):</span>
+<div class="viewcode-block" id="Data_File_Validator.validate_group"><a class="viewcode-back" href="../../api/validate.html#punx.validate.Data_File_Validator.validate_group">[docs]</a>    <span class="k">def</span> <span class="nf">validate_group</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">v_item</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        validate the NeXus content of a HDF5 data file group</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -392,7 +392,7 @@
             <span class="n">c</span> <span class="o">=</span> <span class="n">nx_class</span> <span class="o">+</span> <span class="s2">&quot;: more validations needed&quot;</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">record_finding</span><span class="p">(</span><span class="n">v_item</span><span class="p">,</span> <span class="s2">&quot;NeXus base class&quot;</span><span class="p">,</span> <span class="n">finding</span><span class="o">.</span><span class="n">TODO</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Data_File_Validator.validate_application_definition"><a class="viewcode-back" href="../../source_code/validate.html#punx.validate.Data_File_Validator.validate_application_definition">[docs]</a>    <span class="k">def</span> <span class="nf">validate_application_definition</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">v_item</span><span class="p">):</span>
+<div class="viewcode-block" id="Data_File_Validator.validate_application_definition"><a class="viewcode-back" href="../../api/validate.html#punx.validate.Data_File_Validator.validate_application_definition">[docs]</a>    <span class="k">def</span> <span class="nf">validate_application_definition</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">v_item</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        validate group as a NeXus application definition</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -405,7 +405,7 @@
 
         <span class="n">nx_class_attribute</span><span class="o">.</span><span class="n">validate_NX_class_attribute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">v_item</span><span class="p">,</span> <span class="n">nx_class</span><span class="p">)</span>
 
-<div class="viewcode-block" id="Data_File_Validator.usedAsBaseClass"><a class="viewcode-back" href="../../source_code/validate.html#punx.validate.Data_File_Validator.usedAsBaseClass">[docs]</a>    <span class="k">def</span> <span class="nf">usedAsBaseClass</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nx_class</span><span class="p">):</span>
+<div class="viewcode-block" id="Data_File_Validator.usedAsBaseClass"><a class="viewcode-back" href="../../api/validate.html#punx.validate.Data_File_Validator.usedAsBaseClass">[docs]</a>    <span class="k">def</span> <span class="nf">usedAsBaseClass</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nx_class</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        returns bool: is the nx_class a base class?</span>
 
@@ -438,7 +438,7 @@
         <span class="k">return</span> <span class="kc">True</span></div></div>
 
 
-<div class="viewcode-block" id="ValidationItem"><a class="viewcode-back" href="../../source_code/validate.html#punx.validate.ValidationItem">[docs]</a><span class="k">class</span> <span class="nc">ValidationItem</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="viewcode-block" id="ValidationItem"><a class="viewcode-back" href="../../api/validate.html#punx.validate.ValidationItem">[docs]</a><span class="k">class</span> <span class="nc">ValidationItem</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
 
     <span class="sd">&quot;&quot;&quot;HDF5 data file object for validation&quot;&quot;&quot;</span>
 
@@ -491,7 +491,7 @@
                 <span class="n">object_type</span> <span class="o">=</span> <span class="s2">&quot;NeXus link&quot;</span>
         <span class="k">return</span> <span class="n">object_type</span>
 
-<div class="viewcode-block" id="ValidationItem.determine_NeXus_classpath"><a class="viewcode-back" href="../../source_code/validate.html#punx.validate.ValidationItem.determine_NeXus_classpath">[docs]</a>    <span class="k">def</span> <span class="nf">determine_NeXus_classpath</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="ValidationItem.determine_NeXus_classpath"><a class="viewcode-back" href="../../api/validate.html#punx.validate.ValidationItem.determine_NeXus_classpath">[docs]</a>    <span class="k">def</span> <span class="nf">determine_NeXus_classpath</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        determine the NeXus class path</span>
 
@@ -581,7 +581,7 @@
         <li class="right" >
           <a href="../../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">punx 13.g996eae3 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">punx 15.g8ec64b4 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" >Module code</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">punx.validate</a></li> 
       </ul>

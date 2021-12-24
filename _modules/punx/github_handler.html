@@ -6,7 +6,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>punx.github_handler &#8212; punx 13.g996eae3 documentation</title>
+    <title>punx.github_handler &#8212; punx 15.g8ec64b4 documentation</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/bizstyle.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
@@ -32,7 +32,7 @@
         <li class="right" >
           <a href="../../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">punx 13.g996eae3 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">punx 15.g8ec64b4 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">Module code</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">punx.github_handler</a></li> 
       </ul>
@@ -104,7 +104,7 @@
 <span class="c1"># NXDL_CACHE_SUBDIR = GITHUB_NXDL_REPOSITORY + &#39;-&#39; + GITHUB_NXDL_BRANCH</span>
 
 
-<div class="viewcode-block" id="get_GitHub_credentials"><a class="viewcode-back" href="../../source_code/github_handler.html#punx.github_handler.get_GitHub_credentials">[docs]</a><span class="k">def</span> <span class="nf">get_GitHub_credentials</span><span class="p">():</span>
+<div class="viewcode-block" id="get_GitHub_credentials"><a class="viewcode-back" href="../../api/github_handler.html#punx.github_handler.get_GitHub_credentials">[docs]</a><span class="k">def</span> <span class="nf">get_GitHub_credentials</span><span class="p">():</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Get the Github API token from a file or environment.</span>
 
@@ -134,7 +134,7 @@
     <span class="k">return</span> <span class="kc">None</span></div>
 
 
-<div class="viewcode-block" id="GitHub_Repository_Reference"><a class="viewcode-back" href="../../source_code/github_handler.html#punx.github_handler.GitHub_Repository_Reference">[docs]</a><span class="k">class</span> <span class="nc">GitHub_Repository_Reference</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="viewcode-block" id="GitHub_Repository_Reference"><a class="viewcode-back" href="../../api/github_handler.html#punx.github_handler.GitHub_Repository_Reference">[docs]</a><span class="k">class</span> <span class="nc">GitHub_Repository_Reference</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
 
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    all information necessary to describe and download a repository branch, release, tag, or SHA hash</span>
@@ -160,7 +160,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">zip_url</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">last_modified</span> <span class="o">=</span> <span class="kc">None</span>
 
-<div class="viewcode-block" id="GitHub_Repository_Reference.connect_repo"><a class="viewcode-back" href="../../source_code/github_handler.html#punx.github_handler.GitHub_Repository_Reference.connect_repo">[docs]</a>    <span class="k">def</span> <span class="nf">connect_repo</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">repo_name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">token</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="GitHub_Repository_Reference.connect_repo"><a class="viewcode-back" href="../../api/github_handler.html#punx.github_handler.GitHub_Repository_Reference.connect_repo">[docs]</a>    <span class="k">def</span> <span class="nf">connect_repo</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">repo_name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">token</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        connect with the GitHub repository</span>
 
@@ -179,7 +179,7 @@
 
         <span class="k">return</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">token</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="GitHub_Repository_Reference.request_info"><a class="viewcode-back" href="../../source_code/github_handler.html#punx.github_handler.GitHub_Repository_Reference.request_info">[docs]</a>    <span class="k">def</span> <span class="nf">request_info</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ref</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="GitHub_Repository_Reference.request_info"><a class="viewcode-back" href="../../api/github_handler.html#punx.github_handler.GitHub_Repository_Reference.request_info">[docs]</a>    <span class="k">def</span> <span class="nf">request_info</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ref</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        request download information about ``ref``</span>
 
@@ -206,7 +206,7 @@
         <span class="p">)</span>
         <span class="k">return</span> <span class="n">node</span></div>
 
-<div class="viewcode-block" id="GitHub_Repository_Reference.download"><a class="viewcode-back" href="../../source_code/github_handler.html#punx.github_handler.GitHub_Repository_Reference.download">[docs]</a>    <span class="k">def</span> <span class="nf">download</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="GitHub_Repository_Reference.download"><a class="viewcode-back" href="../../api/github_handler.html#punx.github_handler.GitHub_Repository_Reference.download">[docs]</a>    <span class="k">def</span> <span class="nf">download</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        download the NXDL definitions described by ``ref``</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -247,7 +247,7 @@
             <span class="n">mod_date_time</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">commit</span><span class="o">.</span><span class="n">last_modified</span><span class="p">,</span> <span class="n">fmt</span><span class="p">)</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">last_modified</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">mod_date_time</span><span class="p">)</span>
 
-<div class="viewcode-block" id="GitHub_Repository_Reference.get_branch"><a class="viewcode-back" href="../../source_code/github_handler.html#punx.github_handler.GitHub_Repository_Reference.get_branch">[docs]</a>    <span class="k">def</span> <span class="nf">get_branch</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ref</span><span class="o">=</span><span class="n">DEFAULT_BRANCH_NAME</span><span class="p">):</span>
+<div class="viewcode-block" id="GitHub_Repository_Reference.get_branch"><a class="viewcode-back" href="../../api/github_handler.html#punx.github_handler.GitHub_Repository_Reference.get_branch">[docs]</a>    <span class="k">def</span> <span class="nf">get_branch</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ref</span><span class="o">=</span><span class="n">DEFAULT_BRANCH_NAME</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        learn the download information about the named branch</span>
 
@@ -264,7 +264,7 @@
         <span class="k">except</span> <span class="n">github</span><span class="o">.</span><span class="n">GithubException</span><span class="p">:</span>
             <span class="k">return</span> <span class="kc">None</span></div>
 
-<div class="viewcode-block" id="GitHub_Repository_Reference.get_release"><a class="viewcode-back" href="../../source_code/github_handler.html#punx.github_handler.GitHub_Repository_Reference.get_release">[docs]</a>    <span class="k">def</span> <span class="nf">get_release</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ref</span><span class="o">=</span><span class="n">DEFAULT_RELEASE_NAME</span><span class="p">):</span>
+<div class="viewcode-block" id="GitHub_Repository_Reference.get_release"><a class="viewcode-back" href="../../api/github_handler.html#punx.github_handler.GitHub_Repository_Reference.get_release">[docs]</a>    <span class="k">def</span> <span class="nf">get_release</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ref</span><span class="o">=</span><span class="n">DEFAULT_RELEASE_NAME</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        learn the download information about the named release</span>
 
@@ -279,7 +279,7 @@
         <span class="k">except</span> <span class="n">github</span><span class="o">.</span><span class="n">GithubException</span><span class="p">:</span>
             <span class="k">return</span> <span class="kc">None</span></div>
 
-<div class="viewcode-block" id="GitHub_Repository_Reference.get_tag"><a class="viewcode-back" href="../../source_code/github_handler.html#punx.github_handler.GitHub_Repository_Reference.get_tag">[docs]</a>    <span class="k">def</span> <span class="nf">get_tag</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ref</span><span class="o">=</span><span class="n">DEFAULT_TAG_NAME</span><span class="p">):</span>
+<div class="viewcode-block" id="GitHub_Repository_Reference.get_tag"><a class="viewcode-back" href="../../api/github_handler.html#punx.github_handler.GitHub_Repository_Reference.get_tag">[docs]</a>    <span class="k">def</span> <span class="nf">get_tag</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ref</span><span class="o">=</span><span class="n">DEFAULT_TAG_NAME</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        learn the download information about the named tag</span>
 
@@ -298,7 +298,7 @@
         <span class="k">except</span> <span class="n">github</span><span class="o">.</span><span class="n">GithubException</span><span class="p">:</span>
             <span class="k">return</span> <span class="kc">None</span></div>
 
-<div class="viewcode-block" id="GitHub_Repository_Reference.get_commit"><a class="viewcode-back" href="../../source_code/github_handler.html#punx.github_handler.GitHub_Repository_Reference.get_commit">[docs]</a>    <span class="k">def</span> <span class="nf">get_commit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ref</span><span class="o">=</span><span class="n">DEFAULT_COMMIT_NAME</span><span class="p">):</span>
+<div class="viewcode-block" id="GitHub_Repository_Reference.get_commit"><a class="viewcode-back" href="../../api/github_handler.html#punx.github_handler.GitHub_Repository_Reference.get_commit">[docs]</a>    <span class="k">def</span> <span class="nf">get_commit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ref</span><span class="o">=</span><span class="n">DEFAULT_COMMIT_NAME</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        learn the download information about the referenced commit</span>
 
@@ -345,7 +345,7 @@
         <li class="right" >
           <a href="../../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">punx 13.g996eae3 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">punx 15.g8ec64b4 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" >Module code</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">punx.github_handler</a></li> 
       </ul>

@@ -6,7 +6,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>punx.cache_manager &#8212; punx 13.g996eae3 documentation</title>
+    <title>punx.cache_manager &#8212; punx 15.g8ec64b4 documentation</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/bizstyle.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
@@ -32,7 +32,7 @@
         <li class="right" >
           <a href="../../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">punx 13.g996eae3 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">punx 15.g8ec64b4 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">Module code</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">punx.cache_manager</a></li> 
       </ul>
@@ -129,7 +129,7 @@
 <span class="n">SHORT_SHA_LENGTH</span> <span class="o">=</span> <span class="mi">7</span>
 
 
-<div class="viewcode-block" id="get_short_sha"><a class="viewcode-back" href="../../source_code/cache_manager.html#punx.cache_manager.get_short_sha">[docs]</a><span class="k">def</span> <span class="nf">get_short_sha</span><span class="p">(</span><span class="n">full_sha</span><span class="p">):</span>
+<div class="viewcode-block" id="get_short_sha"><a class="viewcode-back" href="../../api/cache_manager.html#punx.cache_manager.get_short_sha">[docs]</a><span class="k">def</span> <span class="nf">get_short_sha</span><span class="p">(</span><span class="n">full_sha</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    return the first few unique characters of the git commit hash (SHA)</span>
 
@@ -138,7 +138,7 @@
     <span class="k">return</span> <span class="n">full_sha</span><span class="p">[:</span> <span class="nb">min</span><span class="p">(</span><span class="n">SHORT_SHA_LENGTH</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">full_sha</span><span class="p">))]</span></div>
 
 
-<div class="viewcode-block" id="write_json_file"><a class="viewcode-back" href="../../source_code/cache_manager.html#punx.cache_manager.write_json_file">[docs]</a><span class="k">def</span> <span class="nf">write_json_file</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">obj</span><span class="p">):</span>
+<div class="viewcode-block" id="write_json_file"><a class="viewcode-back" href="../../api/cache_manager.html#punx.cache_manager.write_json_file">[docs]</a><span class="k">def</span> <span class="nf">write_json_file</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">obj</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    write the structured ``obj`` to the JSON file ``file_name``</span>
 
@@ -147,7 +147,7 @@
     <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">2</span><span class="p">))</span></div>
 
 
-<div class="viewcode-block" id="read_json_file"><a class="viewcode-back" href="../../source_code/cache_manager.html#punx.cache_manager.read_json_file">[docs]</a><span class="k">def</span> <span class="nf">read_json_file</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+<div class="viewcode-block" id="read_json_file"><a class="viewcode-back" href="../../api/cache_manager.html#punx.cache_manager.read_json_file">[docs]</a><span class="k">def</span> <span class="nf">read_json_file</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    read a structured object from the JSON file ``file_name``</span>
 
@@ -156,7 +156,7 @@
     <span class="k">return</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())</span></div>
 
 
-<div class="viewcode-block" id="should_extract_this"><a class="viewcode-back" href="../../source_code/cache_manager.html#punx.cache_manager.should_extract_this">[docs]</a><span class="k">def</span> <span class="nf">should_extract_this</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">NXDL_file_endings_list</span><span class="p">,</span> <span class="n">allowed_parent_directories</span><span class="p">):</span>
+<div class="viewcode-block" id="should_extract_this"><a class="viewcode-back" href="../../api/cache_manager.html#punx.cache_manager.should_extract_this">[docs]</a><span class="k">def</span> <span class="nf">should_extract_this</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">NXDL_file_endings_list</span><span class="p">,</span> <span class="n">allowed_parent_directories</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    decide if this item should be extracted from the ZIP download</span>
 
@@ -169,7 +169,7 @@
     <span class="k">return</span> <span class="kc">False</span></div>
 
 
-<div class="viewcode-block" id="should_avoid_download"><a class="viewcode-back" href="../../source_code/cache_manager.html#punx.cache_manager.should_avoid_download">[docs]</a><span class="k">def</span> <span class="nf">should_avoid_download</span><span class="p">(</span><span class="n">grr</span><span class="p">,</span> <span class="n">path</span><span class="p">):</span>
+<div class="viewcode-block" id="should_avoid_download"><a class="viewcode-back" href="../../api/cache_manager.html#punx.cache_manager.should_avoid_download">[docs]</a><span class="k">def</span> <span class="nf">should_avoid_download</span><span class="p">(</span><span class="n">grr</span><span class="p">,</span> <span class="n">path</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    decide if the download should be avoided (True: avoid, False: download)</span>
 
@@ -192,7 +192,7 @@
     <span class="k">return</span> <span class="kc">False</span></div>
 
 
-<div class="viewcode-block" id="extract_from_download"><a class="viewcode-back" href="../../source_code/cache_manager.html#punx.cache_manager.extract_from_download">[docs]</a><span class="k">def</span> <span class="nf">extract_from_download</span><span class="p">(</span><span class="n">grr</span><span class="p">,</span> <span class="n">path</span><span class="p">):</span>  <span class="c1"># TODO refactor into NXDL_File_Set</span>
+<div class="viewcode-block" id="extract_from_download"><a class="viewcode-back" href="../../api/cache_manager.html#punx.cache_manager.extract_from_download">[docs]</a><span class="k">def</span> <span class="nf">extract_from_download</span><span class="p">(</span><span class="n">grr</span><span class="p">,</span> <span class="n">path</span><span class="p">):</span>  <span class="c1"># TODO refactor into NXDL_File_Set</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    download &amp; extract NXDL files from ``grr`` into a subdirectory of ``path``</span>
 
@@ -252,7 +252,7 @@
     <span class="k">return</span> <span class="n">msg_list</span></div>
 
 
-<div class="viewcode-block" id="table_of_caches"><a class="viewcode-back" href="../../source_code/cache_manager.html#punx.cache_manager.table_of_caches">[docs]</a><span class="k">def</span> <span class="nf">table_of_caches</span><span class="p">():</span>
+<div class="viewcode-block" id="table_of_caches"><a class="viewcode-back" href="../../api/cache_manager.html#punx.cache_manager.table_of_caches">[docs]</a><span class="k">def</span> <span class="nf">table_of_caches</span><span class="p">():</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    return a pyRestTable table describing all known file sets in both source and user caches</span>
 
@@ -275,7 +275,7 @@
     <span class="k">return</span> <span class="n">cm</span><span class="o">.</span><span class="n">table_of_caches</span><span class="p">()</span></div>
 
 
-<div class="viewcode-block" id="CacheManager"><a class="viewcode-back" href="../../source_code/cache_manager.html#punx.cache_manager.CacheManager">[docs]</a><span class="k">class</span> <span class="nc">CacheManager</span><span class="p">(</span><span class="n">singletons</span><span class="o">.</span><span class="n">Singleton</span><span class="p">):</span>
+<div class="viewcode-block" id="CacheManager"><a class="viewcode-back" href="../../api/cache_manager.html#punx.cache_manager.CacheManager">[docs]</a><span class="k">class</span> <span class="nc">CacheManager</span><span class="p">(</span><span class="n">singletons</span><span class="o">.</span><span class="n">Singleton</span><span class="p">):</span>
 
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    manager both source and user caches</span>
@@ -311,7 +311,7 @@
     <span class="c1"># - - - - - - - - - - - - - -</span>
     <span class="c1"># public</span>
 
-<div class="viewcode-block" id="CacheManager.install_NXDL_file_set"><a class="viewcode-back" href="../../source_code/cache_manager.html#punx.cache_manager.CacheManager.install_NXDL_file_set">[docs]</a>    <span class="k">def</span> <span class="nf">install_NXDL_file_set</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">grr</span><span class="p">,</span> <span class="n">user_cache</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">ref</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">force</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<div class="viewcode-block" id="CacheManager.install_NXDL_file_set"><a class="viewcode-back" href="../../api/cache_manager.html#punx.cache_manager.CacheManager.install_NXDL_file_set">[docs]</a>    <span class="k">def</span> <span class="nf">install_NXDL_file_set</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">grr</span><span class="p">,</span> <span class="n">user_cache</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">ref</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">force</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        using `ref` as a name, get the se of NXDL files from the NeXus GitHub</span>
 
@@ -347,7 +347,7 @@
                     <span class="n">m</span> <span class="o">=</span> <span class="n">extract_from_download</span><span class="p">(</span><span class="n">grr</span><span class="p">,</span> <span class="n">cache_obj</span><span class="o">.</span><span class="n">path</span><span class="p">())</span>
                     <span class="k">return</span> <span class="n">m</span></div>
 
-<div class="viewcode-block" id="CacheManager.select_NXDL_file_set"><a class="viewcode-back" href="../../source_code/cache_manager.html#punx.cache_manager.CacheManager.select_NXDL_file_set">[docs]</a>    <span class="k">def</span> <span class="nf">select_NXDL_file_set</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ref</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="CacheManager.select_NXDL_file_set"><a class="viewcode-back" href="../../api/cache_manager.html#punx.cache_manager.CacheManager.select_NXDL_file_set">[docs]</a>    <span class="k">def</span> <span class="nf">select_NXDL_file_set</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ref</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        return the named self.default_file_set instance or raise KeyError exception if unknown</span>
 
@@ -375,7 +375,7 @@
     <span class="c1"># - - - - - - - - - - - - - -</span>
     <span class="c1"># private</span>
 
-<div class="viewcode-block" id="CacheManager.find_all_file_sets"><a class="viewcode-back" href="../../source_code/cache_manager.html#punx.cache_manager.CacheManager.find_all_file_sets">[docs]</a>    <span class="k">def</span> <span class="nf">find_all_file_sets</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="CacheManager.find_all_file_sets"><a class="viewcode-back" href="../../api/cache_manager.html#punx.cache_manager.CacheManager.find_all_file_sets">[docs]</a>    <span class="k">def</span> <span class="nf">find_all_file_sets</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;return dictionary of all NXDL file sets in both source &amp; user caches&quot;&quot;&quot;</span>
         <span class="n">fs</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="n">v</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">source</span><span class="o">.</span><span class="n">find_all_file_sets</span><span class="p">()</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
         <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot; source file set names: &quot;</span>
@@ -394,12 +394,12 @@
         <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">fs</span></div>
 
-<div class="viewcode-block" id="CacheManager.cleanup"><a class="viewcode-back" href="../../source_code/cache_manager.html#punx.cache_manager.CacheManager.cleanup">[docs]</a>    <span class="k">def</span> <span class="nf">cleanup</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="CacheManager.cleanup"><a class="viewcode-back" href="../../api/cache_manager.html#punx.cache_manager.CacheManager.cleanup">[docs]</a>    <span class="k">def</span> <span class="nf">cleanup</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;removes any temporary directories&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">source</span><span class="o">.</span><span class="n">cleanup</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">cleanup</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="CacheManager.table_of_caches"><a class="viewcode-back" href="../../source_code/cache_manager.html#punx.cache_manager.CacheManager.table_of_caches">[docs]</a>    <span class="k">def</span> <span class="nf">table_of_caches</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="CacheManager.table_of_caches"><a class="viewcode-back" href="../../api/cache_manager.html#punx.cache_manager.CacheManager.table_of_caches">[docs]</a>    <span class="k">def</span> <span class="nf">table_of_caches</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        return a pyRestTable table describing all known file sets in both source and user caches</span>
 
@@ -433,7 +433,7 @@
         <span class="k">return</span> <span class="n">t</span></div></div>
 
 
-<div class="viewcode-block" id="Base_Cache"><a class="viewcode-back" href="../../source_code/cache_manager.html#punx.cache_manager.Base_Cache">[docs]</a><span class="k">class</span> <span class="nc">Base_Cache</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="viewcode-block" id="Base_Cache"><a class="viewcode-back" href="../../api/cache_manager.html#punx.cache_manager.Base_Cache">[docs]</a><span class="k">class</span> <span class="nc">Base_Cache</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
 
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    provides comon methods to get the QSettings path and file name</span>
@@ -450,20 +450,20 @@
     <span class="n">qsettings</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="n">is_temporary_directory</span> <span class="o">=</span> <span class="kc">False</span>
 
-<div class="viewcode-block" id="Base_Cache.path"><a class="viewcode-back" href="../../source_code/cache_manager.html#punx.cache_manager.Base_Cache.path">[docs]</a>    <span class="k">def</span> <span class="nf">path</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Base_Cache.path"><a class="viewcode-back" href="../../api/cache_manager.html#punx.cache_manager.Base_Cache.path">[docs]</a>    <span class="k">def</span> <span class="nf">path</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;directory containing the QSettings file&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">qsettings</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;cache qsettings not defined!&quot;</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">fileName</span><span class="p">())</span></div>
 
-<div class="viewcode-block" id="Base_Cache.fileName"><a class="viewcode-back" href="../../source_code/cache_manager.html#punx.cache_manager.Base_Cache.fileName">[docs]</a>    <span class="k">def</span> <span class="nf">fileName</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Base_Cache.fileName"><a class="viewcode-back" href="../../api/cache_manager.html#punx.cache_manager.Base_Cache.fileName">[docs]</a>    <span class="k">def</span> <span class="nf">fileName</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;full path of the QSettings file&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">qsettings</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;cache qsettings not defined!&quot;</span><span class="p">)</span>
         <span class="n">fn</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">qsettings</span><span class="o">.</span><span class="n">fileName</span><span class="p">())</span>
         <span class="k">return</span> <span class="n">fn</span></div>
 
-<div class="viewcode-block" id="Base_Cache.find_all_file_sets"><a class="viewcode-back" href="../../source_code/cache_manager.html#punx.cache_manager.Base_Cache.find_all_file_sets">[docs]</a>    <span class="k">def</span> <span class="nf">find_all_file_sets</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Base_Cache.find_all_file_sets"><a class="viewcode-back" href="../../api/cache_manager.html#punx.cache_manager.Base_Cache.find_all_file_sets">[docs]</a>    <span class="k">def</span> <span class="nf">find_all_file_sets</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;index all NXDL file sets in this cache&quot;&quot;&quot;</span>
         <span class="n">fs</span> <span class="o">=</span> <span class="p">{}</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">qsettings</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
@@ -479,14 +479,14 @@
                     <span class="n">fs</span><span class="p">[</span><span class="n">item</span><span class="p">]</span><span class="o">.</span><span class="n">read_info_file</span><span class="p">(</span><span class="n">info_file</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">fs</span></div>
 
-<div class="viewcode-block" id="Base_Cache.cleanup"><a class="viewcode-back" href="../../source_code/cache_manager.html#punx.cache_manager.Base_Cache.cleanup">[docs]</a>    <span class="k">def</span> <span class="nf">cleanup</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Base_Cache.cleanup"><a class="viewcode-back" href="../../api/cache_manager.html#punx.cache_manager.Base_Cache.cleanup">[docs]</a>    <span class="k">def</span> <span class="nf">cleanup</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;removes any temporary directories&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_temporary_directory</span><span class="p">:</span>
             <span class="n">os</span><span class="o">.</span><span class="n">removedirs</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">path</span><span class="p">())</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">is_temporary_directory</span> <span class="o">=</span> <span class="kc">False</span></div></div>
 
 
-<div class="viewcode-block" id="SourceCache"><a class="viewcode-back" href="../../source_code/cache_manager.html#punx.cache_manager.SourceCache">[docs]</a><span class="k">class</span> <span class="nc">SourceCache</span><span class="p">(</span><span class="n">Base_Cache</span><span class="p">):</span>
+<div class="viewcode-block" id="SourceCache"><a class="viewcode-back" href="../../api/cache_manager.html#punx.cache_manager.SourceCache">[docs]</a><span class="k">class</span> <span class="nc">SourceCache</span><span class="p">(</span><span class="n">Base_Cache</span><span class="p">):</span>
 
     <span class="sd">&quot;&quot;&quot;manage the source directory cache of NXDL files&quot;&quot;&quot;</span>
 
@@ -506,7 +506,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">qsettings</span> <span class="o">=</span> <span class="n">QtCore</span><span class="o">.</span><span class="n">QSettings</span><span class="p">(</span><span class="n">ini_file</span><span class="p">,</span> <span class="n">QtCore</span><span class="o">.</span><span class="n">QSettings</span><span class="o">.</span><span class="n">IniFormat</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="UserCache"><a class="viewcode-back" href="../../source_code/cache_manager.html#punx.cache_manager.UserCache">[docs]</a><span class="k">class</span> <span class="nc">UserCache</span><span class="p">(</span><span class="n">Base_Cache</span><span class="p">):</span>
+<div class="viewcode-block" id="UserCache"><a class="viewcode-back" href="../../api/cache_manager.html#punx.cache_manager.UserCache">[docs]</a><span class="k">class</span> <span class="nc">UserCache</span><span class="p">(</span><span class="n">Base_Cache</span><span class="p">):</span>
 
     <span class="sd">&quot;&quot;&quot;manage the user directory cache of NXDL files&quot;&quot;&quot;</span>
 
@@ -535,7 +535,7 @@
                 <span class="bp">self</span><span class="o">.</span><span class="n">is_temporary_directory</span> <span class="o">=</span> <span class="kc">True</span></div>
 
 
-<div class="viewcode-block" id="NXDL_File_Set"><a class="viewcode-back" href="../../source_code/cache_manager.html#punx.cache_manager.NXDL_File_Set">[docs]</a><span class="k">class</span> <span class="nc">NXDL_File_Set</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="viewcode-block" id="NXDL_File_Set"><a class="viewcode-back" href="../../api/cache_manager.html#punx.cache_manager.NXDL_File_Set">[docs]</a><span class="k">class</span> <span class="nc">NXDL_File_Set</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
 
     <span class="sd">&quot;&quot;&quot;describe a single set of NXDL files&quot;&quot;&quot;</span>
 
@@ -637,7 +637,7 @@
         <li class="right" >
           <a href="../../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">punx 13.g996eae3 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">punx 15.g8ec64b4 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" >Module code</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">punx.cache_manager</a></li> 
       </ul>

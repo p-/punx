@@ -36,6 +36,6 @@ $(window).resize(function(){
         $("li.nav-item-0 a").text("Top");
     }
     else {
-        $("li.nav-item-0 a").text("punx 13.g996eae3 documentation");
+        $("li.nav-item-0 a").text("punx 15.g8ec64b4 documentation");
     }
 });

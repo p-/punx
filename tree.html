@@ -7,7 +7,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>User interface: subcommand: tree &#8212; punx 13.g996eae3 documentation</title>
+    <title>User interface: subcommand: tree &#8212; punx 15.g8ec64b4 documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/bizstyle.css" />
     <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
@@ -41,7 +41,7 @@
         <li class="right" >
           <a href="hierarchy.html" title="User interface: subcommand: hierarchy"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">punx 13.g996eae3 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">punx 15.g8ec64b4 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="contents.html" >Contents</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="overview.html" accesskey="U">Project Overview</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">User interface: subcommand: <strong>tree</strong></a></li> 
@@ -72,7 +72,60 @@
 </div>
 <section id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
-<p>–tba–</p>
+<p>All options as default choices:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="lineno"> 1 </span><span class="go">console&gt; punx tree punx/data/writer_1_3.hdf5</span>
+<span class="lineno"> 2 </span>
+<span class="lineno"> 3 </span><span class="go">/path/to/punx/data/writer_1_3.hdf5 : NeXus data file</span>
+<span class="lineno"> 4 </span><span class="go">  Scan:NXentry</span>
+<span class="lineno"> 5 </span><span class="go">    @NX_class = &quot;NXentry&quot;</span>
+<span class="lineno"> 6 </span><span class="go">    data:NXdata</span>
+<span class="lineno"> 7 </span><span class="go">      @NX_class = &quot;NXdata&quot;</span>
+<span class="lineno"> 8 </span><span class="go">      @axes = &quot;two_theta&quot;</span>
+<span class="lineno"> 9 </span><span class="go">      @signal = &quot;counts&quot;</span>
+<span class="lineno">10 </span><span class="go">      @two_theta_indices = [0]</span>
+<span class="lineno">11 </span><span class="go">      counts:NX_INT32[31] = [1037, 1318, 1704, &#39;...&#39;, 1321]</span>
+<span class="lineno">12 </span><span class="go">        @units = &quot;counts&quot;</span>
+<span class="lineno">13 </span><span class="go">      two_theta:NX_FLOAT64[31] = [17.92608, 17.92591, 17.92575, &#39;...&#39;, 17.92108]</span>
+<span class="lineno">14 </span><span class="go">        @units = &quot;degrees&quot;</span>
+</pre></div>
+</div>
+<p>No attributes:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="lineno">1 </span><span class="go">console&gt; punx tree -a punx/data/writer_1_3.hdf5</span>
+<span class="lineno">2 </span>
+<span class="lineno">3 </span><span class="go">/path/to/punx/data/writer_1_3.hdf5 : NeXus data file</span>
+<span class="lineno">4 </span><span class="go">Scan:NXentry</span>
+<span class="lineno">5 </span><span class="go">  data:NXdata</span>
+<span class="lineno">6 </span><span class="go">    counts:NX_INT32[31] = [1037, 1318, 1704, &#39;...&#39;, 1321]</span>
+<span class="lineno">7 </span><span class="go">    two_theta:NX_FLOAT64[31] = [17.92608, 17.92591, 17.92575, &#39;...&#39;, 17.92108]</span>
+</pre></div>
+</div>
+<p>Only start and end values of arrays:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="lineno"> 1 </span><span class="go">console&gt; punx tree -m 3 punx/data/writer_1_3.hdf5</span>
+<span class="lineno"> 2 </span>
+<span class="lineno"> 3 </span><span class="go">/path/to/punx/data/writer_1_3.hdf5 : NeXus data file</span>
+<span class="lineno"> 4 </span><span class="go">Scan:NXentry</span>
+<span class="lineno"> 5 </span><span class="go">  @NX_class = &quot;NXentry&quot;</span>
+<span class="lineno"> 6 </span><span class="go">  data:NXdata</span>
+<span class="lineno"> 7 </span><span class="go">    @NX_class = &quot;NXdata&quot;</span>
+<span class="lineno"> 8 </span><span class="go">    @axes = &quot;two_theta&quot;</span>
+<span class="lineno"> 9 </span><span class="go">    @signal = &quot;counts&quot;</span>
+<span class="lineno">10 </span><span class="go">    @two_theta_indices = [0]</span>
+<span class="lineno">11 </span><span class="go">    counts:NX_INT32[31] = [1037, &#39;...&#39;, 1321]</span>
+<span class="lineno">12 </span><span class="go">      @units = &quot;counts&quot;</span>
+<span class="lineno">13 </span><span class="go">    two_theta:NX_FLOAT64[31] = [17.92608, &#39;...&#39;, 17.92108]</span>
+<span class="lineno">14 </span><span class="go">      @units = &quot;degrees&quot;</span>
+</pre></div>
+</div>
+<p>Minimal: no attributes or array values:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="lineno">1 </span><span class="go">console&gt; punx tree -a -m 0 punx/data/writer_1_3.hdf5</span>
+<span class="lineno">2 </span>
+<span class="lineno">3 </span><span class="go">/path/to/punx/data/writer_1_3.hdf5 : NeXus data file</span>
+<span class="lineno">4 </span><span class="go">Scan:NXentry</span>
+<span class="lineno">5 </span><span class="go">  data:NXdata</span>
+<span class="lineno">6 </span><span class="go">    counts:NX_INT32[31] = [ ... ]</span>
+<span class="lineno">7 </span><span class="go">    two_theta:NX_FLOAT64[31] = [ ... ]</span>
+</pre></div>
+</div>
 </section>
 </section>
 
@@ -133,7 +186,7 @@
         <li class="right" >
           <a href="hierarchy.html" title="User interface: subcommand: hierarchy"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">punx 13.g996eae3 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">punx 15.g8ec64b4 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="contents.html" >Contents</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="overview.html" >Project Overview</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">User interface: subcommand: <strong>tree</strong></a></li> 
