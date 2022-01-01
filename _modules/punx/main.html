@@ -6,7 +6,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>punx.main &#8212; punx  documentation</title>
+    <title>punx.main &#8212; punx 0.3.0 documentation</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/bizstyle.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
@@ -32,7 +32,7 @@
         <li class="right" >
           <a href="../../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">punx  documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">punx 0.3.0 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">Module code</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">punx.main</a></li> 
       </ul>
@@ -67,48 +67,45 @@
 <span class="sd">::</span>
 
 <span class="sd">    console&gt; punx -h</span>
-<span class="sd">    usage: punx [-h] [-v]</span>
-<span class="sd">                {configuration,demonstrate,structure,tree,update,validate} ...</span>
+<span class="sd">    usage: punx [-h] [-v] {configuration,demonstrate,install,tree,validate} ...</span>
 
-<span class="sd">    Python Utilities for NeXus HDF5 files version: 0.2.6 URL:</span>
-<span class="sd">    https://prjemian.github.io/punx</span>
+<span class="sd">    Python Utilities for NeXus HDF5 files version: 0.2.7+30.gf373b62.dirty URL: https://prjemian.github.io/punx</span>
 
 <span class="sd">    optional arguments:</span>
-<span class="sd">      -h, --help            show this help message and exit</span>
-<span class="sd">      -v, --version         show program&#39;s version number and exit</span>
+<span class="sd">    -h, --help            show this help message and exit</span>
+<span class="sd">    -v, --version         show program&#39;s version number and exit</span>
 
 <span class="sd">    subcommand:</span>
-<span class="sd">      valid subcommands</span>
+<span class="sd">    valid subcommands</span>
 
-<span class="sd">      {configuration,demonstrate,structure,tree,update,validate}</span>
+<span class="sd">    {configuration,demonstrate,install,tree,validate}</span>
 <span class="sd">        configuration       show configuration details of punx</span>
 <span class="sd">        demonstrate         demonstrate HDF5 file validation</span>
-<span class="sd">        structure           structure command deprecated. Use ``tree`` instead</span>
+<span class="sd">        install             install NeXus definitions into the local cache</span>
 <span class="sd">        tree                show tree structure of HDF5 or NXDL file</span>
-<span class="sd">        update              update the local cache of NeXus definitions</span>
 <span class="sd">        validate            validate a NeXus file</span>
 
-<span class="sd">    Note: It is only necessary to use the first two (or more) characters of any</span>
-<span class="sd">    subcommand, enough that the abbreviation is unique. Such as: ``demonstrate``</span>
-<span class="sd">    can be abbreviated to ``demo`` or even ``de``.</span>
+<span class="sd">    Note: It is only necessary to use the first two (or more) characters</span>
+<span class="sd">    of any subcommand, enough that the abbreviation is unique. Such as:</span>
+<span class="sd">    ``demonstrate`` can be abbreviated to ``demo`` or even ``de``.</span>
 
 <span class="sd">.. autosummary::</span>
 
 <span class="sd">   ~main</span>
 <span class="sd">   ~MyArgumentParser</span>
 <span class="sd">   ~parse_command_line_arguments</span>
-<span class="sd">   ~func_demo</span>
-<span class="sd">   ~func_validate</span>
-<span class="sd">   ~func_hierarchy</span>
 <span class="sd">   ~func_configuration</span>
+<span class="sd">   ~func_demo</span>
+<span class="sd">   ~func_install</span>
 <span class="sd">   ~func_tree</span>
-<span class="sd">   ~func_update</span>
+<span class="sd">   ~func_validate</span>
 
 <span class="sd">&quot;&quot;&quot;</span>
 
 <span class="kn">import</span> <span class="nn">argparse</span>
 <span class="kn">import</span> <span class="nn">logging</span>
 <span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">pathlib</span>
 <span class="kn">import</span> <span class="nn">sys</span>
 
 <span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span>
@@ -126,9 +123,6 @@
 
 <span class="n">ERROR</span> <span class="o">=</span> <span class="mi">40</span>
 <span class="n">logger</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">setup_logger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">,</span> <span class="n">logging</span><span class="o">.</span><span class="n">INFO</span><span class="p">)</span>
-
-<span class="c1"># :see: https://docs.python.org/2/library/argparse.html#sub-commands</span>
-<span class="c1"># obvious 1st implementations are h5structure and update</span>
 
 
 <div class="viewcode-block" id="exit_message"><a class="viewcode-back" href="../../api/main.html#punx.main.exit_message">[docs]</a><span class="k">def</span> <span class="nf">exit_message</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">status</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">exit_code</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
@@ -148,16 +142,11 @@
 <div class="viewcode-block" id="func_configuration"><a class="viewcode-back" href="../../api/main.html#punx.main.func_configuration">[docs]</a><span class="k">def</span> <span class="nf">func_configuration</span><span class="p">(</span><span class="n">args</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;show internal configuration of punx&quot;&quot;&quot;</span>
     <span class="kn">from</span> <span class="nn">.</span> <span class="k">import</span> <span class="n">cache_manager</span>
-    <span class="kn">from</span> <span class="nn">.</span> <span class="k">import</span> <span class="n">github_handler</span>
 
     <span class="n">cm</span> <span class="o">=</span> <span class="n">cache_manager</span><span class="o">.</span><span class="n">CacheManager</span><span class="p">()</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Locally-available versions of NeXus definitions (NXDL files)&quot;</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">cm</span><span class="o">.</span><span class="n">table_of_caches</span><span class="p">())</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;default NXDL file set: &quot;</span><span class="p">,</span> <span class="n">cm</span><span class="o">.</span><span class="n">default_file_set</span><span class="o">.</span><span class="n">ref</span><span class="p">)</span></div>
-
-    <span class="c1"># nothing to show from here</span>
-    <span class="c1"># grr = github_handler.GitHub_Repository_Reference()</span>
-    <span class="c1"># perhaps does local creds file exist?  Show where it is?  or TMI?</span>
 
 
 <div class="viewcode-block" id="func_demo"><a class="viewcode-back" href="../../api/main.html#punx.main.func_demo">[docs]</a><span class="k">def</span> <span class="nf">func_demo</span><span class="p">(</span><span class="n">args</span><span class="p">):</span>
@@ -177,7 +166,7 @@
 <span class="sd">    (line breaks added here for clarity)::</span>
 
 <span class="sd">        punx.cache.FileNotFound: file does not exist:</span>
-<span class="sd">        /Users/&lt;username&gt;/.config/punx/definitions-master/nxdl.xsd</span>
+<span class="sd">        /Users/&lt;username&gt;/.config/punx/definitions-main/nxdl.xsd</span>
 <span class="sd">        AND not found in source cache either!  Report this problem to the developer.</span>
 
 <span class="sd">    then you will need to update your local cache of the NeXus definitions.</span>
@@ -206,19 +195,12 @@
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">mc</span><span class="o">.</span><span class="n">report</span><span class="p">(</span><span class="n">show_attributes</span><span class="p">)))</span></div>
 
 
-<div class="viewcode-block" id="func_hierarchy"><a class="viewcode-back" href="../../api/main.html#punx.main.func_hierarchy">[docs]</a><span class="k">def</span> <span class="nf">func_hierarchy</span><span class="p">(</span><span class="n">args</span><span class="p">):</span>
-    <span class="s2">&quot;not implemented yet&quot;</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;A chart of the NeXus hierarchy is in the **punx** documentation.&quot;</span><span class="p">)</span></div>
-    <span class="c1"># TODO: url = ???</span>
-    <span class="c1"># print(&quot;see: &quot; + url)</span>
-    <span class="c1"># TODO: issue #1 &amp; #10 show NeXus base class hierarchy from a given base class</span>
-
-
-<div class="viewcode-block" id="func_structure"><a class="viewcode-back" href="../../api/main.html#punx.main.func_structure">[docs]</a><span class="k">def</span> <span class="nf">func_structure</span><span class="p">(</span><span class="n">args</span><span class="p">):</span>
-    <span class="s2">&quot;deprecated subcommand&quot;</span>
-    <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;structure command deprecated.  Use ``tree`` instead&quot;</span>
-    <span class="nb">print</span><span class="p">(</span><span class="ne">ValueError</span><span class="p">(</span><span class="n">msg</span><span class="p">))</span>
-    <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span></div>
+<span class="c1"># def func_hierarchy(args):</span>
+<span class="c1">#     &quot;not implemented yet&quot;</span>
+<span class="c1">#     print(&quot;A chart of the NeXus hierarchy is in the **punx** documentation.&quot;)</span>
+<span class="c1">#     # TODO: url = ???</span>
+<span class="c1">#     # print(&quot;see: &quot; + url)</span>
+<span class="c1">#     # TODO: issue #1 &amp; #10 show NeXus base class hierarchy from a given base class</span>
 
 
 <div class="viewcode-block" id="func_tree"><a class="viewcode-back" href="../../api/main.html#punx.main.func_tree">[docs]</a><span class="k">def</span> <span class="nf">func_tree</span><span class="p">(</span><span class="n">args</span><span class="p">):</span>
@@ -293,39 +275,30 @@
     <span class="n">validator</span><span class="o">.</span><span class="n">print_report</span><span class="p">(</span><span class="n">statuses</span><span class="o">=</span><span class="n">report_choices</span><span class="p">)</span></div>
 
 
-<span class="k">def</span> <span class="nf">_install</span><span class="p">(</span><span class="n">cm</span><span class="p">,</span> <span class="n">grr</span><span class="p">,</span> <span class="n">ref</span><span class="p">,</span> <span class="n">use_user_cache</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">force</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<div class="viewcode-block" id="func_install"><a class="viewcode-back" href="../../api/main.html#punx.main.func_install">[docs]</a><span class="k">def</span> <span class="nf">func_install</span><span class="p">(</span><span class="n">args</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Install or update the named NXDL file reference</span>
+<span class="sd">    Install or update the named versions of the NeXus definitions.</span>
+
+<span class="sd">    Install into the user cache.  (Developer manages the source cache.)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">force</span> <span class="o">=</span> <span class="n">force</span> <span class="ow">or</span> <span class="n">ref</span> <span class="o">==</span> <span class="s2">&quot;master&quot;</span>  <span class="c1"># always update from the master branch</span>
-
-    <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;install_NXDL_file_set(ref=</span><span class="si">{}</span><span class="s2">, force=</span><span class="si">{}</span><span class="s2">, user_cache=</span><span class="si">{}</span><span class="s2">)&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
-        <span class="n">ref</span><span class="p">,</span> <span class="n">force</span><span class="p">,</span> <span class="n">use_user_cache</span>
-    <span class="p">)</span>
-    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
-
-    <span class="n">m</span> <span class="o">=</span> <span class="n">cm</span><span class="o">.</span><span class="n">install_NXDL_file_set</span><span class="p">(</span><span class="n">grr</span><span class="p">,</span> <span class="n">user_cache</span><span class="o">=</span><span class="n">use_user_cache</span><span class="p">,</span> <span class="n">ref</span><span class="o">=</span><span class="n">ref</span><span class="p">,</span> <span class="n">force</span><span class="o">=</span><span class="n">force</span><span class="p">)</span>
-    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">m</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]))</span>
-
-
-<div class="viewcode-block" id="func_update"><a class="viewcode-back" href="../../api/main.html#punx.main.func_update">[docs]</a><span class="k">def</span> <span class="nf">func_update</span><span class="p">(</span><span class="n">args</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;update or install versions of the NeXus definitions&quot;&quot;&quot;</span>
     <span class="kn">from</span> <span class="nn">.</span> <span class="k">import</span> <span class="n">cache_manager</span>
-    <span class="kn">from</span> <span class="nn">.</span> <span class="k">import</span> <span class="n">github_handler</span>
 
     <span class="n">cm</span> <span class="o">=</span> <span class="n">cache_manager</span><span class="o">.</span><span class="n">CacheManager</span><span class="p">()</span>
+    <span class="n">cache_dir</span> <span class="o">=</span> <span class="n">pathlib</span><span class="o">.</span><span class="n">Path</span><span class="p">(</span><span class="n">cm</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">path</span><span class="p">)</span>
+
+    <span class="n">cm</span><span class="o">.</span><span class="n">find_all_file_sets</span><span class="p">()</span>
+
+    <span class="k">for</span> <span class="n">file_set_name</span> <span class="ow">in</span> <span class="n">args</span><span class="o">.</span><span class="n">file_set_list</span><span class="p">:</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+            <span class="s2">&quot;cache_manager.download_file_set(&#39;</span><span class="si">%s</span><span class="s2">&#39;, &#39;</span><span class="si">%s</span><span class="s2">&#39;, force=</span><span class="si">%s</span><span class="s2">)&quot;</span><span class="p">,</span>
+            <span class="n">file_set_name</span><span class="p">,</span> <span class="n">cache_dir</span><span class="p">,</span> <span class="n">args</span><span class="o">.</span><span class="n">update</span>
+        <span class="p">)</span>
+        <span class="n">cache_manager</span><span class="o">.</span><span class="n">download_file_set</span><span class="p">(</span>
+            <span class="n">file_set_name</span><span class="p">,</span> <span class="n">cache_dir</span><span class="p">,</span> <span class="n">replace</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">update</span>
+        <span class="p">)</span>
+
     <span class="nb">print</span><span class="p">(</span><span class="n">cm</span><span class="o">.</span><span class="n">table_of_caches</span><span class="p">())</span>
-
-    <span class="k">if</span> <span class="n">args</span><span class="o">.</span><span class="n">token</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="n">grr</span> <span class="o">=</span> <span class="n">github_handler</span><span class="o">.</span><span class="n">GitHub_Repository_Reference</span><span class="p">()</span>
-        <span class="n">grr</span><span class="o">.</span><span class="n">connect_repo</span><span class="p">(</span><span class="n">token</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">token</span><span class="p">)</span>
-        <span class="n">cm</span><span class="o">.</span><span class="n">find_all_file_sets</span><span class="p">()</span>
-
-        <span class="k">for</span> <span class="n">ref</span> <span class="ow">in</span> <span class="n">args</span><span class="o">.</span><span class="n">file_set_list</span><span class="p">:</span>
-            <span class="n">_install</span><span class="p">(</span><span class="n">cm</span><span class="p">,</span> <span class="n">grr</span><span class="p">,</span> <span class="n">ref</span><span class="p">,</span> <span class="n">force</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">token</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">)</span>
-
-        <span class="nb">print</span><span class="p">(</span><span class="n">cm</span><span class="o">.</span><span class="n">table_of_caches</span><span class="p">())</span></div>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;default file set: </span><span class="si">{cm.default_file_set.ref}</span><span class="s2">&quot;</span><span class="p">)</span></div>
 
 
 <div class="viewcode-block" id="MyArgumentParser"><a class="viewcode-back" href="../../api/main.html#punx.main.MyArgumentParser">[docs]</a><span class="k">class</span> <span class="nc">MyArgumentParser</span><span class="p">(</span><span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">):</span>
@@ -373,6 +346,8 @@
 
 <div class="viewcode-block" id="parse_command_line_arguments"><a class="viewcode-back" href="../../api/main.html#punx.main.parse_command_line_arguments">[docs]</a><span class="k">def</span> <span class="nf">parse_command_line_arguments</span><span class="p">():</span>
     <span class="sd">&quot;&quot;&quot;process command line&quot;&quot;&quot;</span>
+    <span class="kn">from</span> <span class="nn">.</span> <span class="k">import</span> <span class="n">cache_manager</span>
+
     <span class="n">doc</span> <span class="o">=</span> <span class="vm">__doc__</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
     <span class="n">doc</span> <span class="o">+=</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">  version: &quot;</span> <span class="o">+</span> <span class="n">__version__</span>
     <span class="n">doc</span> <span class="o">+=</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">  URL: &quot;</span> <span class="o">+</span> <span class="n">__url__</span>
@@ -413,11 +388,28 @@
     <span class="c1">#     p_sub.set_defaults(func=func_hierarchy)</span>
     <span class="c1">#     #p_sub.add_argument(&#39;something&#39;, type=bool, help=&#39;something help_text&#39;)</span>
 
-    <span class="c1"># --- subcommand: structure</span>
-    <span class="n">help_text</span> <span class="o">=</span> <span class="s2">&quot;structure command deprecated.  Use ``tree`` instead&quot;</span>
-    <span class="n">p_sub</span> <span class="o">=</span> <span class="n">subcommand</span><span class="o">.</span><span class="n">add_parser</span><span class="p">(</span><span class="s2">&quot;structure&quot;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="n">help_text</span><span class="p">)</span>
-    <span class="n">p_sub</span><span class="o">.</span><span class="n">set_defaults</span><span class="p">(</span><span class="n">func</span><span class="o">=</span><span class="n">func_structure</span><span class="p">)</span>
-    <span class="n">p_sub</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s2">&quot;infile&quot;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s2">&quot;HDF5 or NXDL file name&quot;</span><span class="p">)</span>
+    <span class="c1"># --- subcommand: install</span>
+    <span class="n">help_text</span> <span class="o">=</span> <span class="s2">&quot;install NeXus definitions into the local cache&quot;</span>
+    <span class="n">p_sub</span> <span class="o">=</span> <span class="n">subcommand</span><span class="o">.</span><span class="n">add_parser</span><span class="p">(</span><span class="s2">&quot;install&quot;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="n">help_text</span><span class="p">)</span>
+    <span class="n">p_sub</span><span class="o">.</span><span class="n">set_defaults</span><span class="p">(</span><span class="n">func</span><span class="o">=</span><span class="n">func_install</span><span class="p">)</span>
+
+    <span class="n">help_text</span> <span class="o">=</span> <span class="s2">&quot;name(s) of reference NeXus NXDL file set&quot;</span>
+    <span class="n">help_text</span> <span class="o">+=</span> <span class="n">f</span><span class="s2">&quot; -- default </span><span class="si">{cache_manager.GITHUB_NXDL_BRANCH}</span><span class="s2">&quot;</span>
+    <span class="c1"># TODO: don&#39;t need the -r switch</span>
+    <span class="n">p_sub</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+        <span class="c1"># &quot;-r&quot;, &quot;--file_set_list&quot;, default=[cache_manager.GITHUB_NXDL_BRANCH], nargs=&quot;*&quot;, help=help_text</span>
+        <span class="s2">&quot;file_set_list&quot;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="p">[</span><span class="n">cache_manager</span><span class="o">.</span><span class="n">GITHUB_NXDL_BRANCH</span><span class="p">],</span> <span class="n">nargs</span><span class="o">=</span><span class="s2">&quot;*&quot;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="n">help_text</span>
+    <span class="p">)</span>
+
+    <span class="n">p_sub</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+        <span class="s2">&quot;-u&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;--update&quot;</span><span class="p">,</span>
+        <span class="n">action</span><span class="o">=</span><span class="s2">&quot;store_true&quot;</span><span class="p">,</span>
+        <span class="n">default</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">help</span><span class="o">=</span><span class="s2">&quot;force existing file set to update from NeXus repository on GitHub&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="c1"># TODO: add_logging_argument(p_sub)</span>
 
     <span class="c1"># --- subcommand: tree</span>
     <span class="n">help_text</span> <span class="o">=</span> <span class="s2">&quot;show tree structure of HDF5 or NXDL file&quot;</span>
@@ -440,35 +432,6 @@
         <span class="c1"># choices=range(1,51),</span>
         <span class="n">help</span><span class="o">=</span><span class="n">help_text</span><span class="p">,</span>
     <span class="p">)</span>
-    <span class="c1"># TODO: add_logging_argument(p_sub)</span>
-
-    <span class="c1"># --- subcommand: update</span>
-    <span class="n">help_text</span> <span class="o">=</span> <span class="s2">&quot;update the local cache of NeXus definitions&quot;</span>
-    <span class="n">p_sub</span> <span class="o">=</span> <span class="n">subcommand</span><span class="o">.</span><span class="n">add_parser</span><span class="p">(</span><span class="s2">&quot;update&quot;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="n">help_text</span><span class="p">)</span>
-    <span class="n">p_sub</span><span class="o">.</span><span class="n">set_defaults</span><span class="p">(</span><span class="n">func</span><span class="o">=</span><span class="n">func_update</span><span class="p">)</span>
-
-    <span class="n">help_text</span> <span class="o">=</span> <span class="s2">&quot;name(s) of reference NeXus NXDL file set&quot;</span>
-    <span class="n">help_text</span> <span class="o">+=</span> <span class="s2">&quot; (GitHub tag, hash, version, or &#39;master&#39;)&quot;</span>
-    <span class="n">help_text</span> <span class="o">+=</span> <span class="s2">&quot; -- default master&quot;</span>
-    <span class="n">p_sub</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
-        <span class="s2">&quot;-r&quot;</span><span class="p">,</span> <span class="s2">&quot;--file_set_list&quot;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;master&quot;</span><span class="p">,</span> <span class="p">],</span> <span class="n">nargs</span><span class="o">=</span><span class="s2">&quot;*&quot;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="n">help_text</span>
-    <span class="p">)</span>
-
-    <span class="n">p_sub</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
-        <span class="s2">&quot;-f&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;--force&quot;</span><span class="p">,</span>
-        <span class="n">action</span><span class="o">=</span><span class="s2">&quot;store_true&quot;</span><span class="p">,</span>
-        <span class="n">default</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-        <span class="n">help</span><span class="o">=</span><span class="s2">&quot;force update (if GitHub available)&quot;</span><span class="p">,</span>
-    <span class="p">)</span>
-
-    <span class="n">p_sub</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
-        <span class="s2">&quot;-t&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;--token&quot;</span><span class="p">,</span>
-        <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-        <span class="n">help</span><span class="o">=</span><span class="s2">&quot;GitHub personal access token (to update the NXDL file sets)&quot;</span><span class="p">,</span>
-    <span class="p">)</span>
-
     <span class="c1"># TODO: add_logging_argument(p_sub)</span>
 
     <span class="c1"># --- subcommand: validate</span>
@@ -530,7 +493,7 @@
         <li class="right" >
           <a href="../../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">punx  documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">punx 0.3.0 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" >Module code</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">punx.main</a></li> 
       </ul>

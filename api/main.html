@@ -7,7 +7,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>User interface : main &#8212; punx  documentation</title>
+    <title>User interface : main &#8212; punx 0.3.0 documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/bizstyle.css" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
@@ -41,7 +41,7 @@
         <li class="right" >
           <a href="h5tree.html" title="HDF5 Data File Tree Structure : h5tree"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">punx  documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">punx 0.3.0 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../contents.html" accesskey="U">Contents</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">User interface : <code class="xref py py-mod docutils literal notranslate"><span class="pre">main</span></code></a></li> 
       </ul>
@@ -61,30 +61,27 @@
 <p>main user interface file</p>
 <p class="rubric">Usage</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>console&gt; punx -h
-usage: punx [-h] [-v]
-            {configuration,demonstrate,structure,tree,update,validate} ...
+usage: punx [-h] [-v] {configuration,demonstrate,install,tree,validate} ...
 
-Python Utilities for NeXus HDF5 files version: 0.2.6 URL:
-https://prjemian.github.io/punx
+Python Utilities for NeXus HDF5 files version: 0.2.7+30.gf373b62.dirty URL: https://prjemian.github.io/punx
 
 optional arguments:
-  -h, --help            show this help message and exit
-  -v, --version         show program&#39;s version number and exit
+-h, --help            show this help message and exit
+-v, --version         show program&#39;s version number and exit
 
 subcommand:
-  valid subcommands
+valid subcommands
 
-  {configuration,demonstrate,structure,tree,update,validate}
+{configuration,demonstrate,install,tree,validate}
     configuration       show configuration details of punx
     demonstrate         demonstrate HDF5 file validation
-    structure           structure command deprecated. Use ``tree`` instead
+    install             install NeXus definitions into the local cache
     tree                show tree structure of HDF5 or NXDL file
-    update              update the local cache of NeXus definitions
     validate            validate a NeXus file
 
-Note: It is only necessary to use the first two (or more) characters of any
-subcommand, enough that the abbreviation is unique. Such as: ``demonstrate``
-can be abbreviated to ``demo`` or even ``de``.
+Note: It is only necessary to use the first two (or more) characters
+of any subcommand, enough that the abbreviation is unique. Such as:
+``demonstrate`` can be abbreviated to ``demo`` or even ``de``.
 </pre></div>
 </div>
 <table class="longtable docutils align-default">
@@ -102,23 +99,20 @@ can be abbreviated to ``demo`` or even ``de``.
 <tr class="row-odd"><td><p><a class="reference internal" href="#punx.main.parse_command_line_arguments" title="punx.main.parse_command_line_arguments"><code class="xref py py-obj docutils literal notranslate"><span class="pre">parse_command_line_arguments</span></code></a>()</p></td>
 <td><p>process command line</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#punx.main.func_demo" title="punx.main.func_demo"><code class="xref py py-obj docutils literal notranslate"><span class="pre">func_demo</span></code></a>(args)</p></td>
-<td><p>show what <strong>punx</strong> can do</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#punx.main.func_validate" title="punx.main.func_validate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">func_validate</span></code></a>(args)</p></td>
-<td><p>validate the content of a NeXus HDF5 data file of NXDL XML file</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#punx.main.func_hierarchy" title="punx.main.func_hierarchy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">func_hierarchy</span></code></a>(args)</p></td>
-<td><p>not implemented yet</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#punx.main.func_configuration" title="punx.main.func_configuration"><code class="xref py py-obj docutils literal notranslate"><span class="pre">func_configuration</span></code></a>(args)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#punx.main.func_configuration" title="punx.main.func_configuration"><code class="xref py py-obj docutils literal notranslate"><span class="pre">func_configuration</span></code></a>(args)</p></td>
 <td><p>show internal configuration of punx</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#punx.main.func_tree" title="punx.main.func_tree"><code class="xref py py-obj docutils literal notranslate"><span class="pre">func_tree</span></code></a>(args)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#punx.main.func_demo" title="punx.main.func_demo"><code class="xref py py-obj docutils literal notranslate"><span class="pre">func_demo</span></code></a>(args)</p></td>
+<td><p>show what <strong>punx</strong> can do</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#punx.main.func_install" title="punx.main.func_install"><code class="xref py py-obj docutils literal notranslate"><span class="pre">func_install</span></code></a>(args)</p></td>
+<td><p>Install or update the named versions of the NeXus definitions.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#punx.main.func_tree" title="punx.main.func_tree"><code class="xref py py-obj docutils literal notranslate"><span class="pre">func_tree</span></code></a>(args)</p></td>
 <td><p>print the tree structure of a NeXus HDF5 data file of NXDL XML file</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#punx.main.func_update" title="punx.main.func_update"><code class="xref py py-obj docutils literal notranslate"><span class="pre">func_update</span></code></a>(args)</p></td>
-<td><p>update or install versions of the NeXus definitions</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#punx.main.func_validate" title="punx.main.func_validate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">func_validate</span></code></a>(args)</p></td>
+<td><p>validate the content of a NeXus HDF5 data file of NXDL XML file</p></td>
 </tr>
 </tbody>
 </table>
@@ -169,7 +163,7 @@ can be abbreviated to ``demo`` or even ``de``.
 <p id="index-1">If you get an error message that looks like this one
 (line breaks added here for clarity):</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>punx.cache.FileNotFound: file does not exist:
-/Users/&lt;username&gt;/.config/punx/definitions-master/nxdl.xsd
+/Users/&lt;username&gt;/.config/punx/definitions-main/nxdl.xsd
 AND not found in source cache either!  Report this problem to the developer.
 </pre></div>
 </div>
@@ -181,27 +175,16 @@ Use this command to update the local cache:</p>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="punx.main.func_hierarchy">
-<span class="sig-prename descclassname"><span class="pre">punx.main.</span></span><span class="sig-name descname"><span class="pre">func_hierarchy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/main.html#func_hierarchy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.main.func_hierarchy" title="Permalink to this definition">¶</a></dt>
-<dd><p>not implemented yet</p>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="punx.main.func_structure">
-<span class="sig-prename descclassname"><span class="pre">punx.main.</span></span><span class="sig-name descname"><span class="pre">func_structure</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/main.html#func_structure"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.main.func_structure" title="Permalink to this definition">¶</a></dt>
-<dd><p>deprecated subcommand</p>
+<dt class="sig sig-object py" id="punx.main.func_install">
+<span class="sig-prename descclassname"><span class="pre">punx.main.</span></span><span class="sig-name descname"><span class="pre">func_install</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/main.html#func_install"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.main.func_install" title="Permalink to this definition">¶</a></dt>
+<dd><p>Install or update the named versions of the NeXus definitions.</p>
+<p>Install into the user cache.  (Developer manages the source cache.)</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="punx.main.func_tree">
 <span class="sig-prename descclassname"><span class="pre">punx.main.</span></span><span class="sig-name descname"><span class="pre">func_tree</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/main.html#func_tree"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.main.func_tree" title="Permalink to this definition">¶</a></dt>
 <dd><p>print the tree structure of a NeXus HDF5 data file of NXDL XML file</p>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="punx.main.func_update">
-<span class="sig-prename descclassname"><span class="pre">punx.main.</span></span><span class="sig-name descname"><span class="pre">func_update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/punx/main.html#func_update"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#punx.main.func_update" title="Permalink to this definition">¶</a></dt>
-<dd><p>update or install versions of the NeXus definitions</p>
 </dd></dl>
 
 <dl class="py function">
@@ -276,7 +259,7 @@ Use this command to update the local cache:</p>
         <li class="right" >
           <a href="h5tree.html" title="HDF5 Data File Tree Structure : h5tree"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">punx  documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">punx 0.3.0 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../contents.html" >Contents</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">User interface : <code class="xref py py-mod docutils literal notranslate"><span class="pre">main</span></code></a></li> 
       </ul>
